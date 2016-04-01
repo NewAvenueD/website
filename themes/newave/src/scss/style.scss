@@ -1,0 +1,10 @@
+@import "base/normalize";
+@import "base/skeleton";
+$font-stack:    Helvetica, sans-serif;
+$primary-color: rgb(170, 25, 147);
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+// test test test test

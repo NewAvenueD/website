@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block head %}
+    <meta charset="UTF-8">
+    {% if header.description %}
+      <meta name="description" content="{{ header.description }}">
+    {% else %}
+        <meta name="description" content="{{ site.description }}">
+    {% endif %}
+    {% if header.robots %}
+      <meta name="robots" content="{{ header.robots }}">
+    {% endif %}
+    <link rel="icon" type="image/png" href="{{ theme_url }}/public/images/favicon.png">
+    <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
+    {% block stylesheets %}
+      {% do assests.add('theme://public/style.css')%}
+    {% endblock %}
+  {% endblock head %}
+</head>
+<body>
+
+</body>
+</html>

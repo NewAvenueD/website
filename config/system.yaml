@@ -4,7 +4,7 @@ home:
   alias: '/home'
 
 pages:
-  theme: afterburner2
+  theme: newave
   markdown_extra: false
   process:
     markdown: true

@@ -1,0 +1,14 @@
+{% extends 'partials/base.html.twig' %}
+{% set taglines_2 = page.header.hero.elevator_tags %}
+{% block content %}
+    <h2>{{ page.header.title }}</h2>
+    <hr>
+    <pitch>
+      {% for item in taglines_2 %}
+      <h3>{{ item.a }}</h3>
+      <p> {{ item.b }}</p>
+      {% endfor %}
+    </pitch>
+    <hr>
+    {{ page.content }}
+{% endblock %}

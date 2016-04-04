@@ -18,10 +18,6 @@ body_classes: "modular home"
 ---
 New Avenue Dentistry is an employee wellness solution that streamlines the dental experience for busy professionals. We offer comprehensive dental care from exceptional dentists in a high-tech, full-service, mobile practice that comes to you.
 
-This is live
-
-
-
 #### For Employers:
 * Innovative, zero-cost employee wellness benefit
 * On-site dentistry fits with your current dental benefits

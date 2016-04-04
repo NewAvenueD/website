@@ -1,39 +1,11 @@
 ---
 title: About New Avenue
 ---
+We’re a group of committed dental professionals who believe taking care of your teeth should be easy. After hearing for years from patients how difficult it can be to fit appointments into their busy schedules we thought there has to be a better way.
 
-# About New Avenue
-## You have installed **Grav** successfully
+>What if we brought dental care to the patients? What if we used technology to take the friction out of the appointment process? What if patients have just been making excuses all along?
 
-Congratulations! You have installed the **Base Grav Package** that provides a **simple page** and the default **antimatter** theme to get you started.
+So we built a high-tech, full-service dental office on wheels to take to busy patients at their workplace. New Avenue Dentistry was born of a belief that dentistry could be done differently and we’re passionate about making healthy teeth more attainable for working patients. We would love to work with you to brighten smiles around your workplace.
 
->>>>> If you want a more **full-featured** base install, you should check out [**Skeleton** packages available in the downloads](http://getgrav.org/downloads).
-
-### Find out all about Grav
-
-* Learn about **Grav** by checking out our dedicated [Learn Grav](http://learn.getgrav.org) site.
-* Download **plugins**, **themes**, as well as other Grav **skeleton** packages from the [Grav Downloads](http://getgrav.org/downloads) page.
-* Check out our [Grav Development Blog](http://getgrav.org/blog) to find out the latest goings on in the Grav-verse.
-
-### Edit this Page
-
-To edit this page, simply navigate to the folder you installed **Grav** into, and then browse to the `user/pages/01.home` folder and open the `default.md` file in your [editor of choice](http://learn.getgrav.org/basics/requirements).  You will see the content of this page in [Markdown format](http://learn.getgrav.org/content/markdown).
-
-### Create a New Page
-
-Creating a new page is a simple affair in **Grav**.  Simply follow these simple steps:
-
-1. Navigate to your pages folder: `user/pages/` and create a new folder.  In this example, we will use [explicit default ordering](http://learn.getgrav.org/content/content-pages) and call the folder `02.mypage`.
-2. Launch your text editor and paste in the following sample code:
-
-        ---
-        title: My New Page
-        ---
-        # My New Page!
-
-        This is the body of **my new page** and I can easily use _Markdown_ syntax here.
-
-3. Save this file in the `user/pages/02.mypage/` folder as `default.md`. This will tell **Grav** to render the page using the **default** template.
-4. That is it! Reload your browser to see your new page in the menu.
-
->>> NOTE: The page will automatically show up in the Menu after the "Home" menu item. If you wish to change the name that shows up in the Menu, simple add: `menu: My Page` between the dashes in the page content. This is called the YAML front matter, and it is where you configure page-specific options.
+###About On-site Dentistry
+On-site dentistry is not a new idea, but it is having it’s day in the era of the smartphone. Respected and innovative organizations from Google and Dropbox to ConocoPhillips and NASA have recognized the value of providing this benefit to their employees. On-site dentistry benefits employers and employees because it decreases dental and medical expenditures, increases productivity by cutting down on the time it takes to see a dentist, and leads to a happier, healthier workforce. All of these benefits are at no additional cost or administrative burden to the employer.

@@ -1,0 +1,16 @@
+{% extends 'partials/base.html.twig' %}
+{% set faqs = page.header.faqs %}
+{% block content %}
+  <h2>{{ page.header.title }}</h2>
+  <hr>
+  <dl class="faqs"></ul>
+    {% for faq in faqs %}
+      <dt>
+        {{ faq.q }}
+      </dt>
+      <dd>
+        {{ faq.a }}
+      </dd>
+    {% endfor %}
+  </dl>
+{% endblock %}

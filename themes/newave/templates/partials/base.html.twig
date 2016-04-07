@@ -18,6 +18,7 @@
       {% do assets.add('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css')%}
     {% endblock %}
     {{ assets.css() }}
+    {{ assets.js() }}
   {% endblock head %}
 </head>
 <body>
@@ -35,6 +36,9 @@
     <section id="body" class="container {{ class }}">
       {% block content %}{% endblock %}
     </section>
+    <page-nav>
+      {% include 'partials/bottom-nav.html.twig' %}
+    </page-nav>
   {% endblock %}
 </body>
 </html>

@@ -1,11 +1,12 @@
 {% set progress = pages.children.visible %}
 <div id="bottom-nav">
+  <p class="iTest">This is a dense display!</p>
   {% set prev = progress.nextSibling(page.path) %}
   {% set next = progress.prevSibling(page.path) %}
   {% if not progress.isFirst(page.path) %}
-  <a class="nav nav-prev" href="{{ prev.url }}"><i class="fa fa-arrow-left"></i>{{ prev.menu }}</a>
+  <a class="nav nav-prev" href="{{ prev.url }}">{{ prev.menu }}</a>
   {% endif %}
   {% if not progress.isLast(page.path) %}
-  <a class="nav nav-next" href="{{ next.url }}">{{ next.menu }}<i class="fa fa-arrow-right"></i></a>
+  <a class="nav nav-next" href="{{ next.url }}">{{ next.menu }}</a>
   {% endif %}
 </div>

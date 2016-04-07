@@ -22,23 +22,30 @@
   {% endblock head %}
 </head>
 <body>
-  {% block header %}
-  <header>
-    <div class="logo">
-      <h3><a href="{{ base_url }}"></a></h3>
+  <div class="page-wrap">
+    <div class="nav-n-content">
+    {% block header %}
+      <header>
+        <div class="logo">
+          <h3><a href="{{ base_url }}"></a></h3>
+        </div>
+        <div id="navbar">
+          {% include 'partials/navigation.html.twig' %}
+        </div>
+      </header>
+      {% endblock header%}
+      {% block body %}
+        <main class="container {{ class }}">
+          {% block content %}{% endblock %}
+        </main>
+    {% endblock body%}
+    <!-- end div.nav-n-content (everything but sticky footer) -->
     </div>
-    <div id="navbar">
-      {% include 'partials/navigation.html.twig' %}
-    </div>
-  </header>
-  {% endblock %}
-  {% block body %}
-    <section id="body" class="container {{ class }}">
-      {% block content %}{% endblock %}
-    </section>
-    <page-nav>
+
+    <div class="progress">
       {% include 'partials/bottom-nav.html.twig' %}
-    </page-nav>
-  {% endblock %}
+    </div>
+  <!-- end (currently useless) div.page-wrap-->
+  </div>
 </body>
 </html>

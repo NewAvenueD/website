@@ -1,3 +1,29 @@
 @import "base/normalize";
 @import "base/skeleton";
+@import "base/mqueries";
+
+$desk-foot-nav: 550px;
 // test test
+html, body, .page-wrap {
+  height: 100%;
+}
+.nav-n-content {
+  min-height: 100%;
+  margin-bottom: -150px;
+  &:after {
+    content: "";
+    display: block;
+  }
+  @include at-least(desktop) {
+    margin-bottom: $desk-foot-nav;
+  }
+}
+.progress, .nav-n-content {
+  height: 150px;
+  @include at-least(desktop) {
+    height: $desk-foot-nav;
+  }
+}
+.progress {
+  background-color: rgb(124, 164, 158);
+}

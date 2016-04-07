@@ -1,0 +1,33 @@
+// mixin following https://10up.github.io/Engineering-Best-Practices/css/#responsive-websites
+/// Register devices widths
+$devices: (
+	mobile-landscape: 400px,
+  phablet: 550px,
+	tablet: 768px,
+	tablet-landscape: 1024px,
+	laptop: 1280px,
+	desktop: 1440px
+) !default;
+
+/// Verify that the breakpoint width is listed
+///
+/// @param {string} $breakpoint - breakpoint name
+/// @group mediaqueries
+@function get-breakpoint-width($breakpoint) {
+	@if map-has-key($devices, $breakpoint) {
+		@return map-get($devices, $breakpoint);
+	} @else {
+		@warn "Breakpoint #{$breakpoint} wasn't found in $devices.";
+	}
+}
+
+/// Min-width media query
+///
+/// @param {string} $breakpoint - breakpoint name
+/// @group mediaqueries
+@mixin at-least($breakpoint) {
+	$device-width: get-breakpoint-width($breakpoint);
+	@media screen and (min-width: $device-width) {
+		@content;
+	}
+}

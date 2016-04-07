@@ -1,5 +1,6 @@
 {% extends 'partials/base.html.twig' %}
 {% set taglines_2 = page.header.hero.elevator_tags %}
+{% set benefits = page.header.benefits %}
 {% block content %}
     <h2>{{ page.header.title }}</h2>
     <hr>
@@ -10,5 +11,13 @@
       {% endfor %}
     </pitch>
     <hr>
+    {% for person in benefits.whom %}
+      <h3>{{ person.name }}</h3>
+      <ul>
+        {% for beni in person.benies %}
+        <li>{{ beni }}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
     {{ page.content }}
 {% endblock %}

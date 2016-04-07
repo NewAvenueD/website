@@ -807,16 +807,24 @@ hr {
   display: table;
   clear: both; }
 
-/* Media Queries
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/*
-Note: The best way to structure the use of media queries is to create the queries
-near the relevant code. For example, if you wanted to change the styles for buttons
-on small devices, paste the mobile query code up in the buttons section and style it
-there.
-*/
-/* Larger than mobile */
-/* Larger than phablet (also point when grid becomes active) */
-/* Larger than tablet */
-/* Larger than desktop */
-/* Larger than Desktop HD */
+html, body, .page-wrap {
+  height: 100%; }
+
+.nav-n-content {
+  min-height: 100%;
+  margin-bottom: -150px; }
+  .nav-n-content:after {
+    content: "";
+    display: block; }
+  @media screen and (min-width: 1440px) {
+    .nav-n-content {
+      margin-bottom: 550px; } }
+
+.progress, .nav-n-content {
+  height: 150px; }
+  @media screen and (min-width: 1440px) {
+    .progress, .nav-n-content {
+      height: 550px; } }
+
+.progress {
+  background-color: #7ca49e; }

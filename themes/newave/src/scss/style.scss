@@ -3,13 +3,16 @@
 @import "base/mqueries";
 
 $desk-foot-nav: 550px;
+$foot-nav: 250;
 // test test
-html, body, .page-wrap {
+html, body {
   height: 100%;
 }
-.nav-n-content {
+.page-wrap, .nav-n-content {
   min-height: 100%;
-  margin-bottom: -150px;
+}
+.nav-n-content {
+  margin-bottom: $foot-nav * -1px;
   &:after {
     content: "";
     display: block;
@@ -18,12 +21,13 @@ html, body, .page-wrap {
     margin-bottom: $desk-foot-nav;
   }
 }
-.progress, .nav-n-content {
-  height: 150px;
+.progress {
+  height: $foot-nav + 0px;
   @include at-least(desktop) {
     height: $desk-foot-nav;
   }
 }
 .progress {
-  background-color: rgb(124, 164, 158);
+  background-size: cover;
+	background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAYklEQVQIWwFXAKj/AS9sjP8SODUA/fj/ANv2+AAlEAkALxkWAPr+AAABXYuk/+EXHQDz+f4A6Pv8ACAKCAAtGBMACwMEAAE4c5P/Jzw6AM7n9ADo+PgAHw8HACsVEAAGBQUAve8d7xx/kEgAAAAASUVORK5CYII=");
 }

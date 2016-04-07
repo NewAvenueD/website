@@ -807,12 +807,14 @@ hr {
   display: table;
   clear: both; }
 
-html, body, .page-wrap {
+html, body {
   height: 100%; }
 
+.page-wrap, .nav-n-content {
+  min-height: 100%; }
+
 .nav-n-content {
-  min-height: 100%;
-  margin-bottom: -150px; }
+  margin-bottom: -250px; }
   .nav-n-content:after {
     content: "";
     display: block; }
@@ -820,11 +822,12 @@ html, body, .page-wrap {
     .nav-n-content {
       margin-bottom: 550px; } }
 
-.progress, .nav-n-content {
-  height: 150px; }
+.progress {
+  height: 250px; }
   @media screen and (min-width: 1440px) {
-    .progress, .nav-n-content {
+    .progress {
       height: 550px; } }
 
 .progress {
-  background-color: #7ca49e; }
+  background-size: cover;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAYklEQVQIWwFXAKj/AS9sjP8SODUA/fj/ANv2+AAlEAkALxkWAPr+AAABXYuk/+EXHQDz+f4A6Pv8ACAKCAAtGBMACwMEAAE4c5P/Jzw6AM7n9ADo+PgAHw8HACsVEAAGBQUAve8d7xx/kEgAAAAASUVORK5CYII="); }

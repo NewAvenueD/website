@@ -8,17 +8,24 @@ $foot-nav: 250;
 html, body {
   height: 100%;
 }
-.page-wrap, .nav-n-content {
+.nav-n-content {
   min-height: 100%;
 }
 .nav-n-content {
   margin-bottom: $foot-nav * -1px;
+  @include at-least(desktop) {
+    margin-bottom: $desk-foot-nav;
+  }
   &:after {
     content: "";
     display: block;
   }
-  @include at-least(desktop) {
-    margin-bottom: $desk-foot-nav;
+}
+main.content {
+  padding-bottom: $foot-nav * 1px;
+  &:after {
+    content: "";
+    display: block;
   }
 }
 .progress {

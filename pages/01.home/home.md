@@ -3,6 +3,7 @@
 title: Introducing New Avenue Dentistry
 tag_line: Dentistry, delivered to your workplace
 hero:
+  image:
   elevator_tags:
     1:
       a: Dentistry, delivered to your workplace
@@ -41,6 +42,6 @@ benefits:
         3: We focus on long-term relationships with employers who value providing excellent benefits to their employees.
         4: Property Managers and Facility Managers can offer on-site dentistry to their tenants to help attract and retain tenants.
 
-body_classes: "modular home"
+body_classes: home
 ---
 New Avenue Dentistry is an employee wellness solution that streamlines the dental experience for busy professionals. We offer comprehensive dental care from exceptional dentists in a high-tech, full-service, mobile practice that comes to you.

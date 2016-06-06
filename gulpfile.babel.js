@@ -8,7 +8,8 @@ import php from 'gulp-connect-php'
 
 let browserSync = bSync.create();
 const scss = './themes/newave/src/scss/**/*.scss';
-const pages = './pages/**/*.md'
+const pages = './pages/**/*.md';
+const templates = './themes/newave/templates/**/*.twig'
 
 
 gulp.task('serve', ['sass'], () => {
@@ -20,15 +21,13 @@ gulp.task('serve', ['sass'], () => {
   });
 
   gulp.watch(scss, ['sass']);
-  gulp.watch(pages).on('change', browserSync.reload)
+  gulp.watch([pages, templates]).on('change', browserSync.reload)
 })
-// Server
+// PHP Server
+// run this once before proxying with bS
 gulp.task('php', function() {
     php.server({ base: '../.', port: 8010, keepalive: true});
 });
-
-
-
 
 gulp.task('sass', () => {
   gulp.src(scss)

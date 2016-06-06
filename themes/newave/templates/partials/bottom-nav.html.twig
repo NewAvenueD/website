@@ -1,6 +1,5 @@
 {% set progress = pages.children.visible %}
 <div id="bottom-nav">
-  <p class="iTest">This is a dense display!</p>
   {% set prev = progress.nextSibling(page.path) %}
   {% set next = progress.prevSibling(page.path) %}
   {% if not progress.isFirst(page.path) %}

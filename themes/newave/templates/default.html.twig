@@ -1,6 +1,13 @@
 {% extends 'partials/base.html.twig' %}
 
+{% block hero %}
+  <section class="hero">
+    <div class="hero-image"></div>
+    <div class="container centered">
+      <h1 class="separator">{{ page.header.title }}</h1>
+    </div>
+  </section>
+{% endblock %}
 {% block content %}
-  <h1>{{ page.header.title }}</h1>
   {{ page.content }}
 {% endblock %}

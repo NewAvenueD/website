@@ -5,7 +5,7 @@
   <ul class="main-navigation">
     {% for page in pages.children.visible %}
     {% set is_active = (page.active or page.activeChild) ? 'active' : '' %}
-    <li class="{{ is_active }}">
+    <li class="item {{ is_active }}">
       <a href="{{ page.url }}">
         {{ page.menu }}
       </a>

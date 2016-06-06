@@ -3,10 +3,11 @@
 <head>
   {% block head %}
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if header.description %}
       <meta name="description" content="{{ header.description }}">
     {% else %}
-        <meta name="description" content="{{ site.description }}">
+      <meta name="description" content="{{ site.description }}">
     {% endif %}
     {% if header.robots %}
       <meta name="robots" content="{{ header.robots }}">
@@ -21,24 +22,27 @@
     {{ assets.js() }}
   {% endblock head %}
 </head>
-<body>
+<body class="{{ header.body_classes }}">
 
   <div class="nav-n-content">
   {% block header %}
     <header>
       <div class="logo">
-        <h3><a href="{{ base_url }}"></a></h3>
+        <h3><a href="{{ base_url }}">[logo]</a></h3>
       </div>
       <div id="navbar">
         {% include 'partials/navigation.html.twig' %}
       </div>
     </header>
     {% endblock header%}
+    {% block hero %}
+
+    {% endblock hero%}
     {% block body %}
       <main class="container content {{ class }}">
         {% block content %}{% endblock %}
       </main>
-  {% endblock body%}
+    {% endblock body%}
   <!-- end div.nav-n-content (everything but sticky footer) -->
   </div>
 

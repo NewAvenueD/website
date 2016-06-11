@@ -3,13 +3,16 @@ import gulp from 'gulp';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import prefix from 'gulp-autoprefixer';
-import bSync from 'browser-sync'
-import php from 'gulp-connect-php'
+import bSync from 'browser-sync';
+import php from 'gulp-connect-php';
+import babel from 'gulp-babel';
 
 let browserSync = bSync.create();
 const scss = './themes/newave/src/scss/**/*.scss';
+const js = './themes/newave/src/js/**/*.js';
 const pages = './pages/**/*.md';
-const templates = './themes/newave/templates/**/*.twig'
+const templates = './themes/newave/templates/**/*.twig';
+const pub = './themes/newave/public';
 
 
 gulp.task('serve', ['sass'], () => {
@@ -21,6 +24,7 @@ gulp.task('serve', ['sass'], () => {
   });
 
   gulp.watch(scss, ['sass']);
+  gulp.watch(js, ['js']);
   gulp.watch([pages, templates]).on('change', browserSync.reload)
 })
 // PHP Server
@@ -33,8 +37,14 @@ gulp.task('sass', () => {
   gulp.src(scss)
     .pipe(sass().on('error', sass.logError))
     .pipe(prefix())
-    .pipe(gulp.dest('./themes/newave/public'))
+    .pipe(gulp.dest(pub))
     .pipe(browserSync.stream());
 });
+
+gulp.task('js', () => {
+  gulp.src(js)
+    .pipe(babel())
+    .pipe(gulp.dest(pub))
+})
 
 gulp.task('default', ['serve']);

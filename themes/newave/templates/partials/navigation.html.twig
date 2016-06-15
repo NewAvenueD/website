@@ -1,13 +1,10 @@
-<div class="menu-icon">
-  <a href="#" id="js-menu-button" class="menu-icon">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
 
-<ul class="hidden main-navigation">
+
+<ul class="main-navigation">
+  <li>&nbsp;</li>
   {% for page in pages.children.visible %}
   {% set is_active = (page.active or page.activeChild) ? 'active' : '' %}
-  <li class="item {{ is_active }}">
+  <li class="item separator {{ is_active }}">
     <a href="{{ page.url }}">
       {{ page.menu }}
     </a>

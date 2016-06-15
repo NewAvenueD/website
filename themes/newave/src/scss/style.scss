@@ -25,8 +25,8 @@ html, body {
 // white line, margin under heading
 .separator {
   position: relative;
-  margin-bottom: 1.7em;
-  padding-bottom: 1.7em;
+  // margin-bottom: 1.7em;
+  // padding-bottom: 1.7em;
   text-align: center;
   &:before {
     content: '';
@@ -34,24 +34,33 @@ html, body {
     top: 100%;
     left: 50%;
     width: 86px;
-    height: 2px;
+    height: 1px;
     background-color: white;
     transform: translateX(-50%);
   }
 }
 // end utils
 
-// skeleton structure
+// basic structure
+
 .nav-n-content {
+  z-index: 100;
   height: 100%;
-}
-.nav-n-content {
   // negative margin to accomodate footer
   margin-bottom: $foot-nav * -1px;
   @include at-least(desktop) {
     margin-bottom: $desk-foot-nav;
   }
-  &:after {
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: black;
+    opacity: .55;
+    z-index: 101;
+  }
+  &::after {
     content: "";
     display: block;
   }
@@ -64,60 +73,90 @@ main.content {
     display: block;
   }
 }
-.progress {
-  height: $foot-nav + 0px;
-  @include at-least(desktop) {
-    height: $desk-foot-nav;
-  }
-}
-.progress {
-  background-size: cover;
-	// background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAXklEQVQIWwXBSw6CQBBAwdeDStMSYAuBBFZOoguNJ0M+F5BwX4xbGavkvawhy1P2H5gZdVPjL57Pd0P6YQppkRO7iLZreT7uiAixGvIa56CqVGWJv11JjifOpjh34A9vNw+MFGNK+gAAAABJRU5ErkJggg==");
-}
-// end skeleton
 
 // navigation
 
 #navigation {
   position: fixed;
-  // padding-left: 16px;
-  // width: 100%;
-  height: 8.4%;
-  width: 13%;
-  text-align: center;
-  background: white;
-  z-index: 1;
-  transition: width .3s ease-in-out;
-  div.menu-icon {
-    height: 100%;
-    display: inline-block;
+  min-height: 4%;
+  background-color: rgba(24, 27, 43, 0.94);
+  opacity: .74;
+  z-index: 102;
+
+  a {
+    color: white;
+    @include responsive-font(3.6vw, 25px, 50px, 30px);
   }
+
   a.menu-icon {
-    margin: 2.4vw;
+    position: absolute;
     @include responsive-font(5vw, 35px, 50px, 50px);
     @include at-least(laptop) {
       display: none;
     };
   }
+}
+
+#{$menuClosed} .test-open {
+  display: none;
+}
+
+
+#{$menuOpen} .test-closed {
+  display: none;
+}
+
+#navigation:not(.open) {
+  // make square
+  width: 15%;
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+  // reasonable width for mobile landscape view
+  @media #{$landscape} {
+    width: 10%;
+  }
+  // when transitioning open to closed, don't transition height
+  transition: min-height 0s linear .38s, width .38s ease-in-out;
+  a.menu-icon {
+    @extend .centered;
+    margin-right: 0;
+    transition: top 0s linear .38s, left 0s linear .38s, transform 0s linear .38s;;
+  }
+  // hide nav items when closed
   ul {
+    @extend .hidden;
+    transition: 0.38s ease-in-out;
+  }
+}
+
+#navigation.open  {
+  width: 82%;
+  transition: width .38s ease-in-out;
+  min-height: 100%;
+
+  a.menu-icon {
+    right: 0;
+    top: 0;
+    margin-right: 2.3%;
+  }
+
+  ul {
+    transition: all .38s ease-in-out;
     list-style: none;
+    line-height: 3em;
     li.item {
       display: block;
-      // float: left;
+      text-align: center;
       a {
         text-decoration: none;
       }
     }
   }
 }
-#navigation.open  {
-  width: 82%;
-  height: 100%;
-  text-align: right;
-}
-#navigation:not(.open) {
-  transition: height 0s linear .3s, width .3s ease-in-out;
-}
+
 // components
 .section {
   padding: 80px 0;
@@ -135,7 +174,7 @@ main.content {
     content: '';
     position: absolute;
     top: 0; right: 0; left: 0; bottom: 0;
-    // background: url('./images/hero/notification.jpg') no-repeat;
+    background: url('./images/hero/notification.jpg') no-repeat;
     background-size: cover;
     background-position: 50% 50%;
     opacity: .9;

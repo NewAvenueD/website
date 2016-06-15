@@ -49,3 +49,10 @@
   clip: rect(0, 0, 0, 0);
   position: absolute;
 }
+
+@mixin grayscale_element($value) {
+    filter:#{"grayscale(#{$value})"};
+}
+
+$menuOpen: "body[data-state-menu=open]";
+$menuClosed: "body[data-state-menu=closed]";

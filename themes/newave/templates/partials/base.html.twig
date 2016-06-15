@@ -31,14 +31,14 @@
 
   {% endblock head %}
 </head>
-<body class="{{ header.body_classes }}">
+<body class="{{ header.body_classes }}" data-state-menu="closed">
 
   <div class="nav-n-content">
   {% block nav %}
     <nav id="navigation" class="">
-      <!-- <div class="logo">
-        <h3><a href="{{ base_url }}">[logo]</a></h3>
-      </div> -->
+      <a href="#" id="js-menu-button" class="menu-icon">
+        <i class="fa fa-bars"></i>
+      </a>
       <div id="navlinks">
         {% include 'partials/navigation.html.twig' %}
       </div>

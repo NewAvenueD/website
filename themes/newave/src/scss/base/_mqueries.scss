@@ -31,3 +31,6 @@ $devices: (
 		@content;
 	}
 }
+
+/// landscape phones and tablets
+$landscape: "screen and (max-width: 1024px) and (orientation: landscape)";

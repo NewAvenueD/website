@@ -3,6 +3,7 @@
 @import "base/mqueries";
 @import "base/mixins";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300);
 
 $desk-foot-nav: 550px;
 $foot-nav: 250;
@@ -52,18 +53,30 @@ html, body {
     margin-bottom: $desk-foot-nav;
   }
   &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    background-color: black;
-    opacity: .55;
-    z-index: 101;
+    opacity: 1;
   }
-  &::after {
-    content: "";
-    display: block;
-  }
+}
+
+#{$menuClosed} .nav-n-content::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: black;
+  opacity: 0;
+  transition: opacity .38s ease-in-out, z-index 0s linear .38s;
+  z-index: -101;
+}
+// grey out content with menu open
+#{$menuOpen} .nav-n-content::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: black;
+  opacity: .64;
+  transition: opacity .38s ease-in-out;
+  z-index: 101;
 }
 main.content {
   // padding to offset neg margin of parent
@@ -79,34 +92,29 @@ main.content {
 #navigation {
   position: fixed;
   min-height: 4%;
-  background-color: rgba(24, 27, 43, 0.94);
-  opacity: .74;
+  background-color: rgba(24, 27, 43, 1);
+  opacity: .78;
   z-index: 102;
+  font-family: 'Josefin Sans', sans-serif;
 
   a {
+    text-transform: uppercase;
     color: white;
-    @include responsive-font(3.6vw, 25px, 50px, 30px);
+    @include responsive-font(7.6vw, 25px, 80px, 30px);
+    line-height: 10vh;
   }
 
   a.menu-icon {
-    position: absolute;
-    @include responsive-font(5vw, 35px, 50px, 50px);
+    @extend .centered;
+    line-height: 100%;
+    @include responsive-font(9vw, 25px, 50px, 50px);
     @include at-least(laptop) {
       display: none;
     };
   }
 }
 
-#{$menuClosed} .test-open {
-  display: none;
-}
-
-
-#{$menuOpen} .test-closed {
-  display: none;
-}
-
-#navigation:not(.open) {
+#{$menuClosed} #navigation {
   // make square
   width: 15%;
   &:after {
@@ -120,9 +128,10 @@ main.content {
   }
   // when transitioning open to closed, don't transition height
   transition: min-height 0s linear .38s, width .38s ease-in-out;
+
   a.menu-icon {
-    @extend .centered;
-    margin-right: 0;
+
+    // delay position transition
     transition: top 0s linear .38s, left 0s linear .38s, transform 0s linear .38s;;
   }
   // hide nav items when closed
@@ -132,17 +141,30 @@ main.content {
   }
 }
 
-#navigation.open  {
+#{$menuOpen} #navigation  {
   width: 82%;
   transition: width .38s ease-in-out;
   min-height: 100%;
 
-  a.menu-icon {
+  div.menu-icon {
+    position: absolute;
     right: 0;
     top: 0;
-    margin-right: 2.3%;
+    width: 15%;
+    // make square
+    &:after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
   }
 
+  div.nav-links {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   ul {
     transition: all .38s ease-in-out;
     list-style: none;
@@ -151,7 +173,11 @@ main.content {
       display: block;
       text-align: center;
       a {
+        line-height: 10vh;
         text-decoration: none;
+      }
+      &:not(:last-child) {
+        @extend .separator;
       }
     }
   }

@@ -34,15 +34,8 @@
 <body class="{{ header.body_classes }}" data-state-menu="closed">
 
   <div class="nav-n-content">
-  {% block nav %}
-    <nav id="navigation" class="">
-      <a href="#" id="js-menu-button" class="menu-icon">
-        <i class="fa fa-bars"></i>
-      </a>
-      <div id="navlinks">
-        {% include 'partials/navigation.html.twig' %}
-      </div>
-    </nav>
+    {% block nav %}
+      {% include 'partials/navigation.html.twig' %}
     {% endblock nav%}
     {% block hero %}
 

@@ -1,13 +1,19 @@
-
-
-<ul class="main-navigation">
-  <li>&nbsp;</li>
-  {% for page in pages.children.visible %}
-  {% set is_active = (page.active or page.activeChild) ? 'active' : '' %}
-  <li class="item separator {{ is_active }}">
-    <a href="{{ page.url }}">
-      {{ page.menu }}
+<nav id="navigation" class="">
+  <div class="button-contain">
+    <a href="#" id="js-menu-button" class="menu-icon">
+      <i class="fa fa-bars"></i>
     </a>
-  </li>
-  {% endfor %}
-</ul>
+  </div>
+  <div class="nav-links">
+    <ul class="main-navigation">
+      {% for page in pages.children.visible %}
+      {% set is_active = (page.active or page.activeChild) ? 'active' : '' %}
+      <li class="item {{ is_active }}">
+        <a href="{{ page.url }}">
+          {{ page.menu }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

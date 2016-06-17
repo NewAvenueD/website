@@ -1,6 +1,7 @@
 ---
 # Page variables
 title: Introducing New Avenue Dentistry
+menu: Introducing
 tag_line: Dentistry, delivered to your workplace
 hero:
   image:

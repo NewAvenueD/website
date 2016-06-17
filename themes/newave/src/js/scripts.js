@@ -1,7 +1,10 @@
 window.addEventListener('load', function () {
   // console.log('window load event');
-  const navigation = document.getElementById('navigation');
+  const navigation = document.querySelector('.navigation');
   const body = document.querySelector('body');
+  //
+  //
+  // ** Helpers **
   //
   // toggle (existing) 'data-state' attributes
   const toggleState = function (el, datum, one, two) {
@@ -14,9 +17,17 @@ window.addEventListener('load', function () {
     }
   }
 
-  function toggleNav() {
+  fixBurgerSize();
+
+  function fixBurgerSize () {
+    const buttonContain = document.querySelector('.burger-tab');
+    let height = buttonContain.clientHeight;
+    buttonContain.setAttribute("style", "height:"+height+"px; width:"+height+"px;");
+    buttonContain.classList.remove("initial");
+  }
+
+  const toggleNav = function () {
     let startingState = body.getAttribute('data-state-menu');
-    console.log('startingState: ', startingState);
     toggleState('body', 'menu', 'closed', 'open');
   }
   // toggle nav on menu button click
@@ -30,6 +41,7 @@ window.addEventListener('load', function () {
     let inSideNav = navigation.contains(e.target);
     if (body.getAttribute('data-state-menu') === 'open' && !inSideNav) {
       toggleNav();
+    }
   }
-  
+
 });

@@ -1,10 +1,10 @@
-<nav id="navigation" class="">
-  <div class="button-contain">
-    <a href="#" id="js-menu-button" class="menu-icon">
+<nav class="navigation" >
+  <div class="burger-tab initial">
+    <a href="#" id="js-menu-button" class="burger-icon">
       <i class="fa fa-bars"></i>
     </a>
   </div>
-  <div class="nav-links">
+  <div class="nav-items">
     <ul class="main-navigation">
       {% for page in pages.children.visible %}
       {% set is_active = (page.active or page.activeChild) ? 'active' : '' %}

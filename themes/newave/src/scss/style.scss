@@ -1,9 +1,6 @@
-@import "base/normalize";
-@import "base/skeleton";
-@import "base/mqueries";
-@import "base/mixins";
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,400italic);
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300);
+@import "vendor/vendor";
+@import "mixins/mixins";
+@import "partials/partials";
 
 $desk-foot-nav: 550px;
 $foot-nav: 250;
@@ -57,29 +54,6 @@ html, body {
     opacity: 1;
   }
 }
-//
-// grey out content with menu open
-//
-#{$menuClosed} .nav-n-content::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  background-color: black;
-  opacity: 0;
-  transition: opacity $menTran ease-in-out, z-index 0s linear $menTran;
-  z-index: -101;
-}
-#{$menuOpen} .nav-n-content::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  background-color: black;
-  opacity: .64;
-  transition: opacity $menTran ease-in-out;
-  z-index: 101;
-}
 main.content {
   // padding to offset neg margin of parent
   padding-bottom: $foot-nav * 1px;
@@ -89,109 +63,6 @@ main.content {
   }
 }
 
-// navigation
-
-.navigation {
-  position: fixed;
-  height: 100%;
-  width: 82%;
-  background-color: rgba(24, 27, 43, 1);
-  opacity: .78;
-  z-index: 102;
-  font-family: 'Josefin Sans', sans-serif;
-  transition: left $menTran ease-in-out;
-
-  //hamburger
-  div.burger-tab {
-    background-color: rgba(24, 27, 43, 1);
-    opacity: .91;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 108;
-
-    &.initial {
-      width: 15%;
-      // reasonable width for mobile landscape view
-      @media #{$landscape} {
-        width: 10%;
-      }
-      // make square hack
-      &:after {
-        content: '';
-        display: block;
-        padding-bottom: 100%;
-      }
-    }
-    a.burger-icon {
-      color: white;
-      @extend .centered;
-      line-height: 100%;
-      @include responsive-font(9vw, 25px, 50px, 50px);
-    }
-  }
-
-  div.nav-items {
-    @extend .centered;
-  }
-
-  .nav-items a {
-    text-transform: uppercase;
-    color: white;
-    @include responsive-font(7.6vw, 25px, 43px, 30px);
-    line-height: 10vh;
-  }
-
-}
-
-#{$menuClosed} .navigation {
-  left: -82%;
-
-  div.burger-tab {
-    transform: translateX(100%);
-    transition: all $menTran ease-in-out;
-  }
-
-}
-
-#{$menuOpen} .navigation  {
-  left: 0;
-
-  div.burger-tab {
-    position: absolute;
-    right: 0;
-    top: 0;
-
-    &:after {
-      content: '';
-      display: block;
-      padding-bottom: 100%;
-    }
-  }
-
-  div.nav-items {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  ul {
-    list-style: none;
-    line-height: 3em;
-    li.item {
-      display: block;
-      text-align: center;
-      a {
-        line-height: 10vh;
-        text-decoration: none;
-      }
-      &:not(:last-child) {
-        @extend .separator;
-      }
-    }
-  }
-}
 
 // components
 .section {

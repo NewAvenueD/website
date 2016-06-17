@@ -32,12 +32,13 @@ window.addEventListener('load', function () {
   }
   // toggle nav on menu button click
   document.getElementById('js-menu-button').onclick = (e) => {
-    toggleNav();
     e.preventDefault();
+    toggleNav();
   };
 
-  // toggle nav on body clicks if it is open && click is to outside 'drawer'
+  // toggle nav on body clicks if it is open && click is outside 'drawer'
   body.onclick = (e) => {
+    // alert('click!');
     let inSideNav = navigation.contains(e.target);
     if (body.getAttribute('data-state-menu') === 'open' && !inSideNav) {
       toggleNav();

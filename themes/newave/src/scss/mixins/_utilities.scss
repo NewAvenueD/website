@@ -39,6 +39,7 @@
 }
 
 /// Accessibly hide element
+///
 %visuallyhidden {
   margin: -1px;
   padding: 0;
@@ -53,6 +54,8 @@
 @mixin grayscale_element($value) {
     filter:#{"grayscale(#{$value})"};
 }
+
+/// long selectors, shorter
 
 $menuOpen: "body[data-state-menu=open]";
 $menuClosed: "body[data-state-menu=closed]";

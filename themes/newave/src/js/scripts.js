@@ -2,10 +2,12 @@ window.addEventListener('load', function () {
   // console.log('window load event');
   const navigation = document.querySelector('.navigation');
   const body = document.querySelector('body');
+  const buttonContain = document.querySelector('.burger-tab');
   //
   //
   // ** Helpers **
   //
+
   // toggle (existing) 'data-state' attributes
   const toggleState = function (el, datum, one, two) {
     let elem = document.querySelector(el);
@@ -16,14 +18,21 @@ window.addEventListener('load', function () {
       console.log(elem, " not found..");
     }
   }
-
-  fixBurgerSize();
-
-  function fixBurgerSize () {
-    const buttonContain = document.querySelector('.burger-tab');
-    let height = buttonContain.clientHeight;
-    buttonContain.setAttribute("style", "height:"+height+"px; width:"+height+"px;");
-    buttonContain.classList.remove("initial");
+  // Debounce
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this,
+          args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
   }
 
   const toggleNav = function () {
@@ -38,7 +47,6 @@ window.addEventListener('load', function () {
 
   // toggle nav on body clicks if it is open && click is outside 'drawer'
   body.onclick = (e) => {
-    // alert('click!');
     let inSideNav = navigation.contains(e.target);
     if (body.getAttribute('data-state-menu') === 'open' && !inSideNav) {
       toggleNav();

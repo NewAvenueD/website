@@ -55,6 +55,24 @@
     filter:#{"grayscale(#{$value})"};
 }
 
+// white line, margin under heading
+@mixin separator($space: 1em) {
+  position: relative;
+  margin-bottom: $space;
+  padding-bottom: $space;
+  text-align: center;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 86px;
+    height: 1px;
+    background-color: white;
+    transform: translateX(-50%);
+  }
+}
+
 /// long selectors, shorter
 
 $menuOpen: "body[data-state-menu=open]";

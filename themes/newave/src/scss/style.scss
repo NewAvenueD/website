@@ -4,6 +4,9 @@
 
 $desk-foot-nav: 550px;
 $foot-nav: 250;
+* {
+  box-sizing: border-box;
+}
 html, body {
   height: 100%;
   font-family: 'Noto Serif', serif;
@@ -22,11 +25,35 @@ html, body {
   transform: translate(-50%, -50%);
 }
 
+.square {
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+.two-by-one {
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: 50%;
+  }
+}
+.three-by-one {
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: 33.333%;
+  }
+}
+
 // end utils
 
 // basic structure
 
 .nav-n-content {
+  background-color: rgb(173, 173, 173);
   z-index: 100;
   height: 100%;
   // negative margin to accomodate footer
@@ -34,11 +61,17 @@ html, body {
   @include at-least(desktop) {
     margin-bottom: $desk-foot-nav;
   }
-  // fix meaningful body clicks, iOS
+  // fix body clicks, iOS
   cursor: pointer;
   &::before {
     opacity: 1;
   }
+}
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: white;
 }
 main.content {
   // padding to offset neg margin of parent
@@ -48,13 +81,49 @@ main.content {
     display: block;
   }
 }
-
-
-// components
-.section {
-  padding: 80px 0;
+.row {
+  width: 100%;
+  // padding: 80px 0;
   position: relative;
 }
+.row:before, .row:after {
+  content:"";
+  display: table;
+  clear: both;
+}
+.col {
+  width: 100%;
+  float: left;
+  
+}
+.third {
+  width: 33.333%;
+  @extend .square;
+}
+.two-thirds {
+  width: 66.666%;
+  @extend .two-by-one;
+}
+.full {
+  width: 100%;
+  @extend .three-by-one;
+}
+.left-two div:nth-of-type(1), .right-two div:nth-of-type(2){
+  @extend .two-thirds;
+  background-color: $red;
+}
+.left-two div:nth-of-type(2), .right-two div:nth-of-type(1){
+  @extend .third;
+  background-color: $blue;
+}
+.left-one > div {
+  @extend .full;
+  background-color: $green;
+}
+// components
+
+
+
 $blackish: rgb(31, 1, 12);
 // $blackish: rgb(111, 15, 5);
 .heading {
@@ -66,7 +135,7 @@ h2, h3 {
 }
 .hero {
   @extend .u-full-width;
-  @extend .section;
+  @extend .row;
   color: white;
   min-height: 500px;
   // background-color: rgba(247, 156, 0, 0.81);
@@ -76,7 +145,7 @@ h2, h3 {
     position: absolute;
     top: 0; right: 0; left: 0; bottom: 0;
     background: url('./images/hero/notification.jpg') no-repeat;
-    filter: grayscale(.6) blur(1px) sepia(.1);;
+    filter: grayscale(.6) sepia(.1);
     background-size: cover;
     background-position: 50% 5%;
     opacity: .9;

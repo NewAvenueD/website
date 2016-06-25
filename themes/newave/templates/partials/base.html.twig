@@ -37,14 +37,14 @@
     {% block nav %}
       {% include 'partials/navigation.html.twig' %}
     {% endblock nav%}
-    {% block hero %}
 
-    {% endblock hero%}
-    {% block body %}
+    {% block main %}
       <main class="container content {{ class }}">
+        {% block hero %}
+        {% endblock hero%}
         {% block content %}{% endblock %}
       </main>
-    {% endblock body%}
+    {% endblock main%}
   <!-- end div.nav-n-content (everything but sticky footer) -->
   </div>
 

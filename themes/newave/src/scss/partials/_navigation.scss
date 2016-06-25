@@ -44,7 +44,6 @@
     background-color: rgba(24, 27, 43, 1);
     opacity: .91;
     z-index: 108;
-    transition: transform $menTran ease-in-out;
 
     &.percentage {
       width: 18%;
@@ -52,12 +51,7 @@
       @media #{$landscape} {
         width: 10%;
       }
-      // make square hack
-      &:after {
-        content: '';
-        display: block;
-        padding-bottom: 100%;
-      }
+      @extend .square;
     }
     a.burger-icon {
       color: white;
@@ -85,6 +79,7 @@
 
   div.burger-tab {
     transform: translateX(100%);
+    transition: transform $menTran ease-in-out;
   }
 
 }
@@ -93,9 +88,6 @@
   left: 0;
 
   div.burger-tab {
-    // // position: absolute;
-    // left: 100%;
-    // transform: translateX(-100%);
 
     &:after {
       content: '';
@@ -131,14 +123,19 @@
 /// Desktop
 @include at-least(tablet-landscape) {
   #{$menuClosed} .navigation {
+    transform: none;
     width: 100%;
-    height: 55px;
-    left: 0;
+    height: auto;
+    // left: 0;
     div.burger-tab {
       display: none;
     }
     div.nav-items {
       position: relative;
+      top: 0;
+      left: 0;
+      margin: 0 auto;
+      transform: none;
       width: 78%;
       ul {
         width: 100%;
@@ -153,6 +150,7 @@
         font-weight: 300;
         a {
           @include responsive-font(1.4vw, 15px, 50px, 50px);
+          line-height: 1.4vw;
           text-decoration: none;
           text-transform: none;
         }

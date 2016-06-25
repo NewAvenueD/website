@@ -61,8 +61,8 @@ html, body {
   @include at-least(desktop) {
     margin-bottom: $desk-foot-nav;
   }
-  // fix body clicks, iOS
-  cursor: pointer;
+  
+
   &::before {
     opacity: 1;
   }
@@ -94,7 +94,9 @@ main.content {
 .col {
   width: 100%;
   float: left;
-  
+  > div {
+    position: absolute;
+  }
 }
 .third {
   width: 33.333%;
@@ -108,11 +110,11 @@ main.content {
   width: 100%;
   @extend .three-by-one;
 }
-.left-two div:nth-of-type(1), .right-two div:nth-of-type(2){
+.left-two > div:nth-of-type(1), .right-two > div:nth-of-type(2){
   @extend .two-thirds;
   background-color: $red;
 }
-.left-two div:nth-of-type(2), .right-two div:nth-of-type(1){
+.left-two > div:nth-of-type(2), .right-two > div:nth-of-type(1){
   @extend .third;
   background-color: $blue;
 }

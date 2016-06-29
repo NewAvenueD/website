@@ -1,29 +1,16 @@
 {% extends 'partials/base.html.twig' %}
-{% set taglines_2 = page.header.hero.elevator_tags %}
-{% set benefits = page.header.benefits %}
 {% block hero %}
+<!-- home.html.twig -->
   <section class="hero">
     <div class="hero-image"></div>
     <h1>{{ page.header.title }}</h1>
-    <div class="taglines_2">
-      {% for item in taglines_2 %}
-      <h3>{{ item.a }}</h3>
-      <p> {{ item.b }}</p>
-      {% endfor %}
-    </div>
+
   </section>
 {% endblock %}
 
 {% block content %}
-  <hr>
-  <h4>{{ page.content }}</h4>
-  {% for person in benefits.whom %}
-  <h3>{{ person.name }}</h3>
-  <ul>
-    {% for beni in person.benies %}
-    <li>{{ beni }}</li>
-    {% endfor %}
-  </ul>
-  {% endfor %}
+<div>
+  {% include '/modular/module.html.twig' with {'page': page.find('/home/_elevator')} %}
+</div>
 
 {% endblock %}

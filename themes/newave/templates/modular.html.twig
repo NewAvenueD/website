@@ -1,8 +1,0 @@
-{% extends 'partials/base.html.twig' %}
-
-{% block content %}
-  {{ page.content }}
-  {% for module in page.collection() %}
-    <div id="{ _self.pageLinkName(module.meu)}"></div>
-  {% endfor %}
-{% endblock %}

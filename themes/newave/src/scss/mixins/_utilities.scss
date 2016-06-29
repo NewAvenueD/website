@@ -1,3 +1,22 @@
+.hidden {
+  @extend %visuallyhidden;
+
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.square {
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+$blackish: rgb(31, 1, 12);
 ///
 /// Viewport sized typography with minimum and maximum values
 ///

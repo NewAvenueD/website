@@ -1,0 +1,20 @@
+{% extends 'partials/base.html.twig' %}
+{% block hero %}
+  <section class="hero">
+    <div class="hero-image"></div>
+    <h1>{{ page.header.title }}</h1>
+    <div class="taglines_2">
+      {% for item in taglines_2 %}
+      <h3>{{ item.a }}</h3>
+      <p> {{ item.b }}</p>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}
+{% block content %}
+	{{ page.content }}
+  {% include '/modular/moduletest.html.twig' with {'page':page.find('/home/_module1')} %}
+  {#
+  {% include '/modular/one_col.html.twig' with {'page': page.find('/home/_elevator')} %}
+  #}
+{% endblock %}

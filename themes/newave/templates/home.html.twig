@@ -1,16 +1,16 @@
 {% extends 'partials/base.html.twig' %}
-{% block hero %}
-<!-- home.html.twig -->
-  <section class="hero">
-    <div class="hero-image"></div>
-    <h1>{{ page.header.title }}</h1>
-
-  </section>
-{% endblock %}
+{# TODO move base out of partials dir #}
 
 {% block content %}
-<div>
-  {% include '/modular/module.html.twig' with {'page': page.find('/home/_elevator')} %}
-</div>
+<!-- home.html.twig -->
+
+<section class="hero">
+  <div class="hero-image"></div>
+  <h1>{{ page.header.title }}</h1>
+</section>
+
+<!--  TODO: loop through explicit ordering from YAML -->
+{% include '/modular/module.html.twig' with {'page': page.find('/home/_elevator')} %}
+{% include '/modular/module.html.twig' with {'page': page.find('/home/_how-it-works-header')} %}
 
 {% endblock %}

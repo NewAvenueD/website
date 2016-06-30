@@ -14,6 +14,7 @@ const pages = './pages/**/*.md';
 const templates = './themes/newave/templates/**/*.twig';
 const pub = './themes/newave/public';
 
+// TODO: switch to gulp-watch so new files are watched too
 
 gulp.task('serve', ['sass'], () => {
   browserSync.init({

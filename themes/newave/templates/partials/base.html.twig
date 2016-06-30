@@ -34,22 +34,25 @@
 <body class="{{ header.body_classes }}" data-state-menu="closed">
 
   <div class="nav-n-content">
-    {% block nav %}
-      {% include 'partials/navigation.html.twig' %}
-    {% endblock nav%}
+  {% block nav %}
+    {% include 'partials/navigation.html.twig' %}
+  {% endblock nav%}
 
-    {% block main %}
-      <main class="container content {{ class }}">
-        {% block hero %}
-        {% endblock hero%}
-        {% block content %}{% endblock %}
-      </main>
-    {% endblock main%}
+  {% block main %}
+    <main class="container content {{ class }}">
+
+      {% block content %}{% endblock %}
+
+    </main>
+  {% endblock main%}
+
   <!-- end div.nav-n-content (everything but sticky footer) -->
   </div>
 
-  <div class="progress">
+  <div class="footer">
+  {% block footer %}
     {% include 'partials/bottom-nav.html.twig' %}
+  {% endblock %}
   </div>
 
 </body>

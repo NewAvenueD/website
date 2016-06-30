@@ -2,7 +2,11 @@
 @import "mixins/mixins";
 @import "partials/partials";
 
-$desk-foot-nav: 550px;
+$grey1: rgb(35, 37, 42);
+$grey2: rgb(35, 42, 41);
+$grey: rgb(35, 42, 36);
+
+$desk-foot-nav: 550;
 $foot-nav: 250;
 * {
   box-sizing: border-box;
@@ -12,14 +16,6 @@ html, body {
   height: 100%;
   font-family: 'Libre Baskerville', serif;
 }
-// .heading {
-//   font-family: 'Josefin Sans', sans-serif;
-//   font-weight: 400;
-// }
-// h2, h3 {
-//   @extend .heading;
-// }
-// structure
 
 .nav-n-content {
   background-color: rgb(173, 173, 173);
@@ -50,7 +46,18 @@ main.content {
   }
 }
 
-// components
+//
+// Sticky Footer
+//
+
+div.footer {
+  height: $foot-nav * 1px;
+  background-color: $grey;
+  color: rgb(195, 195, 195);
+  @include at-least(desktop) {
+    height: $desk-foot-nav;
+  };
+}
 
 
 

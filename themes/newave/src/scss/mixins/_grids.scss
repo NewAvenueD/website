@@ -10,20 +10,28 @@
   clear: both;
 }
 // default (mobile)
-.col {
-  width: 100%;
-  float: left;
 
-  > div.col-contain {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-}
+// On larger screens, grid system divides horizontal space into thirds
+// for columns, row height is set to width of (single) column
 @include at-least(tablet-landscape) {
+
+  .col {
+    float: left;
+
+    > div.col-contain {
+      position: absolute;
+      width: inherit;
+      // height: 100%;
+    }
+  }
+
   %third {
     width: 33.333%;
-    @extend .square;
+    &:after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
   }
   %two-thirds {
     width: 66.666%;
@@ -38,8 +46,15 @@
     display: block;
     padding-bottom: 33.333%;
   }
+
+  //
+  // Column definitions 
+  //
+
   // one third width
-  .left-two > div:nth-of-type(2), .right-two > div:nth-of-type(1), .left-one > div {
+  .left-two > div:nth-of-type(2),
+  .right-two > div:nth-of-type(1),
+  .left-one > div {
     @extend %third;
     background-color: $red;
     &:nth-of-type(2) {
@@ -47,13 +62,14 @@
     }
   }
   // two thirds
-  .left-two > div:nth-of-type(1), .right-two > div:nth-of-type(2){
+  .left-two > div:nth-of-type(1),
+  .right-two > div:nth-of-type(2) {
     @extend %two-thirds;
     background-color: $blue;
   }
+
   // full width
   .left-three > div {
     @extend .full;
-    background-color: rgb(101, 62, 63);
   }
 }

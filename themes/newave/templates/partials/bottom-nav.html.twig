@@ -1,11 +1,20 @@
+<!-- bottom-nav -->
 {% set progress = pages.children.visible %}
+{% set prev = progress.nextSibling(page.path) %}
+{% set next = progress.prevSibling(page.path) %}
+
 <div id="bottom-nav">
-  {% set prev = progress.nextSibling(page.path) %}
-  {% set next = progress.prevSibling(page.path) %}
-  {% if not progress.isFirst(page.path) %}
-  <a class="nav nav-prev" href="{{ prev.url }}">{{ prev.menu }}</a>
-  {% endif %}
-  {% if not progress.isLast(page.path) %}
-  <a class="nav nav-next" href="{{ next.url }}">{{ next.menu }}</a>
-  {% endif %}
+  <div>
+    <h3>this is the bottom nav</h3>
+  </div>
+  <div>
+
+    {% if not progress.isFirst(page.path) %}
+    <a class="nav nav-prev" href="{{ prev.url }}">{{ prev.menu }}</a>
+    {% endif %}
+    {% if not progress.isLast(page.path) %}
+    <a class="nav nav-next" href="{{ next.url }}">{{ next.menu }}</a>
+    {% endif %}
+
+  </div>
 </div>

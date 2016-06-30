@@ -1,6 +1,23 @@
+main img[src*="icon"] {
+  width: 100%;
+  height: auto;
+}
 .elevator {
+  background-color: rgb(238, 238, 238);
   div.inner {
-    width: 69%;
-    @extend .centered;
+    width: 76%;
+    margin: auto;
+    h2 {
+      // transform: translateY(25%);
+    }
+  }
+}
+.how {
+  background-color: rgb(62, 62, 62);
+  h2 {
+    // font-family: 'Playfair Display', serif;
+    // text-transform: uppercase;
+    color: rgb(238, 238, 238);
+    text-align: center;
   }
 }

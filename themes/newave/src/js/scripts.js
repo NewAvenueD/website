@@ -36,7 +36,7 @@ window.addEventListener('load', function () {
   }
 
   const toggleNav = function () {
-    let startingState = body.getAttribute('data-state-menu');
+    // let startingState = body.getAttribute('data-state-menu');
     toggleState('body', 'menu', 'closed', 'open');
   }
   // toggle nav on menu button click

@@ -17,6 +17,13 @@ html, body {
   font-family: 'Libre Baskerville', serif;
 }
 
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  @include at-least(desktop) {
+    font-size: 3.25em;
+  }
+}
+
 .nav-n-content {
   background-color: rgb(173, 173, 173);
   z-index: 100;

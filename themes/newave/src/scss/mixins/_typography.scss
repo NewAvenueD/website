@@ -18,7 +18,7 @@ body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2
   /* equivalent to 20px */
 }
 
-@media (min-width: 43.75em) {
+@include at-least(tablet) {
   #page {
     font-size: 1em;
     /* equivalent to 16px */
@@ -34,7 +34,7 @@ h1 {
   /* 45px / 36px */
 }
 
-@media (min-width: 43.75em) {
+@include at-least(tablet) {
   h1 {
     font-size: 2.5em;
     /* 2.5x body copy size = 40px */
@@ -42,7 +42,7 @@ h1 {
   }
 }
 
-@media (min-width: 56.25em) {
+@include at-least(tablet-landscape) {
   h1 {
     font-size: 3em;
     /* 3x body copy size = 48px */
@@ -58,7 +58,7 @@ h2 {
   /* 30px / 26px */
 }
 
-@media (min-width: 43.75em) {
+@include at-least(tablet) {
   h2 {
     font-size: 2em;
     /* 2x body copy size = 32px */
@@ -66,7 +66,7 @@ h2 {
   }
 }
 
-@media (min-width: 56.25em) {
+@include at-least(tablet-landscape) {
   h2 {
     font-size: 2.25em;
     /* 2.25x body copy size = 36px */
@@ -81,7 +81,7 @@ h3 {
   /* 25px / 22px */
 }
 
-@media (min-width: 43.75em) {
+@include at-least(tablet) {
   h3 {
     font-size: 1.5em;
     /* 1.5x body copy size = 24px */
@@ -89,7 +89,7 @@ h3 {
   }
 }
 
-@media (min-width: 56.25em) {
+@include at-least(tablet-landscape) {
   h3 {
     font-size: 1.75em;
     /* 1.75x body copy size = 28px */
@@ -103,7 +103,7 @@ h4 {
   line-height: 1.11111111;
 }
 
-@media (min-width: 43.75em) {
+@include at-least(tablet) {
   h4 {
     line-height: 1.22222222;
     /* (22px / 18px */
@@ -117,7 +117,7 @@ blockquote {
   /* 25px / 20px */
 }
 
-@media (min-width: 43.75em) {
+@include at-least(tablet) {
   blockquote {
     font-size: 1.5em;
     /* 24px / 16px = */

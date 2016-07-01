@@ -7,7 +7,7 @@ $grey2: rgb(35, 42, 41);
 $grey: rgb(35, 42, 36);
 
 $desk-foot-nav: 550;
-$foot-nav: 250;
+$foot-nav: 125;
 * {
   box-sizing: border-box;
 }
@@ -64,6 +64,9 @@ div.footer {
   @include at-least(desktop) {
     height: $desk-foot-nav;
   };
+  h3 {
+    margin: 0;
+  }
 }
 
 

@@ -1,6 +1,6 @@
 ---
 title: Homepage How it Works Header
-classes: mixed how
+classes: mixed how-header
 ---
 [section name="first_column"]
 ##How it Works

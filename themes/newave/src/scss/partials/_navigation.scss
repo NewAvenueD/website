@@ -59,6 +59,27 @@
   }
 
   div.nav-items {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    ul {
+      list-style: none;
+      line-height: 3em;
+      li.item {
+        display: block;
+        text-align: center;
+        a {
+          line-height: 10vh;
+          text-decoration: none;
+        }
+        &:not(:last-child) {
+          @include separator(.5em);
+        }
+      }
+    }
     @extend .centered;
   }
 
@@ -93,28 +114,6 @@
     }
   }
 
-  div.nav-items {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  ul {
-    list-style: none;
-    line-height: 3em;
-    li.item {
-      display: block;
-      text-align: center;
-      a {
-        line-height: 10vh;
-        text-decoration: none;
-      }
-      &:not(:last-child) {
-        @include separator(.5em);
-      }
-    }
-  }
 }
 
 /// Desktop

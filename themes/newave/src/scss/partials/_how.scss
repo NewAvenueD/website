@@ -2,17 +2,21 @@ main img[src*="icon"] {
   width: 100%;
   height: auto;
 }
-.elevator {
+.col-contain.text {
   background-color: rgb(238, 238, 238);
+  padding: 4%;
   div.inner {
-    width: 76%;
+    width: 82%;
     margin: auto;
-    h2 {
-      // transform: translateY(25%);
+    h3 {
+      margin: 0;
     }
   }
 }
-.how {
+
+.elevator {
+}
+.how-header {
   background-color: rgb(62, 62, 62);
   h2 {
     // font-family: 'Playfair Display', serif;

@@ -823,7 +823,6 @@ body[data-state-menu=open] .navigation {
     right: 0;
     left: 0;
     bottom: 0;
-    background: url("./images/hero/notification.jpg") no-repeat;
     -webkit-filter: grayscale(0.6) sepia(0.1);
             filter: grayscale(0.6) sepia(0.1);
     background-size: cover;

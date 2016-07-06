@@ -43,5 +43,5 @@ benefits:
         3: We focus on long-term relationships with employers who value providing excellent benefits to their employees.
         4: Property Managers and Facility Managers can offer on-site dentistry to their tenants to help attract and retain tenants.
 
-body_classes: home
+body_classes: home lark
 ---

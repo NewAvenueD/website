@@ -1,27 +1,206 @@
-main img[src*="icon"] {
-  width: 100%;
-  height: auto;
+
+//
+//
+// Home
+//
+//
+$color0: rgb(15, 65, 95);
+$color1: rgb(35, 37, 42);
+$color2: rgb(161, 166, 169);
+$color: #adadad;
+$crushedGrape: rgb(242, 242, 251);
+$concord: #806690;
+$bricks: #cc5252;
+$darkBlue: #1c5e85;
+
+.home {
+  filter: grayscale(30%);
+  .row h2 {
+    color: white;
+  }
 }
-.col-contain.text {
-  background-color: rgb(238, 238, 238);
-  padding: 4%;
-  div.inner {
-    width: 82%;
-    margin: auto;
-    h3 {
+//
+// Spiff up grid
+//
+.col-contain {
+  padding: 5%;
+  overflow: auto;
+  background-color: $crushedGrape;
+  &.icon {
+    text-align: center;
+  }
+  @include at-least(tablet-landscape) {
+    padding: 0;
+    div.inner {
+      position: relative;
+      width: 82%;
       margin: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &.icon {
+      text-align: left;
     }
   }
 }
 
-.elevator {
+// is this being used for text?
+@include at-least(tablet-landscape) {
+  .copy-block {
+    h3 {
+      margin: 0;
+    }
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+  }
 }
+
+.col-contain.image {
+  display: none;
+  background-size: cover;
+  @include at-least(tablet-landscape) {
+    display: block;
+  }
+}
+
+.col-contain.header {
+  background-color: $darkBlue;
+  @include at-least(tablet-landscape) {
+    div.inner {
+      h2 {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.col-contain.icon.solo {
+  img {
+    display: inline-block;
+    width: 60%;
+    max-height: 21vh;
+    position: relative;
+    @include at-least(tablet-landscape) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+//
+// Section rules
+//
+
+.elevator {
+  .inner div:nth-of-type(2) {
+    text-align: center;
+    img {
+      width: 30%;
+      height: auto;
+      margin: 3% 0 3% -6%;
+    }
+  }
+}
+
+@include at-least(tablet-landscape) {
+  .elevator {
+    // overide normal centering to achieve bottom border
+    div.inner {
+      height: 100%;
+      position: static;
+      transform: none;
+      margin: 0 auto;
+      div:nth-of-type(1) {
+        overflow: auto;
+      }
+      div:nth-of-type(2) {
+        position: absolute;
+        width: inherit;
+        height: 40%;
+        min-height: 1px;
+        bottom: 0;
+        border-bottom: 3px solid black;
+        margin-bottom: 5px;
+        img {
+          position: absolute;
+          margin: 0;
+          width: auto;
+          height: 100%;
+          left: 64%;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.save {
+  div.col:nth-of-type(1) div.col-contain {
+    background: url(../../../pages/images/texture/louvers.jpg);
+    background-size: 100%;
+  }
+  div.col:nth-of-type(2) {
+    div.col-contain {
+      div.tag-icons {
+        width: 84.3%;
+        // margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        img {
+          width: 15%;
+          height: 15%;
+        }
+      }
+    }
+  }
+}
+
 .how-header {
-  background-color: rgb(62, 62, 62);
+  text-align: center;
+  div.col:nth-of-type(1) {
+    div.col-contain {
+      background-color: $color2;
+      div {
+        img {
+          max-width: 90%;
+        }
+      }
+    }
+  }
+  div.col:nth-of-type(2) {
+    div.col-contain {
+      background: url(../../../themes/newave/images/texture/solar.jpg);
+    }
+  }
   h2 {
     // font-family: 'Playfair Display', serif;
     // text-transform: uppercase;
     color: rgb(238, 238, 238);
-    text-align: center;
+  }
+}
+.sched {
+  div.text {
+    background-color: $crushedGrape;
+  }
+}
+
+.sched, .art, .notification {
+  div.icon {
+    background-color: $color0;
+  }
+}
+
+.art {
+  div.text {
+    background-color: $concord;
+  }
+
+  div.text {
+    background-color: $blue;
   }
 }

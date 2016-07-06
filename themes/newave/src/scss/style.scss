@@ -4,7 +4,13 @@
 
 $grey1: rgb(35, 37, 42);
 $grey2: rgb(35, 42, 41);
-$grey: rgb(35, 42, 36);
+$grey: rgb(208, 208, 208);
+$crushedGrape: rgb(242, 242, 251);
+$green: #408050;
+$concord: #806690;
+$bricks: #cc5252;
+$darkBlue: #1c5e85;
+
 
 $desk-foot-nav: 550;
 $foot-nav: 125;
@@ -25,7 +31,7 @@ h2 {
 }
 
 .nav-n-content {
-  background-color: rgb(173, 173, 173);
+  background-color: $grey;
   z-index: 100;
   min-height: 100%;
   // negative margin to accomodate footer

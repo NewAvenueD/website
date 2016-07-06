@@ -3,7 +3,11 @@
   <div class="col">
     <div class="col-contain {{page.header.classes}}">
       <div class="inner">
-        {{ content }}
+        {% for section in content|split('<hr />') %}
+            <div class="my-row">
+              {{section}}
+            </div>
+        {% endfor %}
       </div>
     </div>
   </div>

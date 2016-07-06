@@ -8,6 +8,25 @@ window.addEventListener('load', function () {
   // ** Helpers **
   //
 
+  // page specific scripts
+
+  const isPage = page => document.body.classList.contains(page)
+
+  const unwrapImage = () => {
+    if (isPage('home')) {
+      let docFrag = document.createDocumentFragment();
+      let p = document.querySelector('.elevator div.my-row:nth-of-type(2) p');
+      while (p.firstChild) {
+        let child = p.removeChild(p.firstChild);
+        docFrag.appendChild(child);
+      }
+      p.parentNode.replaceChild(docFrag, p);
+    }
+
+  }
+
+  unwrapImage();
+
   // toggle (existing) 'data-state' attributes
   const toggleState = function (el, datum, one, two) {
     let elem = document.querySelector(el);

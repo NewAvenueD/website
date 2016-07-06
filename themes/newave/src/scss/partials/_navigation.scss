@@ -3,7 +3,7 @@
 //
 #{$menuClosed} .nav-n-content::before {
   opacity: 0;
-  transition: opacity $menTran ease-in-out, z-index 0s linear $menTran;
+  transition: opacity $menTran ease-in-out;
   z-index: -101;
 }
 #{$menuOpen} .nav-n-content{
@@ -16,7 +16,7 @@
     top: 0; right: 0; bottom: 0; left: 0;
     background-color: black;
     opacity: .64;
-    transition: opacity $menTran ease-in-out;
+    transition: all $menTran ease-in-out;
     z-index: 101;
   }
 }

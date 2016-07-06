@@ -59,7 +59,7 @@ $darkBlue: #1c5e85;
   }
 }
 
-.col-contain.image {
+.col-contain.image-bg {
   display: none;
   background-size: cover;
   @include at-least(tablet-landscape) {
@@ -172,11 +172,7 @@ $darkBlue: #1c5e85;
       }
     }
   }
-  div.col:nth-of-type(2) {
-    div.col-contain {
-      background: url(../../../themes/newave/images/texture/solar.jpg);
-    }
-  }
+
   h2 {
     // font-family: 'Playfair Display', serif;
     // text-transform: uppercase;

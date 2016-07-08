@@ -78,6 +78,11 @@
         &:not(:last-child) {
           @include separator(.5em);
         }
+        @include at-least(tablet-landscape) {
+          &:last-child {
+            @include separator(.5em);
+          }
+        }
       }
     }
     @extend .centered;

@@ -44,6 +44,13 @@ $darkBlue: #1c5e85;
     }
   }
 }
+.override-right {
+  @include at-least(tablet-landscape) {
+    div.col:nth-of-type(1) {
+      float: right;
+    }
+  }
+}
 
 // is this being used for text?
 @include at-least(tablet-landscape) {
@@ -183,16 +190,13 @@ $darkBlue: #1c5e85;
   }
 }
 
-.sched, .art, .notification {
+.sched, .art, .range, .notification, .regular {
   div.icon {
     background-color: $color0;
   }
 }
 
-.art {
-  div.text {
-    background-color: $concord;
-  }
+.art, .regular {
 
   div.text {
     background-color: $blue;

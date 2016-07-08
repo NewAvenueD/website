@@ -605,6 +605,22 @@ body[data-state-menu=open] .nav-n-content {
             background-color: white;
             -webkit-transform: translateX(-50%);
                     transform: translateX(-50%); }
+        @media screen and (min-width: 1024px) {
+          .navigation div.nav-items ul li.item:last-child {
+            position: relative;
+            margin-bottom: 0.5em;
+            padding-bottom: 0.5em;
+            text-align: center; }
+            .navigation div.nav-items ul li.item:last-child:before {
+              content: '';
+              position: absolute;
+              top: 100%;
+              left: 50%;
+              width: 86px;
+              height: 1px;
+              background-color: white;
+              -webkit-transform: translateX(-50%);
+                      transform: translateX(-50%); } }
   .navigation .nav-items a {
     text-transform: uppercase;
     color: white;
@@ -707,6 +723,10 @@ body[data-state-menu=open] .navigation {
         text-align: left; } }
 
 @media screen and (min-width: 1024px) {
+  .override-right div.col:nth-of-type(1) {
+    float: right; } }
+
+@media screen and (min-width: 1024px) {
   .copy-block {
     position: absolute;
     width: 90%;
@@ -804,13 +824,10 @@ body[data-state-menu=open] .navigation {
 .sched div.text {
   background-color: #f2f2fb; }
 
-.sched div.icon, .art div.icon, .notification div.icon {
+.sched div.icon, .art div.icon, .range div.icon, .notification div.icon, .regular div.icon {
   background-color: #0f415f; }
 
-.art div.text {
-  background-color: #806690; }
-
-.art div.text {
+.art div.text, .regular div.text {
   background-color: #3ea5ce; }
 
 .hero {

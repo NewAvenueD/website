@@ -11,17 +11,23 @@ form:
         - name: name
           label: Name
           default: ''
-          placeholder: Enter your name
+          placeholder: Your name
           autofocus: on
           autocomplete: on
           type: text
-          validate:
-            required: true
+
+        - name: organization
+          label: Organization
+          default: ''
+          placeholder: Organization
+          autofocus: on
+          autocomplete: on
+          type: text
 
         - name: email
           label: Email
           default: ''
-          placeholder: Enter your email address
+          placeholder: Contact email
           type: email
           validate:
             required: true

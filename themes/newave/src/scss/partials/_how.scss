@@ -11,7 +11,7 @@ $color: #adadad;
 $crushedGrape: rgb(242, 242, 251);
 $concord: #806690;
 $bricks: #cc5252;
-$darkBlue: #1c5e85;
+$darkBlue: rgb(24, 112, 165);
 
 .home {
   filter: grayscale(30%);
@@ -204,6 +204,30 @@ $darkBlue: #1c5e85;
 }
 .contact {
   div.col-contain {
-    padding: 9%;
+    padding: 0 9%;
+    background-color: $darkBlue;
+  }
+  div.form-label {
+    @extend %visually-hidden;
+  }
+  h2, h3 {
+    margin: .48em auto;
+  }
+  div.form-field {
+    margin: 5px auto;
+  }
+  input, button {
+    width: 100%;
+    border-radius: 2px;
+    border: none;
+    height: 1.85em;
+    font-size: 1.25em;
+    padding-left: 6px;
+    @include at-least(tablet-landscape) {
+      width: 42%;
+    }
+  }
+  button {
+    margin: 12px auto;
   }
 }

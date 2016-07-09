@@ -60,7 +60,6 @@ window.addEventListener('load', function () {
 
     for (var i=0; i<form.elements.length; i++) {
       let input = form.elements[i];
-      console.log(input.type);
       switch (input.type) {
         case "text":
         case "email":

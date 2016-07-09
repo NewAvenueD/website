@@ -1,5 +1,5 @@
 .hidden {
-  @extend %visuallyhidden;
+  @extend %visually-hidden;
 
 }
 .centered {
@@ -59,7 +59,7 @@ $blackish: rgb(31, 1, 12);
 
 /// Accessibly hide element
 ///
-%visuallyhidden {
+%visually-hidden {
   margin: -1px;
   padding: 0;
   width: 1px;

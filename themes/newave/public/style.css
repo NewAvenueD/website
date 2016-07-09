@@ -366,7 +366,7 @@ th {
   display: block;
   padding-bottom: 100%; }
 
-.hidden {
+.hidden, .contact div.form-label {
   margin: -1px;
   padding: 0;
   width: 1px;
@@ -745,7 +745,7 @@ body[data-state-menu=open] .navigation {
       display: block; } }
 
 .col-contain.header {
-  background-color: #1c5e85; }
+  background-color: #1870a5; }
   @media screen and (min-width: 1024px) {
     .col-contain.header div.inner h2 {
       margin-top: 0; } }
@@ -831,7 +831,28 @@ body[data-state-menu=open] .navigation {
   background-color: #3ea5ce; }
 
 .contact div.col-contain {
-  padding: 9%; }
+  padding: 0 9%;
+  background-color: #1870a5; }
+
+.contact h2, .contact h3 {
+  margin: .48em auto; }
+
+.contact div.form-field {
+  margin: 5px auto; }
+
+.contact input, .contact button {
+  width: 100%;
+  border-radius: 2px;
+  border: none;
+  height: 1.85em;
+  font-size: 1.25em;
+  padding-left: 6px; }
+  @media screen and (min-width: 1024px) {
+    .contact input, .contact button {
+      width: 42%; } }
+
+.contact button {
+  margin: 12px auto; }
 
 .hero {
   color: white;

@@ -830,6 +830,9 @@ body[data-state-menu=open] .navigation {
 .art div.text, .regular div.text {
   background-color: #3ea5ce; }
 
+.contact div.col-contain {
+  padding: 9%; }
+
 .hero {
   color: white;
   min-height: 500px; }

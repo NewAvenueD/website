@@ -1,16 +1,12 @@
 ---
-# Page variables
-title: Introducing New Avenue Dentistry
-menu: Introducing
-tag_line: Dentistry, delivered to your workplace
-body_classes: home
+title: Contact Us
+body_classes: contact
+menu: Contact
 form:
-    action: /
-    name: quick-contact
+    name: contact-us-form
     fields:
         - name: name
           label: Name
-          default: ''
           placeholder: Enter your name
           autofocus: on
           autocomplete: on
@@ -20,7 +16,6 @@ form:
 
         - name: email
           label: Email
-          default: ''
           placeholder: Enter your email address
           type: email
           validate:
@@ -29,6 +24,8 @@ form:
     buttons:
         - type: submit
           value: Submit
+        - type: reset
+          value: Reset
 
     process:
         - email:
@@ -44,4 +41,7 @@ form:
             extension: txt
             body: "{% include 'forms/data.txt.twig' %}"
         - message: Thank you for your feedback!
+        - display: thankyou
 ---
+
+### Interested in learning more? Drop us a note

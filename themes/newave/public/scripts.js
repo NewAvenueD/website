@@ -5,30 +5,10 @@ window.addEventListener('load', function () {
   var navigation = document.querySelector('.navigation');
   var body = document.querySelector('body');
   var buttonContain = document.querySelector('.burger-tab');
-  //
+
   //
   // ** Helpers **
   //
-
-  // page specific scripts
-
-  var isPage = function isPage(page) {
-    return document.body.classList.contains(page);
-  };
-
-  var unwrapImage = function unwrapImage() {
-    if (isPage('home')) {
-      var docFrag = document.createDocumentFragment();
-      var p = document.querySelector('.elevator div.my-row:nth-of-type(2) p');
-      while (p.firstChild) {
-        var child = p.removeChild(p.firstChild);
-        docFrag.appendChild(child);
-      }
-      p.parentNode.replaceChild(docFrag, p);
-    }
-  };
-
-  unwrapImage();
 
   // toggle (existing) 'data-state' attributes
   var toggleState = function toggleState(el, datum, one, two) {
@@ -56,6 +36,59 @@ window.addEventListener('load', function () {
       if (callNow) func.apply(context, args);
     };
   }
+
+  // What page are we on?
+  var isPage = function isPage(page) {
+    return document.body.classList.contains(page);
+  };
+
+  //
+  // ** Page specific scripts **
+  //
+
+  // Home
+
+  // Unwrap images that markdown wraps in a paragraph
+  var unwrapImage = function unwrapImage() {
+    var docFrag = document.createDocumentFragment();
+    var p = document.querySelector('.elevator div.my-row:nth-of-type(2) p');
+    while (p.firstChild) {
+      var child = p.removeChild(p.firstChild);
+      docFrag.appendChild(child);
+    }
+    p.parentNode.replaceChild(docFrag, p);
+  };
+
+  var clearForm = function clearForm() {
+    var form = document.querySelector('form');
+
+    for (var i = 0; i < form.elements.length; i++) {
+      var input = form.elements[i];
+      console.log(input.type);
+      switch (input.type) {
+        case "text":
+        case "email":
+        case "textarea":
+          input.value = "";
+          break;
+        default:
+
+      }
+    }
+    // form.addEventListener("submit", (e) => {
+    //   console.log('Form submit');
+    //   e.preventDefault();
+    //   form.submit();
+    //   form.reset();
+    // })
+  };
+
+  if (isPage('home')) {
+    var timer = setTimeout(clearForm(), 2000);
+    unwrapImage();
+  }
+
+  if (isPage('contact')) {}
 
   var toggleNav = function toggleNav() {
     // let startingState = body.getAttribute('data-state-menu');

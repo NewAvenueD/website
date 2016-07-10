@@ -1,16 +1,16 @@
 enabled: true
 from: noreply@newavenuedentistry.com
 from_name: New Avenue Dentistry
-to:
-to_name:
+to: thom.penn@yahoo.com
+to_name: Thom
 mailer:
   engine: smtp
   smtp:
-    server: mailtrap.io
-    port: 2525
-    encryption: none
-    user: e57a2912cb4250
-    password: 65e590ef8d29aa
+    server: smtp.gmail.com
+    port: 587
+    encryption: tls
+    user: adam.romines@gmail.com
+    password: H!llyard
   sendmail:
     bin: '/usr/sbin/sendmail'
 content_type: text/html

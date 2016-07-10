@@ -1,0 +1,17 @@
+enabled: true
+from: noreply@newavenuedentistry.com
+from_name: New Avenue Dentistry
+to:
+to_name:
+mailer:
+  engine: smtp
+  smtp:
+    server: mailtrap.io
+    port: 2525
+    encryption: none
+    user: e57a2912cb4250
+    password: 65e590ef8d29aa
+  sendmail:
+    bin: '/usr/sbin/sendmail'
+content_type: text/html
+debug: false

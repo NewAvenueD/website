@@ -3,3 +3,4 @@ themes/*
 !themes/newave
 plugins
 data
+!config/plugins

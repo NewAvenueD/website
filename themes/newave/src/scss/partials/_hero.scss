@@ -1,10 +1,16 @@
 .hero {
   @extend .u-full-width;
   @extend .row;
-  color: white;
+  // color: white;
   min-height: 500px;
+  padding-top: 4.5em;
   // background-color: rgba(247, 156, 0, 0.81);
 
+  div.contents {
+    position: absolute;
+    top: 10%; right: 0; left: 0; bottom: 0;
+    z-index: 101
+  }
   .hero-image {
     content: '';
     position: absolute;
@@ -13,7 +19,7 @@
     filter: grayscale(.6) sepia(.1);
     background-size: cover;
     background-position: 50% 5%;
-    opacity: .9;
+    opacity: .8;
 
     &:after {
       content: '';

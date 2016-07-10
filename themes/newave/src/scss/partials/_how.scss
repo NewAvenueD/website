@@ -102,6 +102,21 @@ $darkBlue: rgb(24, 112, 165);
 //
 // Section rules
 //
+.hero {
+  text-align: center;
+  color: white;
+  h1 {
+    font-size: 4.4em;
+  }
+  span.cormorant {
+    font-family: 'Cormorant', serif;
+    text-transform: uppercase;
+    display: block;
+    text-align: left;
+    margin-left: 24%;
+    margin-bottom: 205px;
+  }
+}
 
 .elevator {
   .inner div:nth-of-type(2) {

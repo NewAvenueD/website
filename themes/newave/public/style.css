@@ -4,7 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville|Montserrat|Playfair+Display|Josefin+Sans:300,400);
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville|Cormorant|Montserrat|Playfair+Display|Josefin+Sans:300,400);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -762,6 +762,19 @@ body[data-state-menu=open] .navigation {
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%); } }
 
+.hero {
+  text-align: center;
+  color: white; }
+  .hero h1 {
+    font-size: 4.4em; }
+  .hero span.cormorant {
+    font-family: 'Cormorant', serif;
+    text-transform: uppercase;
+    display: block;
+    text-align: left;
+    margin-left: 24%;
+    margin-bottom: 205px; }
+
 .elevator .inner div:nth-of-type(2) {
   text-align: center; }
   .elevator .inner div:nth-of-type(2) img {
@@ -855,8 +868,15 @@ body[data-state-menu=open] .navigation {
   margin: 12px auto; }
 
 .hero {
-  color: white;
-  min-height: 500px; }
+  min-height: 500px;
+  padding-top: 4.5em; }
+  .hero div.contents {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 101; }
   .hero .hero-image {
     content: '';
     position: absolute;
@@ -868,7 +888,7 @@ body[data-state-menu=open] .navigation {
             filter: grayscale(0.6) sepia(0.1);
     background-size: cover;
     background-position: 50% 5%;
-    opacity: .9; }
+    opacity: .8; }
     .hero .hero-image:after {
       content: '';
       opacity: .67;
@@ -888,11 +908,12 @@ html, body {
   height: 100%;
   font-family: 'Libre Baskerville', serif; }
 
-h2 {
+h1, h2 {
   font-family: 'Montserrat', sans-serif; }
-  @media screen and (min-width: 1440px) {
-    h2 {
-      font-size: 3.25em; } }
+
+@media screen and (min-width: 1440px) {
+  h2 {
+    font-size: 3.25em; } }
 
 .nav-n-content {
   background-color: #d0d0d0;

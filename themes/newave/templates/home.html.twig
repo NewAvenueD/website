@@ -4,10 +4,13 @@
 {% block content %}
 <!-- home.html.twig -->
 
-<section class="hero">
+<div class="hero">
+  <div class="contents">
+    <h1 class="headline"><span class="cormorant">Introducing</span> New Avenue Dentistry</h1>
+
+  </div>
   <div class="hero-image" style="background-image: url({{ pages.find('/images/hero').media['notification.jpg'].url }})"></div>
-  <h1>{{ page.header.title }}</h1>
-</section>
+</div>
 
 <!--  row 01 -->
 <div class="row right-two save">

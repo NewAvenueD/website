@@ -22,9 +22,10 @@ html, body {
   height: 100%;
   font-family: 'Libre Baskerville', serif;
 }
-
-h2 {
+h1, h2 {
   font-family: 'Montserrat', sans-serif;
+}
+h2 {
   @include at-least(desktop) {
     font-size: 3.25em;
   }

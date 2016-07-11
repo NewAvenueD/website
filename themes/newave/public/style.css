@@ -537,7 +537,7 @@ body[data-state-menu=open] .nav-n-content {
     opacity: .64;
     -webkit-transition: all 0.43s ease-in-out;
     transition: all 0.43s ease-in-out;
-    z-index: 101; }
+    z-index: 103; }
 
 .navigation {
   position: fixed;
@@ -545,7 +545,7 @@ body[data-state-menu=open] .nav-n-content {
   height: 100%;
   background-color: #181b2b;
   opacity: .78;
-  z-index: 102;
+  z-index: 105;
   font-family: 'Josefin Sans', sans-serif;
   -webkit-transition: -webkit-transform 0.43s ease-in-out;
   transition: -webkit-transform 0.43s ease-in-out;

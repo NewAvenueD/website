@@ -11,12 +11,16 @@ $color: #adadad;
 $crushedGrape: rgb(242, 242, 251);
 $concord: #806690;
 $bricks: #cc5252;
-$darkBlue: rgb(24, 112, 165);
+$darkBlue: rgb(16, 95, 142);
+$blue: rgb(40, 183, 241);
 
 .home {
-  filter: grayscale(30%);
+
   .row h2 {
     color: white;
+  }
+  .col {
+    filter: grayscale(30%);
   }
 }
 //
@@ -103,18 +107,24 @@ $darkBlue: rgb(24, 112, 165);
 // Section rules
 //
 .hero {
-  text-align: center;
-  color: white;
-  h1 {
-    font-size: 4.4em;
-  }
+  filter: none;
+  // filter: grayscale(30%);
+  color: rgb(12, 32, 49);
   span.cormorant {
-    font-family: 'Cormorant', serif;
-    text-transform: uppercase;
+    font-family: 'Cormorant Infant', serif;
+    font-weight: 300;
+    // text-transform: uppercase;
     display: block;
     text-align: left;
+  }
+  span.cormorant {
     margin-left: 24%;
-    margin-bottom: 205px;
+    // margin-bottom: 205px;
+  }
+  @include at-least(tablet-landscape) {
+    h1 {
+      font-size: 4.4em;
+    }
   }
 }
 

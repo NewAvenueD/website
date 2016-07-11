@@ -4,7 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville|Cormorant|Montserrat|Playfair+Display|Josefin+Sans:300,400);
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville|Cormorant+Infant:300|Montserrat|Playfair+Display|Josefin+Sans:300,400);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -657,7 +657,8 @@ body[data-state-menu=open] .navigation {
     -webkit-transform: none;
             transform: none;
     width: 100%;
-    height: auto; }
+    height: auto;
+    min-height: 9vh; }
     body[data-state-menu=closed] .navigation div.burger-tab {
       display: none; }
     body[data-state-menu=closed] .navigation div.nav-items {
@@ -696,11 +697,12 @@ body[data-state-menu=open] .navigation {
           body[data-state-menu=closed] .navigation div.nav-items li.item a {
             font-size: 50px; } }
 
-.home {
+.home .row h2, .home .hero h2 {
+  color: white; }
+
+.home .col {
   -webkit-filter: grayscale(30%);
           filter: grayscale(30%); }
-  .home .row h2, .home .hero h2 {
-    color: white; }
 
 .col-contain {
   padding: 5%;
@@ -745,7 +747,7 @@ body[data-state-menu=open] .navigation {
       display: block; } }
 
 .col-contain.header {
-  background-color: #1870a5; }
+  background-color: #105f8e; }
   @media screen and (min-width: 1024px) {
     .col-contain.header div.inner h2 {
       margin-top: 0; } }
@@ -763,17 +765,19 @@ body[data-state-menu=open] .navigation {
               transform: translate(-50%, -50%); } }
 
 .hero {
-  text-align: center;
-  color: white; }
-  .hero h1 {
-    font-size: 4.4em; }
+  -webkit-filter: none;
+          filter: none;
+  color: #0c2031; }
   .hero span.cormorant {
-    font-family: 'Cormorant', serif;
-    text-transform: uppercase;
+    font-family: 'Cormorant Infant', serif;
+    font-weight: 300;
     display: block;
-    text-align: left;
-    margin-left: 24%;
-    margin-bottom: 205px; }
+    text-align: left; }
+  .hero span.cormorant {
+    margin-left: 24%; }
+  @media screen and (min-width: 1024px) {
+    .hero h1 {
+      font-size: 4.4em; } }
 
 .elevator .inner div:nth-of-type(2) {
   text-align: center; }
@@ -841,11 +845,11 @@ body[data-state-menu=open] .navigation {
   background-color: #0f415f; }
 
 .art div.text, .regular div.text {
-  background-color: #3ea5ce; }
+  background-color: #28b7f1; }
 
 .contact div.col-contain {
   padding: 0 9%;
-  background-color: #1870a5; }
+  background-color: #105f8e; }
 
 .contact h2, .contact h3 {
   margin: .48em auto; }
@@ -868,33 +872,53 @@ body[data-state-menu=open] .navigation {
   margin: 12px auto; }
 
 .hero {
-  min-height: 500px;
-  padding-top: 4.5em; }
+  text-align: center;
+  height: 30vh; }
+  @media screen and (min-width: 1024px) {
+    .hero {
+      height: 50vh; } }
+  @media screen and (min-width: 1024px) {
+    .hero div.contents h1 {
+      font-size: 7vh;
+      line-height: 1.5; } }
   .hero div.contents {
+    height: 30vh;
     position: absolute;
-    top: 10%;
     right: 0;
     left: 0;
-    bottom: 0;
-    z-index: 101; }
+    z-index: 102; }
+    @media screen and (min-width: 1024px) {
+      .hero div.contents {
+        height: 50vh; } }
+    .hero div.contents .inner.bottom {
+      position: absolute;
+      width: 100%;
+      bottom: 6%; }
   .hero .hero-image {
+    height: 30vh;
     content: '';
     position: absolute;
+    z-index: 101;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-    -webkit-filter: grayscale(0.6) sepia(0.1);
-            filter: grayscale(0.6) sepia(0.1);
     background-size: cover;
     background-position: 50% 5%;
     opacity: .8; }
+    @media screen and (min-width: 1024px) {
+      .hero .hero-image {
+        height: 50vh; } }
     .hero .hero-image:after {
       content: '';
       opacity: .67;
       /* layer alpha */
       background: -webkit-linear-gradient(96deg, #1f010c, transparent, #1f010c);
       background: linear-gradient(-6deg, #1f010c, transparent, #1f010c);
+      opacity: 0.5;
+      background: -webkit-linear-gradient(to bottom, #005b9a 1, rgba(61, 193, 230, 0));
+      background: -webkit-linear-gradient(top, #005b9a 1, rgba(61, 193, 230, 0));
+      background: linear-gradient(to bottom, #005b9a 1, rgba(61, 193, 230, 0));
       position: absolute;
       top: 0;
       right: 0;

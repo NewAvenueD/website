@@ -12,7 +12,7 @@ form:
           label: Name
           default: ''
           placeholder: Your name
-          autofocus: on
+          autofocus: off
           autocomplete: on
           type: text
 
@@ -20,7 +20,7 @@ form:
           label: Organization
           default: ''
           placeholder: Organization
-          autofocus: on
+          autofocus: off
           autocomplete: on
           type: text
 

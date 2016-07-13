@@ -1,8 +1,23 @@
+
+
 <div class="row right-two {{page.header.classes}}">
-  <div class="col square">
-    <div class="col-contain">{{ shortcode.section.first_column }}</div>
-  </div>
-  <div class="col">
-    <div class="col-contain">{{ shortcode.section.second_column }}</div>
-  </div>
+  {% for column in shortcode.section %}
+    {% set colIndex = (loop.index)-1 %}
+
+    {% if page.header.bgImages[colIndex] %}
+      {% set style = "background-image: url(/user/pages/images/feature/" ~ page.header.bgImages[colIndex] %}
+    {% endif %}
+    {% else %}
+        {% set style = "" %}
+    <div class="col">
+      <div class="col-contain" style="{{style}}">
+        {% for row in column|split('<hr />') %}
+        <div class="inner-row">
+          {{row}}
+        </div>
+        {% endfor %}
+      </div>
+
+    </div>
+  {% endfor %}
 </div>

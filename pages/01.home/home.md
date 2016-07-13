@@ -2,8 +2,29 @@
 # Page variables
 title: Introducing New Avenue Dentistry
 menu: Introducing
-tag_line: Dentistry, delivered to your workplace
 body_classes: home
+###
+###
+### Page content
+###
+###
+content:
+  rows:
+    # row 0
+    - class: hero
+      background: notification.jpg
+      heading:
+        - Introducing
+        - New Avenue Dentistry
+    # row 1
+    - class: right-two
+      cols:
+        left:
+          background: smile.jpg
+        right:
+          top: Dentistry, Delivered to your Workplace
+          bottom: trailer_parked.svg
+
 form:
     action: /
     name: quick-contact

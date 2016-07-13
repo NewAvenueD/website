@@ -89,8 +89,8 @@ $blue: rgb(40, 183, 241);
   }
 }
 
-.col-contain.icon.solo {
-  img {
+.col-contain {
+  img[src*='icon']:only-child {
     display: inline-block;
     width: 60%;
     max-height: 21vh;
@@ -173,7 +173,7 @@ $blue: rgb(40, 183, 241);
 
 .save {
   div.col:nth-of-type(1) div.col-contain {
-    background: url(../../../pages/images/texture/louvers.jpg);
+    background: url(../../../pages/images/feature/louvers.jpg);
     background-size: 100%;
   }
   div.col:nth-of-type(2) {

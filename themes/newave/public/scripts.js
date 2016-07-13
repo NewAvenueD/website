@@ -51,7 +51,7 @@ window.addEventListener('load', function () {
   // Unwrap images that markdown wraps in a paragraph
   var unwrapImage = function unwrapImage() {
     var docFrag = document.createDocumentFragment();
-    var p = document.querySelector('.elevator div.my-row:nth-of-type(2) p');
+    var p = document.querySelector('.elevator div.inner-row:nth-of-type(2) p');
     while (p.firstChild) {
       var child = p.removeChild(p.firstChild);
       docFrag.appendChild(child);

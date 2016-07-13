@@ -752,13 +752,13 @@ body[data-state-menu=open] .navigation {
     .col-contain.header div.inner h2 {
       margin-top: 0; } }
 
-.col-contain.icon.solo img {
+.col-contain img[src*='icon']:only-child {
   display: inline-block;
   width: 60%;
   max-height: 21vh;
   position: relative; }
   @media screen and (min-width: 1024px) {
-    .col-contain.icon.solo img {
+    .col-contain img[src*='icon']:only-child {
       top: 50%;
       left: 50%;
       -webkit-transform: translate(-50%, -50%);
@@ -812,7 +812,7 @@ body[data-state-menu=open] .navigation {
         bottom: 0; } }
 
 .save div.col:nth-of-type(1) div.col-contain {
-  background: url(../../../pages/images/texture/louvers.jpg);
+  background: url(../../../pages/images/feature/louvers.jpg);
   background-size: 100%; }
 
 .save div.col:nth-of-type(2) div.col-contain div.tag-icons {

@@ -3,9 +3,9 @@
   <div class="col">
     <div class="col-contain {{page.header.classes}}">
       <div class="inner">
-        {% for section in content|split('<hr />') %}
-            <div class="my-row">
-              {{section}}
+        {% for row in content|split('<hr />') %}
+            <div class="inner-row">
+              {{row}}
             </div>
         {% endfor %}
       </div>

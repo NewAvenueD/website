@@ -1,37 +1,39 @@
 {% extends 'partials/base.html.twig' %}
 {# TODO move base out of partials dir #}
-
 {% block content %}
 <!-- home.html.twig -->
-
-<div class="hero">
-  <div class="hero-image" style="background-image: url({{ pages.find('/images/hero').media['notification.jpg'].url }})"></div>
+{% set rows = page.header.content.rows %}
+{% set row = page.header.content.rows[0] %}
+<!--  row 00 -->
+<div class="{{row.class}}">
+  <div class="hero-image" style="background-image: url({{ pages.find('/images/hero').media[row.background].url }})"></div>
   <div class="contents">
     <div class="inner bottom">
-      <h1 class="headline"><span class="cormorant">Introducing</span> New Avenue Dentistry</h1>
+      <h1 class="headline"><span class="cormorant">{{row.heading[0]}}</span>{{row.heading[1]}}</h1>
     </div>
-
   </div>
 </div>
 
+{% set row = page.header.content.rows[1] %}
 <!--  row 01 -->
-<div class="row right-two save">
+{% include '/modular/module.html.twig' with {'page': page.find('/home/_delivered')} %}
+<div class="row {{row.class}}">
   <div class="col">
-    <div class="col-contain image-bg" style="background-image: url({{ pages.find('/images/texture').media['solar.jpg'].url }})"></div>
+
+    <div class="col-contain image-bg" style="background-image: url({{ pages.find('/images/feature').media[row.cols.left.background].url }})"></div>
   </div>
   <div class="col">
     <div class="col-contain header">
       <div class="inner">
-        <h2>Save time. Save travel. Save teeth.</h2>
-        <div class="tag-icons">
-          <img src="{{ pages.find('/images/icon').media['clock.svg'].url }}" alt="Save time with New Avenue Dentistry">
-          <img src="{{ pages.find('/images/icon').media['fuel.svg'].url }}" alt="Save time with New Avenue Dentistry">
-          <img src="{{ pages.find('/images/icon').media['tooth.svg'].url }}" alt="Save time with New Avenue Dentistry">
+        <h2>{{row.cols.right.top}}</h2>
+        <div class="">
+          <img src="{{ pages.find('/images/icon').media[row.cols.right.bottom].url }}" alt="New Avenue Dentistry on your campus" />
         </div>
       </div>
     </div>
   </div>
 </div>
+{% set row = page.header.content.rows[2] %}
 <!--  row 02 -->
 {% include '/modular/module.html.twig' with {'page': page.find('/home/_elevator')} %}
 <!--  row 03 -->
@@ -46,7 +48,7 @@
     </div>
   </div>
   <div class="col">
-    <div class="col-contain image-bg" style="background-image: url({{ pages.find('/images/texture').media['louvers.jpg'].url }})"></div>
+    <div class="col-contain image-bg" style="background-image: url({{ pages.find('/images/feature').media['louvers.jpg'].url }})"></div>
   </div>
 </div>
 <!--  row 04 -->
@@ -100,14 +102,14 @@
     </div>
   </div>
   <div class="col">
-    <div class="col-contain image-bg solo" style="background-image: url({{ pages.find('/images/texture').media['notification.jpg'].url }})">
+    <div class="col-contain image-bg solo" style="background-image: url({{ pages.find('/images/feature').media['notification.jpg'].url }})">
     </div>
   </div>
 </div>
 <!--  row 07 -->
 <div class="row right-two delivered">
   <div class="col">
-    <div class="col-contain image-bg solo" style="background-image: url({{ pages.find('/images/texture').media['reflection.jpg'].url }})">
+    <div class="col-contain image-bg solo" style="background-image: url({{ pages.find('/images/feature').media['reflection.jpg'].url }})">
     </div>
   </div>
   <div class="col">
@@ -153,7 +155,7 @@
     </div>
   </div>
   <div class="col">
-    <div class="col-contain image-bg solo" style="background-image: url({{ pages.find('/images/texture').media['chair.jpg'].url }})">
+    <div class="col-contain image-bg solo" style="background-image: url({{ pages.find('/images/feature').media['chair.jpg'].url }})">
     </div>
   </div>
 </div>

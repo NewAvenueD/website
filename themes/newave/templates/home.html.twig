@@ -14,98 +14,21 @@
   </div>
 </div>
 
-{% set row = page.header.content.rows[1] %}
 <!--  row 01 -->
 {% include '/modular/module.html.twig' with {'page': page.find('/home/_delivered')} %}
-<div class="row {{row.class}}">
-  <div class="col">
 
-    <div class="col-contain image-bg" style="background-image: url({{ pages.find('/images/feature').media[row.cols.left.background].url }})"></div>
-  </div>
-  <div class="col">
-    <div class="col-contain header">
-      <div class="inner">
-        <h2>{{row.cols.right.top}}</h2>
-        <div class="">
-          <img src="{{ pages.find('/images/icon').media[row.cols.right.bottom].url }}" alt="New Avenue Dentistry on your campus" />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{% set row = page.header.content.rows[2] %}
 <!--  row 02 -->
 {% include '/modular/module.html.twig' with {'page': page.find('/home/_elevator')} %}
 <!--  row 03 -->
-{# {% include '/modular/module.html.twig' with {'page': page.find('/home/_how-it-works-header')} %} #}
-<div class="row left-two how-header">
-  <div class="col">
-    <div class="col-contain header">
-      <div class="inner">
-        <h2>How it Works</h2>
-        <img src="{{ pages.find('/images/icon').media['time.svg'].url }}" alt="How New Avenue Dentistry works">
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="col-contain image-bg" style="background-image: url({{ pages.find('/images/feature').media['louvers.jpg'].url }})"></div>
-  </div>
-</div>
+{% include '/modular/module.html.twig' with {'page': page.find('/home/_how-it-works-header')} %}
 <!--  row 04 -->
-<div class="row right-two sched">
-  <div class="col">
-    <div class="col-contain icon solo">
-      <img src="{{ pages.find('/images/icon').media['computer.svg'].url }}" alt="Making an appointment with New Avenue Dentistry">
-    </div>
-  </div>
-  <div class="col">
-    <div class="col-contain text">
-      <div class="copy-block">
-        <h3>
-          Appointment scheduling is opened to your employees. Those with treatment needs schedule for the next time we’re at your location. And we handle all of the details.
-        </h3>
-      </div>
-    </div>
-  </div>
-</div>
+{% include '/modular/module.html.twig' with {'page': page.find('/home/_apt-scheduling')} %}
 <!--  row 05 -->
-<div class="row right-two art override-right">
-  <div class="col">
-    <div class="col-contain icon solo">
-      <img src="{{ pages.find('/images/icon').media['trailer.svg'].url }}" alt="New Avenue Dentistry trailer icon">
-    </div>
-  </div>
-  <div class="col">
-    <div class="col-contain text">
-      <div class="copy-block">
-        <h3>
-          Our state of the art mobile facility arrives at your office to see patients on scheduled days.
-        </h3>
-      </div>
-    </div>
-  </div>
-</div>
+{% include '/modular/module.html.twig' with {'page': page.find('/home/_mobile-facility')} %}
 <!--  row 06 -->
-<div class="row left-one notification">
-  <div class="col">
-    <div class="col-contain icon solo">
-      <img src="{{ pages.find('/images/icon').media['notification.svg'].url }}" alt="New Avenue Dentistry mobile notifications">
-    </div>
-  </div>
-  <div class="col">
-    <div class="col-contain text">
-      <div class="copy-block">
-        <h3>
-          Employees get friendly appointment reminders, and notifications when we’re ready to see them.
-        </h3>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="col-contain image-bg solo" style="background-image: url({{ pages.find('/images/feature').media['notification.jpg'].url }})">
-    </div>
-  </div>
-</div>
+{% include '/modular/module.html.twig' with {'page': page.find('/home/_notifications')} %}
+
+
 <!--  row 07 -->
 <div class="row right-two delivered">
   <div class="col">

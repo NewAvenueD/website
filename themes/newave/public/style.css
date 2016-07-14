@@ -396,12 +396,12 @@ th {
       height: 100%; }
   .left-two > div:nth-of-type(2),
   .right-two > div:nth-of-type(1),
-  .left-one > div {
+  .three-cols > div {
     width: 33.3333%;
     width: calc(100% / 3); }
     .left-two > div:nth-of-type(2):after,
     .right-two > div:nth-of-type(1):after,
-    .left-one > div:after {
+    .three-cols > div:after {
       content: '';
       display: block;
       padding-bottom: 100%; }
@@ -414,7 +414,7 @@ th {
       content: '';
       display: block;
       padding-bottom: 50%; }
-  .full::after, .left-three > div::after {
+  .full::after, .one-col > div::after {
     content: '';
     display: block;
     padding-bottom: 33.3333%;

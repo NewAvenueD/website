@@ -1,11 +1,11 @@
 ---
 description: Homepage second row (Dentistry, Delivered..)
-classes: delivered
+classes: right-two delivered header
 bgImages:
   - smile.jpg
 ###
 ###
-### Row contents, rows separated by three dashes (---)
+### Cols separated by [section] shortcodes, rows (inside cols) separated by three dashes (---)
 ---
 [section name="first_column"]
 [/section]

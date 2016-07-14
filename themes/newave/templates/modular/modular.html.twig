@@ -1,0 +1,22 @@
+<div class="row {{page.header.classes}}">
+  <!--  the modulular template -->
+  {% for column in shortcode.section %}
+    {% set colIndex = (loop.index)-1 %}
+    {# set a background image style if there is one #}
+    {% set style = page.header.bgImages[colIndex] ? "background-image: url(/user/pages/images/feature/" ~ page.header.bgImages[colIndex] : "" %}
+
+    <div class="col">
+      <div class="col-contain" style="{{style}}">
+        <div class="inner">
+          {# rows are split on hr elements #}
+          {% for row in column|split('<hr />') %}
+          <div class="inner-row">
+            {{row}}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+  {% endfor %}
+</div>

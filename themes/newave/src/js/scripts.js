@@ -47,12 +47,15 @@ window.addEventListener('load', function () {
   // Unwrap images that markdown wraps in a paragraph
   const unwrapImage = () => {
     let docFrag = document.createDocumentFragment();
-    let p = document.querySelector('.elevator div.inner-row:nth-of-type(2) p');
-    while (p.firstChild) {
-      let child = p.removeChild(p.firstChild);
-      docFrag.appendChild(child);
+    let elementList = document.querySelectorAll('.col-contain.icon div.inner p');
+    for (var icon of elementList) {
+      console.log(icon);
+      while (icon.firstChild) {
+        let child = icon.removeChild(icon.firstChild);
+        docFrag.appendChild(child);
+      }
+      icon.parentNode.replaceChild(docFrag, icon);
     }
-    p.parentNode.replaceChild(docFrag, p);
   }
 
   const clearForm = () => {

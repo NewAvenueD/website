@@ -10,7 +10,6 @@
         <div class="inner">
           {# rows are split on hr elements #}
           {% set rows = column|split('<hr />') %}
-          {{ dump(rows, rows|length, rows|length > 1 )}}
           {% if rows|length > 1 %}
             {% for row in column|split('<hr />') %}
             <div class="inner-row row{{loop.index}}">

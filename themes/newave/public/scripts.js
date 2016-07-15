@@ -51,12 +51,36 @@ window.addEventListener('load', function () {
   // Unwrap images that markdown wraps in a paragraph
   var unwrapImage = function unwrapImage() {
     var docFrag = document.createDocumentFragment();
-    var p = document.querySelector('.elevator div.inner-row:nth-of-type(2) p');
-    while (p.firstChild) {
-      var child = p.removeChild(p.firstChild);
-      docFrag.appendChild(child);
+    var elementList = document.querySelectorAll('.col-contain.icon div.inner p');
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+      for (var _iterator = elementList[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+        var icon = _step.value;
+
+        console.log(icon);
+        while (icon.firstChild) {
+          var child = icon.removeChild(icon.firstChild);
+          docFrag.appendChild(child);
+        }
+        icon.parentNode.replaceChild(docFrag, icon);
+      }
+    } catch (err) {
+      _didIteratorError = true;
+      _iteratorError = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion && _iterator.return) {
+          _iterator.return();
+        }
+      } finally {
+        if (_didIteratorError) {
+          throw _iteratorError;
+        }
+      }
     }
-    p.parentNode.replaceChild(docFrag, p);
   };
 
   var clearForm = function clearForm() {

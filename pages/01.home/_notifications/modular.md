@@ -1,10 +1,15 @@
 ---
 description: Homepage seventh row (Employees get friendly apt. reminders)
-classes: three-cols notification
-bgImages:
-  - null
-  - null
-  - notification.jpg
+row_class_list: three-cols notification
+cols:
+  -
+    col_class_list: icon
+  -
+    col_class_list: text
+  -
+    col_class_list: photo
+    bgImage: notification.jpg
+
 ###
 ###
 ### Cols separated by [section] shortcodes, rows (inside cols) separated by three dashes (---)

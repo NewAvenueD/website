@@ -1,6 +1,12 @@
 ---
 description: Homepage second row (Dentistry, Delivered..)
-classes: right-two delivered header
+row_class_list: right-two delivered
+cols:
+  -
+    col_class_list: photo
+    bgImage: smile.jpg
+  -
+    col_class_list: header split icon
 bgImages:
   - smile.jpg
 ###

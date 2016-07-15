@@ -1,38 +1,18 @@
-
-//
-//
-// Home
-//
-//
-$color0: rgb(15, 65, 95);
-$color1: rgb(35, 37, 42);
-$color2: rgb(161, 166, 169);
-$color: #adadad;
-$crushedGrape: rgb(242, 242, 251);
-$concord: #806690;
-$bricks: #cc5252;
-$darkBlue: rgb(16, 95, 142);
-$blue: rgb(40, 183, 241);
-
 .home {
 
   .row h2 {
     color: white;
   }
-  .col {
-    filter: grayscale(30%);
-  }
+
 }
 //
 // Spiff up grid
 //
 .col-contain {
   padding: 5%;
-  overflow: auto;
-  background-color: $crushedGrape;
-  &.icon {
-    text-align: center;
-  }
+  // overflow: auto;
+  background-color: $white;
+
   @include at-least(tablet-landscape) {
     padding: 0;
     div.inner {
@@ -107,8 +87,6 @@ $blue: rgb(40, 183, 241);
 // Section rules
 //
 .hero {
-  filter: none;
-  // filter: grayscale(30%);
   color: rgb(12, 32, 49);
   span.cormorant {
     font-family: 'Cormorant Infant', serif;
@@ -196,7 +174,7 @@ $blue: rgb(40, 183, 241);
   text-align: center;
   div.col:nth-of-type(1) {
     div.col-contain {
-      background-color: $color2;
+      background-color: $darkBlue;
       div {
         img {
           max-width: 90%;
@@ -211,22 +189,16 @@ $blue: rgb(40, 183, 241);
 }
 .sched {
   div.text {
-    background-color: $crushedGrape;
+    background-color: $white;
   }
 }
 
 .sched, .art, .range, .notification, .regular {
   div.icon {
-    background-color: $color0;
+    background-color: $darkBlue;
   }
 }
 
-.art, .regular {
-
-  div.text {
-    background-color: $blue;
-  }
-}
 .contact {
   div.col-contain {
     padding: 0 9%;

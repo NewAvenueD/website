@@ -27,61 +27,12 @@
 {% include '/modular/module.html.twig' with {'page': page.find('/home/_mobile-facility')} %}
 <!--  row 06 -->
 {% include '/modular/module.html.twig' with {'page': page.find('/home/_notifications')} %}
-
-
 <!--  row 07 -->
-<div class="row right-two delivered">
-  <div class="col">
-    <div class="col-contain image-bg solo" style="background-image: url({{ pages.find('/images/feature').media['reflection.jpg'].url }})">
-    </div>
-  </div>
-  <div class="col">
-    <div class="col-contain header">
-      <div class="inner">
-        <h2>Dentistry, delivered to your workplace.</h2>
-      </div>
-
-    </div>
-  </div>
-</div>
+{% include '/modular/module.html.twig' with {'page': page.find('/home/_site-visits')} %}
 <!--  row 08 -->
-<div class="row right-two range override-right">
-  <div class="col">
-    <div class="col-contain icon solo">
-      <img src="{{ pages.find('/images/icon').media['tooth_magnifier.svg'].url }}" alt="New Avenue Dentistry use as your primary dentist">
-    </div>
-  </div>
-  <div class="col">
-    <div class="col-contain text">
-      <div class="copy-block">
-        <h3>
-          We offer a full range of services, enabling employees to use New Avenue as their primary dentist.
-        </h3>
-      </div>
-    </div>
-  </div>
-</div>
-<!--  row 06 -->
-<div class="row left-one regular">
-  <div class="col">
-    <div class="col-contain icon solo">
-      <img src="{{ pages.find('/images/icon').media['calendar.svg'].url }}" alt="New Avenue Dentistry makes regular site visits to your business">
-    </div>
-  </div>
-  <div class="col">
-    <div class="col-contain text">
-      <div class="copy-block">
-        <h3>
-          New Avenue makes regular site visits based on the needs of your team.
-        </h3>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="col-contain image-bg solo" style="background-image: url({{ pages.find('/images/feature').media['chair.jpg'].url }})">
-    </div>
-  </div>
-</div>
+{% include '/modular/module.html.twig' with {'page': page.find('/home/_full-range')} %}
+<!--  row 09 -->
+
 <div class="row left-three contact">
   <div class="col">
     <div class="col-contain">

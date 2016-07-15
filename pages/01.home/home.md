@@ -2,7 +2,7 @@
 # Page variables
 title: Introducing New Avenue Dentistry
 menu: Introducing
-body_classes: home
+body_class_list: home
 ###
 ###
 ### Page content

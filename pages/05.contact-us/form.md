@@ -1,6 +1,6 @@
 ---
 title: Contact Us
-body_classes: contact
+body_class_list: contact
 menu: Contact
 form:
     name: contact-us-form

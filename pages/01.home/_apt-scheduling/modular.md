@@ -1,6 +1,11 @@
 ---
 description: Homepage fourth row (Apt scheduling is opened..)
-classes: right-two sched
+row_class_list: right-two sched
+cols:
+  -
+    col_class_list: icon
+  -
+    col_class_list: text
 ###
 ###
 ### Cols separated by [section] shortcodes, rows (inside cols) separated

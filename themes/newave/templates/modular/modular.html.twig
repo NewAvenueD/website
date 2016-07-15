@@ -1,19 +1,25 @@
-<div class="row {{page.header.classes}}">
+<div class="row {{page.header.row_class_list}}">
   <!--  the modulular template -->
   {% for column in shortcode.section %}
     {% set colIndex = (loop.index)-1 %}
-    {# set a background image style if there is one #}
-    {% set style = page.header.bgImages[colIndex] ? "background-image: url(/user/pages/images/feature/" ~ page.header.bgImages[colIndex] : "" %}
-
+    {% set col = page.header.cols[(loop.index)-1] %}
+    {# make a style attribute with background photo if col has 'photo' class #}
+    {% set bg_style = 'photo' in col.col_class_list ? "background-image: url(/user/pages/images/feature/" ~ col.bgImage : "" %}
     <div class="col">
-      <div class="col-contain" style="{{style}}">
+      <div class="col-contain {{col.col_class_list}}" style="{{bg_style}}">
         <div class="inner">
           {# rows are split on hr elements #}
-          {% for row in column|split('<hr />') %}
-          <div class="inner-row">
-            {{row}}
-          </div>
-          {% endfor %}
+          {% set rows = column|split('<hr />') %}
+          {{ dump(rows, rows|length, rows|length > 1 )}}
+          {% if rows|length > 1 %}
+            {% for row in column|split('<hr />') %}
+            <div class="inner-row row{{loop.index}}">
+              {{row}}
+            </div>
+            {% endfor %}
+          {% else %}
+            {{column}}
+          {% endif %}
         </div>
       </div>
 

@@ -366,7 +366,7 @@ th {
   display: block;
   padding-bottom: 100%; }
 
-.hidden, .contact div.form-label {
+.hidden {
   margin: -1px;
   padding: 0;
   width: 1px;
@@ -697,179 +697,12 @@ body[data-state-menu=open] .navigation {
           body[data-state-menu=closed] .navigation div.nav-items li.item a {
             font-size: 50px; } }
 
-.home .row h2, .home .hero h2 {
-  color: white; }
-
-.home .col {
-  -webkit-filter: grayscale(30%);
-          filter: grayscale(30%); }
-
-.col-contain {
-  padding: 5%;
-  overflow: auto;
-  background-color: #f2f2fb; }
-  .col-contain.icon {
-    text-align: center; }
-  @media screen and (min-width: 1024px) {
-    .col-contain {
-      padding: 0; }
-      .col-contain div.inner {
-        position: relative;
-        width: 82%;
-        margin: 0;
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%); }
-      .col-contain.icon {
-        text-align: left; } }
-
-@media screen and (min-width: 1024px) {
-  .override-right div.col:nth-of-type(1) {
-    float: right; } }
-
-@media screen and (min-width: 1024px) {
-  .copy-block {
-    position: absolute;
-    width: 90%;
-    top: 50%;
-    left: 5%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%); }
-    .copy-block h3 {
-      margin: 0; } }
-
-.col-contain.image-bg {
-  display: none;
-  background-size: cover; }
-  @media screen and (min-width: 1024px) {
-    .col-contain.image-bg {
-      display: block; } }
-
 .col-contain.header {
-  background-color: #105f8e; }
-  @media screen and (min-width: 1024px) {
-    .col-contain.header div.inner h2 {
-      margin-top: 0; } }
+  color: white;
+  background-color: #245b7c; }
 
-.col-contain img[src*='icon']:only-child {
-  display: inline-block;
-  width: 60%;
-  max-height: 21vh;
-  position: relative; }
-  @media screen and (min-width: 1024px) {
-    .col-contain img[src*='icon']:only-child {
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%); } }
-
-.hero {
-  -webkit-filter: none;
-          filter: none;
-  color: #0c2031; }
-  .hero span.cormorant {
-    font-family: 'Cormorant Infant', serif;
-    font-weight: 300;
-    display: block;
-    text-align: left; }
-  .hero span.cormorant {
-    margin-left: 24%; }
-  @media screen and (min-width: 1024px) {
-    .hero h1 {
-      font-size: 4.4em; } }
-
-.elevator .inner div:nth-of-type(2) {
-  text-align: center; }
-  .elevator .inner div:nth-of-type(2) img {
-    width: 30%;
-    height: auto;
-    margin: 3% 0 3% -6%; }
-
-@media screen and (min-width: 1024px) {
-  .elevator div.inner {
-    height: 100%;
-    position: static;
-    -webkit-transform: none;
-            transform: none;
-    margin: 0 auto; }
-    .elevator div.inner div:nth-of-type(1) {
-      overflow: auto; }
-    .elevator div.inner div:nth-of-type(2) {
-      position: absolute;
-      width: inherit;
-      height: 40%;
-      min-height: 1px;
-      bottom: 0;
-      border-bottom: 3px solid black;
-      margin-bottom: 5px; }
-      .elevator div.inner div:nth-of-type(2) img {
-        position: absolute;
-        margin: 0;
-        width: auto;
-        height: 100%;
-        left: 64%;
-        bottom: 0; } }
-
-.save div.col:nth-of-type(1) div.col-contain {
-  background: url(../../../pages/images/feature/louvers.jpg);
-  background-size: 100%; }
-
-.save div.col:nth-of-type(2) div.col-contain div.tag-icons {
-  width: 84.3%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-  .save div.col:nth-of-type(2) div.col-contain div.tag-icons img {
-    width: 15%;
-    height: 15%; }
-
-.how-header {
-  text-align: center; }
-  .how-header div.col:nth-of-type(1) div.col-contain {
-    background-color: #a1a6a9; }
-    .how-header div.col:nth-of-type(1) div.col-contain div img {
-      max-width: 90%; }
-  .how-header h2 {
-    color: #eeeeee; }
-
-.sched div.text {
-  background-color: #f2f2fb; }
-
-.sched div.icon, .art div.icon, .range div.icon, .notification div.icon, .regular div.icon {
-  background-color: #0f415f; }
-
-.art div.text, .regular div.text {
-  background-color: #28b7f1; }
-
-.contact div.col-contain {
-  padding: 0 9%;
-  background-color: #105f8e; }
-
-.contact h2, .contact h3 {
-  margin: .48em auto; }
-
-.contact div.form-field {
-  margin: 5px auto; }
-
-.contact input, .contact button {
-  width: 100%;
-  border-radius: 2px;
-  border: none;
-  height: 1.85em;
-  font-size: 1.25em;
-  padding-left: 6px; }
-  @media screen and (min-width: 1024px) {
-    .contact input, .contact button {
-      width: 42%; } }
-
-.contact button {
-  margin: 12px auto; }
+.col-contain.icon {
+  background-color: #1b3e53; }
 
 .hero {
   text-align: center;
@@ -940,7 +773,7 @@ h1, h2 {
     font-size: 3.25em; } }
 
 .nav-n-content {
-  background-color: #d0d0d0;
+  background-color: #a2a6a8;
   z-index: 100;
   min-height: 100%;
   margin-bottom: -125px; }
@@ -964,7 +797,7 @@ main.content {
 
 div.footer {
   height: 125px;
-  background-color: #d0d0d0;
+  background-color: #a2a6a8;
   color: #c3c3c3; }
   @media screen and (min-width: 1440px) {
     div.footer {

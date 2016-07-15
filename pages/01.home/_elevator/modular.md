@@ -1,6 +1,9 @@
 ---
 description: Homepage Elevator Pitch
-classes: one-col elevator
+row_class_list: one-col elevator
+cols:
+  -
+    col_class_list: header split
 ###
 ###
 ### Row contents

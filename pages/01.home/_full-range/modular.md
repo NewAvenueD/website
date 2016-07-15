@@ -1,6 +1,6 @@
 ---
-description: Homepage fifth row (Our state of the art...)
-row_class_list: right-two override-right art
+description: Homepage fourth row (Apt scheduling is opened..)
+row_class_list: right-two sched
 cols:
   -
     col_class_list: icon
@@ -12,8 +12,8 @@ cols:
 ### by three dashes (---)
 ---
 [section name="first_column"]
-![New Avenue Dentistry](../../images/icon/trailer.svg)
+![New Avenue Dentistry](../../images/icon/tooth_magnifier.svg)
 [/section]
 [section name="second_column"]
-###Our state of the art mobile facility arrives at your office to see patients on scheduled days.
+###We offer a full range of services, enabling employees to use New Avenue as their primary dentist.
 [/section]

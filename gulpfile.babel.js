@@ -16,7 +16,7 @@ const pub = './themes/newave/public';
 
 // TODO: switch to gulp-watch so new files are watched too
 
-gulp.task('serve', ['sass'], () => {
+gulp.task('serve', ['sass', 'php'], () => {
   browserSync.init({
     proxy:'127.0.0.1:8010',
     port: 8080,

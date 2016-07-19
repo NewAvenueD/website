@@ -37,7 +37,9 @@ gulp.task('php', function() {
 gulp.task('sass', () => {
   gulp.src(scss)
     .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.init())
     .pipe(prefix())
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(pub))
     .pipe(browserSync.stream());
 });

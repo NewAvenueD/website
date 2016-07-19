@@ -2,9 +2,6 @@
 @import "mixins/mixins";
 @import "partials/partials";
 
-
-
-
 $desk-foot-nav: 550;
 $foot-nav: 125;
 * {
@@ -25,7 +22,7 @@ h2 {
 }
 
 .nav-n-content {
-  background-color: $grey;
+  background-color: $bgGrey;
   z-index: 100;
   min-height: 100%;
   // negative margin to accomodate footer

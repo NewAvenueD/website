@@ -69,42 +69,10 @@
   }
 }
 
-.col-contain {
-  img[src*='icon']:only-child {
-    display: inline-block;
-    width: 60%;
-    max-height: 21vh;
-    position: relative;
-    @include at-least(tablet-landscape) {
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-}
 
-//
-// Section rules
-//
-.hero {
-  color: rgb(12, 32, 49);
-  span.cormorant {
-    font-family: 'Cormorant Infant', serif;
-    font-weight: 300;
-    // text-transform: uppercase;
-    display: block;
-    text-align: left;
-  }
-  span.cormorant {
-    margin-left: 24%;
-    // margin-bottom: 205px;
-  }
-  @include at-least(tablet-landscape) {
-    h1 {
-      font-size: 4.4em;
-    }
-  }
-}
+
+
+
 
 .elevator {
   .inner div:nth-of-type(2) {
@@ -196,35 +164,5 @@
 .sched, .art, .range, .notification, .regular {
   div.icon {
     background-color: $darkBlue;
-  }
-}
-
-.contact {
-  div.col-contain {
-    padding: 0 9%;
-    background-color: $darkBlue;
-  }
-  div.form-label {
-    @extend %visually-hidden;
-  }
-  h2, h3 {
-    margin: .48em auto;
-  }
-  div.form-field {
-    margin: 5px auto;
-  }
-  input, button {
-    width: 100%;
-    border-radius: 2px;
-    border: none;
-    height: 1.85em;
-    font-size: 1.25em;
-    padding-left: 6px;
-    @include at-least(tablet-landscape) {
-      width: 42%;
-    }
-  }
-  button {
-    margin: 12px auto;
   }
 }

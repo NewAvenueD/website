@@ -16,14 +16,6 @@ content:
       heading:
         - Introducing
         - New Avenue Dentistry
-    # row 1
-    - class: right-two
-      cols:
-        left:
-          background: smile.jpg
-        right:
-          top: Dentistry, Delivered to your Workplace
-          bottom: trailer_parked.svg
 
 form:
     action: /

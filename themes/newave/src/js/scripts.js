@@ -47,9 +47,8 @@ window.addEventListener('load', function () {
   // Unwrap images that markdown wraps in a paragraph
   const unwrapImage = () => {
     let docFrag = document.createDocumentFragment();
-    let elementList = document.querySelectorAll('.col-contain.icon div.inner p');
+    let elementList = document.querySelectorAll('.col-contain div.inner p');
     for (var icon of elementList) {
-      console.log(icon);
       while (icon.firstChild) {
         let child = icon.removeChild(icon.firstChild);
         docFrag.appendChild(child);
@@ -73,12 +72,6 @@ window.addEventListener('load', function () {
 
       }
     }
-    // form.addEventListener("submit", (e) => {
-    //   console.log('Form submit');
-    //   e.preventDefault();
-    //   form.submit();
-    //   form.reset();
-    // })
   }
 
   if (isPage('home')) {

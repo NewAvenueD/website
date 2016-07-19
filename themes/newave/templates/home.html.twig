@@ -9,7 +9,7 @@
   <div class="hero-image" style="background-image: url({{ pages.find('/images/hero').media[row.background].url }})"></div>
   <div class="contents">
     <div class="inner bottom">
-      <h1 class="headline"><span class="cormorant">{{row.heading[0]}}</span>{{row.heading[1]}}</h1>
+      <h1 class="headline"><span class="cormorant">{{row.heading[0]}}</span> {{row.heading[1]}}</h1>
     </div>
   </div>
 </div>
@@ -33,12 +33,14 @@
 {% include '/modular/module.html.twig' with {'page': page.find('/home/_full-range')} %}
 <!--  row 09 -->
 
-<div class="row left-three contact">
+<div class="row one-col contact">
   <div class="col">
     <div class="col-contain">
-      <h2>Get in Touch</h2>
-      <h3>Drop us a line to find out how easy it is to bring on-site dentistry to your workplace</h3>
-      {% include '/modular/module.html.twig' with {'page': page.find('/home/_contact')} %}
+      <div class="inner">
+        <h2>Get in Touch</h2>
+        <h3>Drop us a line to find out how easy it is to bring on-site dentistry to your workplace</h3>
+        {% include '/modular/module.html.twig' with {'page': page.find('/home/_contact')} %}
+      </div>
     </div>
   </div>
 </div>

@@ -3,7 +3,7 @@ description: Homepage Elevator Pitch
 row_class_list: one-col elevator
 cols:
   -
-    col_class_list: header split
+    col_class_list: split
 ###
 ###
 ### Row contents

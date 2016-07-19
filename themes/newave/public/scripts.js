@@ -51,7 +51,7 @@ window.addEventListener('load', function () {
   // Unwrap images that markdown wraps in a paragraph
   var unwrapImage = function unwrapImage() {
     var docFrag = document.createDocumentFragment();
-    var elementList = document.querySelectorAll('.col-contain.icon div.inner p');
+    var elementList = document.querySelectorAll('.col-contain div.inner p');
     var _iteratorNormalCompletion = true;
     var _didIteratorError = false;
     var _iteratorError = undefined;
@@ -60,7 +60,6 @@ window.addEventListener('load', function () {
       for (var _iterator = elementList[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
         var icon = _step.value;
 
-        console.log(icon);
         while (icon.firstChild) {
           var child = icon.removeChild(icon.firstChild);
           docFrag.appendChild(child);
@@ -98,12 +97,6 @@ window.addEventListener('load', function () {
 
       }
     }
-    // form.addEventListener("submit", (e) => {
-    //   console.log('Form submit');
-    //   e.preventDefault();
-    //   form.submit();
-    //   form.reset();
-    // })
   };
 
   if (isPage('home')) {

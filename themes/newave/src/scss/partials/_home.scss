@@ -1,7 +1,174 @@
+.col-contain {
+  background-color: $white;
+  padding: 5%;
+  @include at-least(tablet-landscape) {
+    padding: 0;
+  }
+}
+
 .col-contain.header {
   color: white;
   background-color: $mediumBlue;
 }
 .col-contain.icon {
   background-color: $darkBlue;
+}
+.col-contain.photo {
+  display: none;
+  background-size: cover;
+  @include at-least(tablet-landscape) {
+    display: block;
+  }
+}
+.col-contain .inner {
+  overflow: auto;
+  @include at-least(tablet-landscape) {
+    width: 88%;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+}
+
+// icons that are the only contents of column
+.icon {
+  text-align: center;
+  img[src*='icon'] {
+    width: 60%;
+    max-height: 21vh;
+    @include at-least(tablet-landscape) {
+      display: inline-block;
+    }
+  }
+}
+
+//
+// Section specific rules
+//
+
+.hero {
+  color: rgb(12, 32, 49);
+  span.cormorant {
+    font-family: 'Cormorant Infant', serif;
+    font-weight: 300;
+    display: block;
+    text-align: left;
+  }
+  span.cormorant {
+    margin-left: 24%;
+  }
+  @include at-least(tablet-landscape) {
+    h1 {
+      font-size: 4.4em;
+    }
+  }
+}
+//
+// 'Dentistry, delivered...'
+//
+.delivered .col-contain {
+  background-color: $mediumBlue;
+  .row1 {
+    text-align: left;
+  }
+  @include at-least(tablet-landscape) {
+    .row2 {
+      text-align: right;
+      border-bottom: 2px solid;
+    }
+    img {
+      width: 22%;
+      margin: 0 10% -3px 0
+
+    }
+  }
+}
+//
+// Elevator pitch
+//
+.elevator {
+  h3 {
+    margin-top: 0;
+  }
+  .row2 {
+    text-align: center;
+    img {
+      width: 100%;
+      @include at-least(tablet-landscape) {
+        width: 52%;
+      }
+    }
+  }
+}
+//
+// 'How it Works'
+//
+.how-header .col-contain {
+  background-color: $grey;
+  h2 {
+    font-size: 10vw;
+    @include at-least(tablet-landscape) {
+      @include responsive-font(5vw, 35px, 150px, 50px);
+    }
+  }
+}
+//
+// 'Our state of the art facility...'
+//
+.art {
+  @include at-least(tablet-landscape) {
+    .col:first-child {
+      float: right;
+    }
+  }
+  .col-contain.text {
+    background-color: $lightBlue;
+  }
+}
+//
+// 'Regular site visits...'
+//
+.site-visits {
+  @include at-least(tablet-landscape) {
+    .col:first-child, .col:nth-child(2) {
+      float: right;
+    }
+  }
+  .col-contain.text {
+    background-color: $lightBlue;
+  }
+}
+//
+// mini contact form
+//
+.contact {
+  div.col-contain {
+    padding: 0 9%;
+    background-color: $mediumBlue;
+  }
+  div.form-label {
+    @extend %visually-hidden;
+  }
+  h2, h3 {
+    margin: .48em auto;
+  }
+  div.form-field {
+    margin: 5px auto;
+  }
+  input, button {
+    width: 100%;
+    border-radius: 2px;
+    border: none;
+    height: 1.85em;
+    font-size: 1.25em;
+    padding-left: 6px;
+    @include at-least(tablet-landscape) {
+      width: 42%;
+    }
+  }
+  button {
+    margin: 12px auto;
+  }
 }

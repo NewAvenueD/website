@@ -1,12 +1,15 @@
 ---
 description: Homepage fifth row (Our state of the art...)
-row_class_list: right-two override-right art
+row_class_list: right-two override art
 cols:
   -
     col_class_list: icon
   -
     col_class_list: text
 ###
+###
+### (Left-right arrangement is overridden for this module to make
+### row ordering work on mobile)
 ###
 ### Cols separated by [section] shortcodes, rows (inside cols) separated
 ### by three dashes (---)

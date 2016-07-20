@@ -1,3 +1,11 @@
+//
+// Useful variables
+//
+$blackish: rgb(31, 1, 12);
+$navHeight: 95;
+//
+// Utility classes and mixins
+// 
 .hidden {
   @extend %visually-hidden;
 
@@ -16,7 +24,7 @@
     padding-bottom: 100%;
   }
 }
-$blackish: rgb(31, 1, 12);
+
 ///
 /// Viewport sized typography with minimum and maximum values
 ///

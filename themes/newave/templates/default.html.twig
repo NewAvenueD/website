@@ -4,7 +4,9 @@
   <div class="col hero-image"></div>
   <h1 class="separator">{{ page.header.title }}</h1>
 </section>
+<div class="inner">
   {{ page.content }}
+</div>
 {% endblock %}
 {% block footer %}
   {% include 'partials/bottom-nav.html.twig' %}

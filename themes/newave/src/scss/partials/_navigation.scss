@@ -126,8 +126,8 @@
   #{$menuClosed} .navigation {
     transform: none;
     width: 100%;
-    height: auto;
-    min-height: 9vh;
+    height: $navHeight * 1px;
+    min-height: 8vh;
     // left: 0;
     div.burger-tab {
       display: none;

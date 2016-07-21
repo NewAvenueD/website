@@ -56,6 +56,17 @@ main.content {
 }
 
 
+.about {
+  main {
+    background-color: $white;
+  }
+  div.inner {
+    padding: 5%
+  }
+  h1 {
+    margin-left: 13vw;
+  }
+}
 
 //
 // Sticky Footer

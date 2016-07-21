@@ -1,6 +1,8 @@
 ---
 title: About New Avenue
+hero: steps.jpg
 menu: About
+body_class_list: about
 ---
 We’re a group of committed dental professionals who believe taking care of your teeth should be easy. After hearing for years from patients how difficult it can be to fit appointments into their busy schedules we thought there has to be a better way.
 

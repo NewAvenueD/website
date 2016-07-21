@@ -57,12 +57,12 @@ main.content {
 
 
 .about {
-  & > div.inner {
-    padding: 5%;
-    background-color: $white;
-  }
   h1 {
     margin-left: 13vw;
+  }
+  main > .inner {
+    padding: 5%;
+    background-color: $white;
   }
 }
 

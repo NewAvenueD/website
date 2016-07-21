@@ -19,7 +19,7 @@ $blackish: rgb(16, 25, 29);
         width: 84%;
         margin:  auto;
       }
-      @include at-least(desktop) {
+      @include at-least(tablet-landscape) {
         position: absolute;
         bottom: 6%;
       }
@@ -38,14 +38,14 @@ $blackish: rgb(16, 25, 29);
     .col:nth-child(2) .inner {
         width: 100%;
         top: 0;
-        @include at-least(desktop) {
+        @include at-least(tablet-landscape) {
           transform: translateX(-50%);
         }
       }
   }
   .right-two.override {
     .col:first-child {
-      @include at-least(desktop) {
+      @include at-least(tablet-landscape) {
         float: right;
       }
     }

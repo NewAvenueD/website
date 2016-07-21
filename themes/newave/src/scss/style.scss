@@ -57,11 +57,9 @@ main.content {
 
 
 .about {
-  main {
+  & > div.inner {
+    padding: 5%;
     background-color: $white;
-  }
-  div.inner {
-    padding: 5%
   }
   h1 {
     margin-left: 13vw;

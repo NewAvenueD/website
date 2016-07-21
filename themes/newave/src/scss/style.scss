@@ -65,7 +65,17 @@ main.content {
     background-color: $white;
   }
 }
+.faqs {
+  .hero .hero-image:after {
+    opacity: .3;
+  }
+}
 
+.contact {
+  .hero {
+    color: white;
+  }
+}
 //
 // Sticky Footer
 //

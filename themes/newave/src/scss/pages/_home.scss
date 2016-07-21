@@ -49,6 +49,10 @@
 //
 
 .hero {
+  padding: 10% 0;
+  @include at-least(tablet-landscape) {
+    padding: 0;
+  }
   color: rgb(12, 32, 49);
   span.cormorant {
     font-family: 'Cormorant Infant', serif;
@@ -64,6 +68,7 @@
       font-size: 4.4em;
     }
   }
+
 }
 //
 // 'Dentistry, delivered...'

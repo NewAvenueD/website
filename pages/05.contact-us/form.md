@@ -1,6 +1,7 @@
 ---
 title: Contact Us
 body_class_list: contact
+hero: desk.jpg
 menu: Contact
 form:
     name: contact-us-form

@@ -1,8 +1,17 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-
-    {{ content }}
+<section class="hero">
+  <div class="col hero-image" style="background-image: url({{ pages.find('/images/hero').media[page.header.hero].url }})"></div>
+  <div class="contents">
+    <div class="inner">
+      <h1 class="headline">{{ page.header.title }}</h1>
+    </div>
+  </div>
+</section>
+<div class="inner">
+  {{ page.content }}
+</div>
     {% include "forms/form.html.twig" %}
 
 {% endblock %}

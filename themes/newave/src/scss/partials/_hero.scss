@@ -1,4 +1,4 @@
-$hero-height-small: 30vh;
+$hero-height-small: auto;
 $hero-height: 50vh;
 
 .hero {
@@ -22,27 +22,27 @@ $hero-height: 50vh;
   };
   div.contents {
     height: $hero-height-small;
+    position: relative;
     @include at-least(tablet-landscape) {
       height: $hero-height;
+      .inner.bottom {
+        position: absolute;
+        width: 100%;
+        bottom: 24%;
+      }
+      // position: absolute;
     };
-    position: absolute;
     // top: 50%;
     // transform: translateY(-50%);
     right: 0; left: 0;
     z-index: 102;
-    .inner.bottom {
-      position: absolute;
-      width: 100%;
-      bottom: 24%;
-    }
   }
   .hero-image {
-    height: $hero-height-small;
+    position: absolute;
     @include at-least(tablet-landscape) {
       height: $hero-height;
     };
     content: '';
-    position: absolute;
     z-index: 101;
     top: 0; right: 0; left: 0; bottom: 0;
     background-size: cover;

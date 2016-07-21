@@ -1,5 +1,7 @@
 ---
 title: FAQs
+body_class_list: faqs
+hero: gleam.jpg
 faqs:
   1:
     q: What is 'mobile dentistry?'

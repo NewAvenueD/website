@@ -1,17 +1,20 @@
 ---
 title: Why New Avenue
+hero: interior.jpg
+body_class_list: why
+lead: Tired of waiting rooms? We are too. That’s why we don’t have one. We know going to the dentist can be a chore, that’s why we’re making it easier for your team by bringing the dental office to you. It’s dentistry, delivered to your workplace.
 benefits:
   whom:
     employers:
       name: For Employers
       benies:
-        1: No dental benefits? We can customize a discount plan for your employees at no cost to you.
+        1: Innovative, zero-cost employee wellness benefit
         2: On-site dentistry fits with your current dental benefits
-        3: True cost savings for self-insured employers
-        4: Prevent dental emergencies that cause 1 in 10 employees to miss a full day of work each year
-        5: Every $1 spent on dental prevention can save up to $50 in medical treatment costs
-        6: Decrease employee absence for routine dental care from 3-4 hours to 1 hour or less (including travel time)
-        7: No dental benefits? We can customize a discount plan for your employees at no cost to you.
+        3: No dental benefits? We can create a customized discount plan for your employees
+        #4: True cost savings for self-insured employers
+        5: Prevent dental emergencies that cause 1 in 10 employees to miss a full day of work each year
+        6: Every $1 spent on dental prevention can save up to $50 in medical treatment costs
+        7: Decrease employee absence for routine dental care from 3-4 hours to 1 hour or less (including travel time)
     employees:
       name: For Employees
       benies:
@@ -27,7 +30,7 @@ benefits:
         3: We focus on long-term relationships with employers who value providing excellent benefits to their employees.
         4: Property Managers and Facility Managers can offer on-site dentistry to their tenants to help attract and retain tenants.
 ---
-Tired of waiting rooms? We are too. That’s why we don’t have one. We know going to the dentist can be a chore, that’s why we’re making it easier for your team by bringing the dental office to you. It’s dentistry, delivered to your workplace.
+
 
 
 [comment]: <> (TODO: Icons?)

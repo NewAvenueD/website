@@ -1,8 +1,10 @@
 {% extends 'partials/base.html.twig' %}
 {% block content %}
 <section class="hero">
-  <div class="col hero-image"></div>
-  <h1 class="separator">{{ page.header.title }}</h1>
+  <div class="col hero-image" style="background-image: url({{ pages.find('/images/hero').media[page.header.hero].url }})"></div>
+  <div class="contents">
+    <h1 class="separator">{{ page.header.title }}</h1>
+  </div>
 </section>
 <div class="inner">
   {{ page.content }}

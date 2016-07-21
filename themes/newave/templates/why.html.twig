@@ -1,0 +1,88 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+<section class="hero">
+  <div class="col hero-image" style="background-image: url({{ pages.find('/images/hero').media[page.header.hero].url }})"></div>
+  <div class="contents">
+    <h1 class="separator">{{ page.header.title }}</h1>
+    <div class="lead">
+      <h3>{{ page.header.lead }}</h3>
+    </div>
+
+  </div>
+</section>
+<div class="inner">
+  <!--  for employers -->
+  <div class="row right-two employers">
+    <div class="col">
+      <div class="col-contain icon" style="">
+        <div class="inner">
+          <h2>For Employers</h2>
+          <img alt="New Avenue Dentistry" src="/user/pages/images/icon/person.svg">
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="col-contain text" style="">
+        <div class="inner">
+          {% set whom = page.header.benefits.whom.employers %}
+          <ul>
+            {% for benie in whom.benies %}
+            <li><span class="text">{{benie}}</span></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  for employees -->
+  <div class="row right-two override">
+    <div class="col">
+      <div class="col-contain icon" style="">
+        <div class="inner">
+          <h2>For Employees</h2>
+          <img alt="New Avenue Dentistry" src="/user/pages/images/icon/team.svg">
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="col-contain text" style="">
+        <div class="inner">
+          {% set whom = page.header.benefits.whom.employees %}
+          <ul>
+            {% for benie in whom.benies %}
+            <li><span class="text">{{benie}}</span></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  for teeth -->
+  <div class="row right-two">
+    <div class="col">
+      <div class="col-contain icon" style="">
+        <div class="inner">
+          <h2>For Teeth</h2>
+          <img alt="New Avenue Dentistry" src="/user/pages/images/icon/tooth.svg">
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="col-contain text" style="">
+        <div class="inner">
+          {% set whom = page.header.benefits.whom.teeth %}
+          <ul>
+            {% for benie in whom.benies %}
+            <li>{{benie}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+{% endblock %}
+{% block footer %}
+  {% include 'partials/bottom-nav.html.twig' %}
+{% endblock %}

@@ -1,0 +1,76 @@
+.why {
+  h2 {
+    margin-top: 0;
+  }
+  .hero .contents {
+    color: white;
+    .lead {
+      text-align: left;
+      h3 {
+        width: 84%;
+        margin:  auto;
+      }
+      @include at-least(desktop) {
+        position: absolute;
+        bottom: 12%;
+      }
+      &::after {
+        background-color: white;
+      }
+    }
+  }
+  .row {
+    .col:first-child {
+      color: white;
+      h2 {
+        @include responsive-font(2vw, 20px, 39px, 36px);
+      }
+    }
+    .col:nth-child(2) .inner {
+        width: 100%;
+        top: 0;
+        @include at-least(desktop) {
+          transform: translateX(-50%);
+        }
+      }
+  }
+  .right-two.override {
+    .col:first-child {
+      @include at-least(desktop) {
+        float: right;
+      }
+    }
+    .col:nth-child(2) .col-contain {
+      background-color: $grey;
+    }
+  }
+  .row ul {
+    padding-left: 0;
+    margin-top: 0;
+    list-style: none;
+    li {
+      @include responsive-font(2.3vh, 18px, 24px, 13px);
+      line-height: 1.5;
+      span {
+        display: inline-block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 89%;
+        margin-left: -18px;
+      }
+    }
+    li:nth-child(2n-1) {
+      background-color: $bgGrey;
+    }
+    li:before {
+      content: '';
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      margin-left: 12px;
+      background-image: url(../../../pages/images/icon/check.png);
+      background-size: cover;
+    }
+  }
+}

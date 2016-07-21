@@ -1,7 +1,16 @@
+$blackish: rgb(16, 25, 29);
 .why {
+  h1 {
+    margin-top: 2.8vh;
+  }
   h2 {
     margin-top: 0;
   }
+
+.hero .hero-image:after {
+    opacity: .74;
+    background: linear-gradient(-6deg, $blackish, $blackish, transparent, $blackish);
+}
   .hero .contents {
     color: white;
     .lead {
@@ -12,7 +21,7 @@
       }
       @include at-least(desktop) {
         position: absolute;
-        bottom: 12%;
+        bottom: 6%;
       }
       &::after {
         background-color: white;

@@ -80,7 +80,8 @@ $blackish: rgb(16, 25, 29);
         width: 100%;
         top: 0;
         @include at-least(tablet-landscape) {
-          transform: translateX(-50%);
+          transform: translate(-50%, -50%);
+          top: 50%;
         }
       }
   }

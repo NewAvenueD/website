@@ -112,6 +112,7 @@ window.addEventListener('load', function () {
   };
   // toggle nav on menu button click
   document.getElementById('js-menu-button').onclick = function (e) {
+    alert('clicked');
     e.preventDefault();
     toggleNav();
   };
@@ -120,6 +121,7 @@ window.addEventListener('load', function () {
   body.onclick = function (e) {
     var inSideNav = navigation.contains(e.target);
     if (body.getAttribute('data-state-menu') === 'open' && !inSideNav) {
+      alert('body click');
       toggleNav();
     }
   };

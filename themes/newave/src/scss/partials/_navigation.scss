@@ -51,6 +51,7 @@
       @extend .square;
     }
     a.burger-icon {
+      cursor: pointer;
       color: white;
       @extend .centered;
       line-height: 100%;

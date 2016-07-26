@@ -21,6 +21,11 @@ form:
     action: /
     name: quick-contact
     fields:
+        - name: comments
+          label: Additional comments
+          placeholder: Additional comments
+          type: textarea
+          class: comments
         - name: name
           label: Name
           default: ''
@@ -45,10 +50,7 @@ form:
           validate:
             required: true
 
-        - name: comments
-          label: Additional comments
-          placeholder: Additional comments
-          type: textarea
+
 
     buttons:
         - type: submit

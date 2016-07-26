@@ -160,20 +160,45 @@
     margin: .48em auto;
   }
   div.form-field {
-    margin: 5px auto;
   }
-  input, button {
+  input, button, textarea {
     width: 100%;
     border-radius: 2px;
     border: none;
     height: 1.85em;
     font-size: 1.25em;
     padding-left: 6px;
+  }
+  form > div {
+    margin: 5px auto;
     @include at-least(tablet-landscape) {
       width: 42%;
+      display: inline-block;
+      float: left;
+      clear: left;
     }
+  }
+  form > div:first-child {
+    @include at-least(tablet-landscape) {
+      float: right;
+      clear: none;
+      height: 250px;
+      width: 57%;
+    }
+  }
+
+  // fixes phantom margin
+  div.form-textarea-wrapper {
+    margin-bottom: -4px;
   }
   button {
     margin: 12px auto;
+  }
+  textarea {
+    @include at-least(tablet-landscape) {
+      width: 100%;
+      display: inline-block;
+      // float: right;
+    }
   }
 }

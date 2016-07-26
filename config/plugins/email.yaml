@@ -10,7 +10,7 @@ mailer:
     port: 25
     encryption: tls
     user: postmaster@mg.newavenuedentistry.com
-    password: 9c5e26eea0239ecc2893dbddc392219a
+    password: 4Js0AF1YMsePG9CeJw9ynB7OnUvWrT
   sendmail:
     bin: '/usr/sbin/sendmail'
 content_type: text/html

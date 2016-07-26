@@ -45,6 +45,11 @@ form:
           validate:
             required: true
 
+        - name: comments
+          label: Additional comments
+          placeholder: Additional comments
+          type: textarea
+
     buttons:
         - type: submit
           value: Submit

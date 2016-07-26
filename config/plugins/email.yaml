@@ -6,11 +6,11 @@ to_name: Thom
 mailer:
   engine: smtp
   smtp:
-    server: smtp.gmail.com
-    port: 587
+    server: smtp.mailgun.org
+    port: 25
     encryption: tls
-    user: adam.romines@gmail.com
-    password: H!llyard
+    user: postmaster@mg.newavenuedentistry.com
+    password: 9c5e26eea0239ecc2893dbddc392219a
   sendmail:
     bin: '/usr/sbin/sendmail'
 content_type: text/html

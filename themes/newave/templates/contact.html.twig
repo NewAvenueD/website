@@ -5,6 +5,7 @@
   <div class="col hero-image" style="background-image: url({{ pages.find('/images/hero').media[page.header.hero].url }})"></div>
   <div class="contents">
     <div class="inner">
+      <!-- user/themes/newave/templates/form.html.twig -->
       <h1 class="headline">{{ page.header.title }}</h1>
     </div>
   </div>
@@ -12,6 +13,7 @@
 <div class="inner">
   {{ page.content }}
 </div>
-    {% include "forms/form.html.twig" %}
+{# refernces core form template supplied by plugin #}
+{% include "forms/form.html.twig" %}
 
 {% endblock %}

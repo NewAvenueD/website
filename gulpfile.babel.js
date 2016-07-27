@@ -46,7 +46,9 @@ gulp.task('sass', () => {
 
 gulp.task('js', () => {
   gulp.src(js)
-    .pipe(babel())
+    .pipe(babel({
+            presets: ['es2015']
+        }))
     .pipe(gulp.dest(pub))
 })
 

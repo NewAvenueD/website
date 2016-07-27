@@ -50,35 +50,10 @@ window.addEventListener('load', function () {
 
   // Unwrap images that markdown wraps in a paragraph
   var unwrapImage = function unwrapImage() {
-    var docFrag = document.createDocumentFragment();
-    var elementList = document.querySelectorAll('.col-contain div.inner p');
-    var _iteratorNormalCompletion = true;
-    var _didIteratorError = false;
-    var _iteratorError = undefined;
-
-    try {
-      for (var _iterator = elementList[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-        var icon = _step.value;
-
-        while (icon.firstChild) {
-          var child = icon.removeChild(icon.firstChild);
-          docFrag.appendChild(child);
-        }
-        icon.parentNode.replaceChild(docFrag, icon);
-      }
-    } catch (err) {
-      _didIteratorError = true;
-      _iteratorError = err;
-    } finally {
-      try {
-        if (!_iteratorNormalCompletion && _iterator.return) {
-          _iterator.return();
-        }
-      } finally {
-        if (_didIteratorError) {
-          throw _iteratorError;
-        }
-      }
+    var elementList = document.querySelectorAll('.col-contain div.inner p img');
+    for (var i = 0; i < elementList.length; i++) {
+      var icon = elementList[i];
+      icon.parentNode.parentNode.replaceChild(icon, icon.parentNode);
     }
   };
 
@@ -112,7 +87,6 @@ window.addEventListener('load', function () {
   };
   // toggle nav on menu button click
   document.getElementById('js-menu-button').onclick = function (e) {
-    alert('clicked');
     e.preventDefault();
     toggleNav();
   };
@@ -121,7 +95,6 @@ window.addEventListener('load', function () {
   body.onclick = function (e) {
     var inSideNav = navigation.contains(e.target);
     if (body.getAttribute('data-state-menu') === 'open' && !inSideNav) {
-      alert('body click');
       toggleNav();
     }
   };

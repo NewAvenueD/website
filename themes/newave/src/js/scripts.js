@@ -36,7 +36,7 @@ window.addEventListener('load', function () {
   }
 
   // What page are we on?
-  const isPage = page => document.body.classList.contains(page)
+  const isPage = page => document.body.classList.contains(page);
 
   //
   // ** Page specific scripts **
@@ -46,14 +46,10 @@ window.addEventListener('load', function () {
 
   // Unwrap images that markdown wraps in a paragraph
   const unwrapImage = () => {
-    let docFrag = document.createDocumentFragment();
-    let elementList = document.querySelectorAll('.col-contain div.inner p');
-    for (var icon of elementList) {
-      while (icon.firstChild) {
-        let child = icon.removeChild(icon.firstChild);
-        docFrag.appendChild(child);
-      }
-      icon.parentNode.replaceChild(docFrag, icon);
+    var elementList = document.querySelectorAll('.col-contain div.inner p img');
+    for (var i = 0; i<elementList.length; i++) {
+      var icon = elementList[i];
+      icon.parentNode.parentNode.replaceChild(icon, icon.parentNode);
     }
   }
 
@@ -90,7 +86,6 @@ window.addEventListener('load', function () {
   }
   // toggle nav on menu button click
   document.getElementById('js-menu-button').onclick = (e) => {
-    alert('clicked');
     e.preventDefault();
     toggleNav();
   };
@@ -99,7 +94,6 @@ window.addEventListener('load', function () {
   body.onclick = (e) => {
     let inSideNav = navigation.contains(e.target);
     if (body.getAttribute('data-state-menu') === 'open' && !inSideNav) {
-      alert('body click')
       toggleNav();
     }
   }

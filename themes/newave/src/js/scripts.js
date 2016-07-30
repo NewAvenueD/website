@@ -72,13 +72,17 @@ window.addEventListener('load', function () {
 
   if (isPage('home')) {
     var timer = setTimeout(clearForm(), 2000);
+    const sr = ScrollReveal({ reset: true });
+    sr.reveal('.beni');
     unwrapImage();
   }
 
-  if (isPage('contact')) {
-
+  if (isPage('why')) {
+    const sr = ScrollReveal({ reset: true });
+    sr.reveal('.beni');
   }
 
+  if (isPage('contact')) {}
 
   const toggleNav = function () {
     // let startingState = body.getAttribute('data-state-menu');

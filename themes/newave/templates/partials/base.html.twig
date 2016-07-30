@@ -20,6 +20,7 @@
       {{ assets.css() }}
     {% endblock %}
     {% block javascript %}
+    {% do assets.add('https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js') %}
       {% do assets.add('theme://public/scripts.js') %}
 
       {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}

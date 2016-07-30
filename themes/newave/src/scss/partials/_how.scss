@@ -4,165 +4,165 @@
     color: white;
   }
 
-}
-//
-// Spiff up grid
-//
-.col-contain {
-  padding: 5%;
-  // overflow: auto;
-  background-color: $white;
-
-  @include at-least(tablet-landscape) {
-    padding: 0;
-    div.inner {
-      position: relative;
-      width: 82%;
-      margin: 0;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    &.icon {
-      text-align: left;
-    }
-  }
-}
-.override-right {
-  @include at-least(tablet-landscape) {
-    div.col:nth-of-type(1) {
-      float: right;
-    }
-  }
-}
-
-// is this being used for text?
-@include at-least(tablet-landscape) {
-  .copy-block {
-    h3 {
-      margin: 0;
-    }
-    position: absolute;
-    width: 90%;
-    top: 50%;
-    left: 5%;
-    transform: translateY(-50%);
-  }
-}
-
-.col-contain.image-bg {
-  display: none;
-  background-size: cover;
-  @include at-least(tablet-landscape) {
-    display: block;
-  }
-}
-
-.col-contain.header {
-  background-color: $darkBlue;
-  @include at-least(tablet-landscape) {
-    div.inner {
-      h2 {
-        margin-top: 0;
-      }
-    }
-  }
-}
-
-
-
-
-
-
-.elevator {
-  .inner div:nth-of-type(2) {
-    text-align: center;
-    img {
-      width: 30%;
-      height: auto;
-      margin: 3% 0 3% -6%;
-    }
-  }
-}
-
-@include at-least(tablet-landscape) {
-  .elevator {
-    // overide normal centering to achieve bottom border
-    div.inner {
-      height: 100%;
-      position: static;
-      transform: none;
-      margin: 0 auto;
-      div:nth-of-type(1) {
-        overflow: auto;
-      }
-      div:nth-of-type(2) {
-        position: absolute;
-        width: inherit;
-        height: 40%;
-        min-height: 1px;
-        bottom: 0;
-        border-bottom: 3px solid black;
-        margin-bottom: 5px;
-        img {
-          position: absolute;
-          margin: 0;
-          width: auto;
-          height: 100%;
-          left: 64%;
-          bottom: 0;
-        }
-      }
-    }
-  }
-}
-
-.save {
-  div.col:nth-of-type(1) div.col-contain {
-    background: url(../../../pages/images/feature/louvers.jpg);
-    background-size: 100%;
-  }
-  div.col:nth-of-type(2) {
-    div.col-contain {
-      div.tag-icons {
-        width: 84.3%;
-        // margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        img {
-          width: 15%;
-          height: 15%;
-        }
-      }
-    }
-  }
-}
-
-.how-header {
-  text-align: center;
-  div.col:nth-of-type(1) {
-    div.col-contain {
-      background-color: $darkBlue;
-      div {
-        img {
-          max-width: 90%;
-        }
-      }
-    }
-  }
-
-  h2 {
-    color: rgb(238, 238, 238);
-  }
-}
-.sched {
-  div.text {
+  //
+  // Spiff up grid
+  //
+  .col-contain {
+    padding: 5%;
+    // overflow: auto;
     background-color: $white;
-  }
-}
 
-.sched, .art, .range, .notification, .regular {
-  div.icon {
+    @include at-least(tablet-landscape) {
+      padding: 0;
+      div.inner {
+        position: relative;
+        width: 82%;
+        margin: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &.icon {
+        text-align: left;
+      }
+    }
+  }
+  .override-right {
+    @include at-least(tablet-landscape) {
+      div.col:nth-of-type(1) {
+        float: right;
+      }
+    }
+  }
+
+  // is this being used for text?
+  @include at-least(tablet-landscape) {
+    .copy-block {
+      h3 {
+        margin: 0;
+      }
+      position: absolute;
+      width: 90%;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .col-contain.image-bg {
+    display: none;
+    background-size: cover;
+    @include at-least(tablet-landscape) {
+      display: block;
+    }
+  }
+
+  .col-contain.header {
     background-color: $darkBlue;
+    @include at-least(tablet-landscape) {
+      div.inner {
+        h2 {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+  .elevator {
+    .inner div:nth-of-type(2) {
+      text-align: center;
+      img {
+        width: 30%;
+        height: auto;
+        margin: 3% 0 3% -6%;
+      }
+    }
+  }
+
+  @include at-least(tablet-landscape) {
+    .elevator {
+      // overide normal centering to achieve bottom border
+      div.inner {
+        height: 100%;
+        position: static;
+        transform: none;
+        margin: 0 auto;
+        div:nth-of-type(1) {
+          overflow: auto;
+        }
+        div:nth-of-type(2) {
+          position: absolute;
+          width: inherit;
+          height: 40%;
+          min-height: 1px;
+          bottom: 0;
+          border-bottom: 3px solid black;
+          margin-bottom: 5px;
+          img {
+            position: absolute;
+            margin: 0;
+            width: auto;
+            height: 100%;
+            left: 64%;
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .save {
+    div.col:nth-of-type(1) div.col-contain {
+      background: url(../../../pages/images/feature/louvers.jpg);
+      background-size: 100%;
+    }
+    div.col:nth-of-type(2) {
+      div.col-contain {
+        div.tag-icons {
+          width: 84.3%;
+          // margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          img {
+            width: 15%;
+            height: 15%;
+          }
+        }
+      }
+    }
+  }
+
+  .how-header {
+    text-align: center;
+    div.col:nth-of-type(1) {
+      div.col-contain {
+        background-color: $darkBlue;
+        div {
+          img {
+            max-width: 90%;
+          }
+        }
+      }
+    }
+
+    h2 {
+      color: rgb(238, 238, 238);
+    }
+  }
+  .sched {
+    div.text {
+      background-color: $white;
+    }
+  }
+
+  .sched, .art, .range, .notification, .regular {
+    div.icon {
+      background-color: $darkBlue;
+    }
   }
 }

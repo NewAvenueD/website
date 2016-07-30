@@ -1,4 +1,10 @@
+/*=============================================>>>>>
+= Why New Avenue =
+===============================================>>>>>*/
+
+// set locally; used in hero filter
 $blackish: rgb(16, 25, 29);
+
 .why {
   h1 {
     margin-top: 2.8vh;
@@ -28,75 +34,66 @@ $blackish: rgb(16, 25, 29);
       }
     }
   }
-  .row {
-    .col-contain {
-      padding: 0;
-      &::first-child {
+  .person-head {
+    .icon {
+      text-align: center;
+      img[src*='icon'] {
+        width: 50vw;
         @include at-least(tablet-landscape) {
-          padding: 0;
-        }
-      }
-    }
-    ul {
-      padding-left: 0;
-      margin-top: 0;
-      list-style: none;
-      li {
-        @include responsive-font(2.3vh, 18px, 24px, 13px);
-        line-height: 1.5;
-        span {
           display: inline-block;
-          padding: 4% 2%;
-          position: relative;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 89%;
-          margin-left: -18px;
+          width: 40vw;
+          max-width: 366px;
         }
       }
-      li:nth-child(2n-1) {
-        background-color: $bgGrey;
-      }
-      li:before {
-        content: '';
-        display: inline-block;
-        height: 40px;
-        width: 40px;
-        margin-left: 12px;
-        background-image: url(../../../pages/images/icon/check.png);
-        background-size: cover;
-      }
     }
-    // icon cols
-    .col:first-child {
-      .col-contain {
-        padding: 5%;
-      }
-      color: white;
-      h2 {
-        @include responsive-font(2vw, 20px, 39px, 36px);
-      }
-    }
-    .col:nth-child(2) .inner {
-        width: 100%;
-        top: 0;
-        @include at-least(tablet-landscape) {
-          transform: translate(-50%, -50%);
-          top: 50%;
-        }
-      }
   }
-  .right-two.override {
-    .col:first-child {
+  ul.benefits {
+    padding-left: 0;
+    margin-top: 0;
+    list-style: none;
+    li:nth-child(2n-1) {
+      background-color: $bgGrey;
+    }
+    li:nth-child(2n) {
+      background-color: $white;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 2%;
+      width: 100%;
+
       @include at-least(tablet-landscape) {
-        float: right;
+        // padding: 5%;
+      }
+
+      div.checkmark {
+        width: 15%;
+        height: 100%;
+        img {
+          width: 100%;
+        }
+        @include at-least(phablet) {
+          width: 10%;
+        }
+        @include at-least(tablet-landscape) {
+          width: 6%;
+        }
+      }
+      span.text {
+        display: inline-block;
+        width: 76%;
+        font-family: 'Montserrat', sans-serif;
+        @include responsive-font(2.5vw, 23px, 40px, 50px);
+
       }
     }
-    .col:nth-child(2) .col-contain {
-      background-color: $grey;
-    }
   }
-  .row {
-  }
+
+
+/*= End of Why New Ave =*/
+/*=============================================<<<<<*/
+
 
 }

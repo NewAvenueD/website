@@ -79,6 +79,11 @@ window.addEventListener('load', function () {
     unwrapImage();
   }
 
+  if (isPage('why')) {
+    var sr = ScrollReveal({ reset: true });
+    sr.reveal('.beni');
+  }
+
   if (isPage('contact')) {}
 
   var toggleNav = function toggleNav() {

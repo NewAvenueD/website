@@ -76,12 +76,14 @@ window.addEventListener('load', function () {
 
   if (isPage('home')) {
     var timer = setTimeout(clearForm(), 2000);
+    var sr = ScrollReveal({ reset: true });
+    sr.reveal('.beni');
     unwrapImage();
   }
 
   if (isPage('why')) {
-    var sr = ScrollReveal({ reset: true });
-    sr.reveal('.beni');
+    var _sr = ScrollReveal({ reset: true });
+    _sr.reveal('.beni');
   }
 
   if (isPage('contact')) {}

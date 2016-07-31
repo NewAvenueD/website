@@ -19,9 +19,15 @@ const pub = './themes/newave/public';
 let env = gutil.env.env || 'development';
 
 // TODO: switch to gulp-watch so new files are watched too
+gutil.log(__filename);
+
+gulp.task('test', () => {
+  gutil.log('the working directory is', __dirname)
+})
 
 gulp.task('serve', ['sass', 'php'], () => {
-  gutil.log(env);
+  // gutil.log(env);
+
   browserSync.init({
     proxy:'127.0.0.1:8010',
     port: 8080,

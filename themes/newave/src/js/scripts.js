@@ -72,6 +72,8 @@ window.addEventListener('load', function () {
 
   if (isPage('home')) {
     var timer = setTimeout(clearForm(), 2000);
+    const sr = ScrollReveal({ reset: true });
+    sr.reveal('.beni');
     unwrapImage();
   }
 

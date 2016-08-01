@@ -26,7 +26,6 @@ gulp.task('test', () => {
   gutil.log('gulp says the working directory is', __dirname)
 })
 
-
 gulp.task('clean', () => {
   gulp.src('./themes/newave/public/*', {read: false})
     .pipe(print())

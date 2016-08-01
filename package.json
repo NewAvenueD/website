@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "echo \"Hello, start\"",
+<<<<<<< HEAD
     "build": "gulp build"
+=======
+    "test": "gulp test"
+>>>>>>> e1646e86426424e500327037ad8d56adfa4e9f40
   },
   "author": "",
   "license": "ISC",

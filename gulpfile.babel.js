@@ -22,7 +22,7 @@ let env = gutil.env.env || 'development';
 gutil.log(__filename);
 
 gulp.task('test', () => {
-  gutil.log('the working directory is', __dirname)
+  gutil.log('gulp says the working directory is', __dirname)
 })
 
 gulp.task('serve', ['sass', 'php'], () => {

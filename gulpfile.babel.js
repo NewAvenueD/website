@@ -49,7 +49,6 @@ gulp.task('build', ['clean'], () => {
 })
 
 gulp.task('serve', ['sass', 'php'], () => {
-  // gutil.log(env);
 
   browserSync.init({
     proxy:'127.0.0.1:8010',

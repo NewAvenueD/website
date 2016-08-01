@@ -12,7 +12,7 @@
     {% if header.robots %}
       <meta name="robots" content="{{ header.robots }}">
     {% endif %}
-    <link rel="icon" type="image/png" href="{{ theme_url }}/public/images/favicon.png">
+    <link rel="icon" type="image/png" href="/user/pages/images/icon/favicon.png">
     <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
     {% block stylesheets %}
       {% do assets.add('theme://public/style.css')%}

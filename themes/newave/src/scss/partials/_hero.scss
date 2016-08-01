@@ -2,7 +2,6 @@ $hero-height-small: auto;
 $hero-height: 50vh;
 
 .hero {
-  @extend .u-full-width;
   @extend .row;
   text-align: center;
   height: $hero-height-small;

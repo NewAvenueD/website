@@ -1,6 +1,7 @@
 node_modules
 themes/*
 !themes/newave
+themes/newave/public
 plugins
 data
 !config/plugins

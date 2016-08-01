@@ -7,7 +7,8 @@ import bSync from 'browser-sync';
 import php from 'gulp-connect-php';
 import babel from 'gulp-babel';
 import gutil from 'gulp-util';
-import print from 'gulp-print'
+import print from 'gulp-print';
+import clean from 'gulp-clean';
 
 let browserSync = bSync.create();
 const scss = './themes/newave/src/scss/**/*.scss';
@@ -23,6 +24,28 @@ gutil.log(__filename);
 
 gulp.task('test', () => {
   gutil.log('gulp says the working directory is', __dirname)
+})
+
+
+gulp.task('clean', () => {
+  gulp.src('./themes/newave/public/*', {read: false})
+    .pipe(print())
+    .pipe(clean({force: true}));
+})
+
+gulp.task('build', ['clean'], () => {
+
+  gulp.src(scss)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(prefix())
+    .pipe(gulp.dest(pub));
+
+    gulp.src(js)
+    .pipe(babel({
+          presets: ['es2015']
+        }))
+    .pipe(gulp.dest(pub));
+
 })
 
 gulp.task('serve', ['sass', 'php'], () => {

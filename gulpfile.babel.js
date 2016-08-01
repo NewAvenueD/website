@@ -1,4 +1,5 @@
 'use strict';
+import Promise from 'es6-promise';
 import gulp from 'gulp';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';

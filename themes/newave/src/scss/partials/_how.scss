@@ -27,13 +27,6 @@
       }
     }
   }
-  .override-right {
-    @include at-least(tablet-landscape) {
-      div.col:nth-of-type(1) {
-        float: right;
-      }
-    }
-  }
 
   // is this being used for text?
   @include at-least(tablet-landscape) {

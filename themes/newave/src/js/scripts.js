@@ -72,13 +72,15 @@ window.addEventListener('load', function () {
 
   if (isPage('home')) {
     var timer = setTimeout(clearForm(), 2000);
-    const sr = ScrollReveal({ reset: true });
-    sr.reveal('.beni');
     unwrapImage();
+    const sr = ScrollReveal({ distance: '35px' });
+    sr.reveal('.col:first-child');
+    sr.reveal('.col:nth-child(2)', {delay: 200});
+    sr.reveal('.col:nth-child(3)', {delay: 400});
   }
 
   if (isPage('why')) {
-    const sr = ScrollReveal({ reset: true });
+    const sr = ScrollReveal();
     sr.reveal('.beni');
   }
 

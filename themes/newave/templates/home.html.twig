@@ -9,29 +9,31 @@
   <div class="hero-image" style="background-image: url({{ pages.find('/images/hero').media[row.background].url }})"></div>
   <div class="contents">
     <div class="inner bottom">
-      <h1 class="headline"><span class="cormorant">{{row.heading[0]}}</span> {{row.heading[1]}}</h1>
+      <h1 class="headline"><span class="introducing">{{row.heading[0]}}</span> {{row.heading[1]}}</h1>
     </div>
   </div>
 </div>
+<div class="the-rows">
+  <!--  row 01 -->
+  {% include '/modular/module.html.twig' with {'page': page.find('/home/_delivered')} %}
 
-<!--  row 01 -->
-{% include '/modular/module.html.twig' with {'page': page.find('/home/_delivered')} %}
+  <!--  row 02 -->
+  {% include '/modular/module.html.twig' with {'page': page.find('/home/_elevator')} %}
+  <!--  row 03 -->
+  {% include '/modular/module.html.twig' with {'page': page.find('/home/_how-it-works-header')} %}
+  <!--  row 04 -->
+  {% include '/modular/module.html.twig' with {'page': page.find('/home/_apt-scheduling')} %}
+  <!--  row 05 -->
+  {% include '/modular/module.html.twig' with {'page': page.find('/home/_mobile-facility')} %}
+  <!--  row 06 -->
+  {% include '/modular/module.html.twig' with {'page': page.find('/home/_notifications')} %}
+  <!--  row 07 -->
+  {% include '/modular/module.html.twig' with {'page': page.find('/home/_site-visits')} %}
+  <!--  row 08 -->
+  {% include '/modular/module.html.twig' with {'page': page.find('/home/_full-range')} %}
+  <!--  row 09 -->
 
-<!--  row 02 -->
-{% include '/modular/module.html.twig' with {'page': page.find('/home/_elevator')} %}
-<!--  row 03 -->
-{% include '/modular/module.html.twig' with {'page': page.find('/home/_how-it-works-header')} %}
-<!--  row 04 -->
-{% include '/modular/module.html.twig' with {'page': page.find('/home/_apt-scheduling')} %}
-<!--  row 05 -->
-{% include '/modular/module.html.twig' with {'page': page.find('/home/_mobile-facility')} %}
-<!--  row 06 -->
-{% include '/modular/module.html.twig' with {'page': page.find('/home/_notifications')} %}
-<!--  row 07 -->
-{% include '/modular/module.html.twig' with {'page': page.find('/home/_site-visits')} %}
-<!--  row 08 -->
-{% include '/modular/module.html.twig' with {'page': page.find('/home/_full-range')} %}
-<!--  row 09 -->
+</div>
 
 <div class="row one-col contact">
   <div class="col">

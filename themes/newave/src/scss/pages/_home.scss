@@ -1,4 +1,15 @@
 .home {
+
+  div.the-rows {
+
+  }
+
+
+
+
+
+
+
   .col-contain {
     background-color: $white;
     padding: 5%;
@@ -56,13 +67,11 @@
       padding: 0;
     }
     color: rgb(12, 32, 49);
-    span.cormorant {
-      font-family: 'Cormorant Infant', serif;
-      font-weight: 300;
+    span.introducing {
+      // font-family: 'Cormorant Infant', serif;
+      // font-weight: 300;
       display: block;
       text-align: left;
-    }
-    span.cormorant {
       margin-left: 24%;
     }
     @include at-least(tablet-landscape) {

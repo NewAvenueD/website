@@ -80,7 +80,11 @@ window.addEventListener('load', function () {
       sr.reveal('.col:nth-child(3)', {delay: 400});
     }
   }
-
+  /**
+   *
+   * Why New Avenue
+   *
+   */
   if (isPage('why')) {
     const sr = ScrollReveal();
     sr.reveal('.beni');

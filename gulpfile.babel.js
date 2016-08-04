@@ -25,31 +25,20 @@ let env = gutil.env.env || 'development';
 gutil.log(__filename);
 
 gulp.task('test', () => {
-  gutil.log('gulp says the working directory is', __dirname)
+  gutil.log('gulp says the environment var is', env)
 })
 
 gulp.task('clean', () => {
-  gulp.src('./themes/newave/public/*', {read: false})
+  return gulp.src('./themes/newave/public/*', {read: false})
     .pipe(print())
     .pipe(clean({force: true}));
 })
 
-gulp.task('build', ['clean'], () => {
+gulp.task('build', ['clean', 'sass', 'js'], () => {
+  gutil.log('running ', env, ' tasks........')
+});
 
-  gulp.src(scss)
-    .pipe(sass().on('error', sass.logError))
-    .pipe(prefix())
-    .pipe(gulp.dest(pub));
-
-  gulp.src(js)
-    .pipe(babel({
-          presets: ['es2015']
-        }))
-    .pipe(gulp.dest(pub));
-
-})
-
-gulp.task('serve', ['sass', 'php'], () => {
+gulp.task('serve', ['sass', 'php', 'js'], () => {
   // headers required to make debugbar work
   browserSync.init({
     proxy: {
@@ -76,13 +65,22 @@ gulp.task('php', function() {
 });
 
 gulp.task('sass', () => {
-  gulp.src(scss)
+  if (env === 'production') {
+    gulp.src(scss)
+      .pipe(sass().on('error', sass.logError))
+      .pipe(prefix())
+      .pipe(gulp.dest(pub));
+
+  } else {
+    // no minify, add sourcemaps and pipe to BS stream
+    gulp.src(scss)
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(prefix())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(pub))
     .pipe(browserSync.stream());
+  }
 });
 
 gulp.task('js', () => {

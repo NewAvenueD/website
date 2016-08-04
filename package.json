@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "echo \"Hello, start\"",
-    "build": "gulp build"
+    "build": "gulp build --env production"
   },
   "author": "",
   "license": "ISC",

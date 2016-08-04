@@ -50,9 +50,16 @@ gulp.task('build', ['clean'], () => {
 })
 
 gulp.task('serve', ['sass', 'php'], () => {
-
+  // headers required to make debugbar work
   browserSync.init({
-    proxy:'127.0.0.1:8010',
+    proxy: {
+      target: '127.0.0.1:8010',
+      reqHeaders: function() {
+        return {
+            host: 'localhost:8080'
+        };
+      }
+    },
     port: 8080,
     open: true,
     notify: false

@@ -16,29 +16,31 @@
 {% set people = page.header.benefits.whom %}
 
 {% for person in people %}
-  <div class="row person-head">
-    <div class="icon">
-      <img alt="New Avenue Dentistry" src="/user/pages/images/icon/{{person.icon}}">
+  <div class="row benies">
+    <div class="whom">
+        <div class="inner">
+          <div class="person-name">
+            <h2>{{person.name}}</h2>
+          </div>
+          <img alt="New Avenue Dentistry" src="/user/pages/images/icon/{{person.icon}}">
+        </div>
     </div>
-    <div class="description">
-      <div class="person-name">
-        <h2>{{person.name}}</h2>
-      </div>
+    <div class="benefits">
+      <ul>
+        {% for benefit in person.benies %}
+        <li class="beni">
+          <div class="checkmark">
+            <img src="/user/pages/images/icon/check.png" alt="" />
+          </div>
+          <span class="text">{{benefit}}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
     </div>
   </div>
   <div class="row bullets" style="">
     <div class="inside">
-      <ul class="benefits">
-        {% for benefit in person.benies %}
-          <li class="beni">
-            <div class="checkmark">
-              <img src="/user/pages/images/icon/check.png" alt="" />
-            </div>
-            <span class="text">{{benefit}}</span>
-          </li>
-        {% endfor %}
-        </ul>
-      </div>
     </div>
 {% endfor %}
 

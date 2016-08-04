@@ -7,7 +7,10 @@ $blackish: rgb(16, 25, 29);
 
 .why {
   h1 {
-    margin-top: 2.8vh;
+    margin-top: 4.8vh;
+    @include at-least(tablet-landscape) {
+      margin-top: 140px;
+    }
   }
   h2 {
     margin-top: 0;
@@ -27,66 +30,80 @@ $blackish: rgb(16, 25, 29);
       }
       @include at-least(tablet-landscape) {
         position: absolute;
-        bottom: 6%;
+        bottom: 25%;
       }
       &::after {
         background-color: white;
       }
     }
   }
-  .person-head {
-    .icon {
-      text-align: center;
-      img[src*='icon'] {
-        width: 50vw;
-        @include at-least(tablet-landscape) {
-          display: inline-block;
-          width: 40vw;
-          max-width: 366px;
+  .row.benies {
+    background-color: $mediumBlue;
+    color: white;
+    & > div {
+      float: left;
+    }
+    .whom {
+      width: calc(100%/3);
+      height: 100%;
+      
+      .inner {
+        text-align: center;
+        img[src*='icon'] {
+          width: 50vw;
+          @include at-least(tablet-landscape) {
+            display: inline-block;
+            width: 30vw;
+            max-width: 299px;
+          }
         }
       }
     }
   }
-  ul.benefits {
-    padding-left: 0;
-    margin-top: 0;
-    list-style: none;
-    li:nth-child(2n-1) {
-      background-color: $bgGrey;
-    }
-    li:nth-child(2n) {
-      background-color: $white;
-    }
-    li {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      padding: 2%;
-      width: 100%;
-
-      @include at-least(tablet-landscape) {
-        // padding: 5%;
+  div.benefits {
+    width: calc(100%*2/3);
+    ul {
+      padding-left: 0;
+      margin-top: 0;
+      list-style: none;
+      li:nth-child(2n-1) {
+        background-color: $bgGrey;
       }
+      li:nth-child(2n) {
+        background-color: $white;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 2%;
+        width: 100%;
 
-      div.checkmark {
-        width: 15%;
-        height: 100%;
-        img {
-          width: 100%;
-        }
-        @include at-least(phablet) {
-          width: 10%;
-        }
         @include at-least(tablet-landscape) {
-          width: 6%;
+          // padding: 5%;
         }
-      }
-      span.text {
-        display: inline-block;
-        width: 76%;
-        font-family: 'Montserrat', sans-serif;
-        @include responsive-font(2.5vw, 23px, 40px, 50px);
 
+        div.checkmark {
+          width: 15%;
+          height: 100%;
+          img {
+            width: 100%;
+          }
+          @include at-least(phablet) {
+            width: 10%;
+          }
+          @include at-least(tablet-landscape) {
+            width: 6%;
+          }
+        }
+        span.text {
+          display: inline-block;
+          color: black;
+          width: 76%;
+          font-family: 'Montserrat', sans-serif;
+          @include responsive-font(1.9vw, 17px, 40px, 26px);
+
+        }
       }
     }
   }

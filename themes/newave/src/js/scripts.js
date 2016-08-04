@@ -73,10 +73,12 @@ window.addEventListener('load', function () {
   if (isPage('home')) {
     var timer = setTimeout(clearForm(), 2000);
     unwrapImage();
-    const sr = ScrollReveal({ distance: '35px', duration: 620 });
-    sr.reveal('.col:first-child');
-    sr.reveal('.col:nth-child(2)', {delay: 200});
-    sr.reveal('.col:nth-child(3)', {delay: 400});
+    if (!Modernizr.touchevents) {
+      const sr = ScrollReveal({ distance: '35px', duration: 620 });
+      sr.reveal('.col:first-child');
+      sr.reveal('.col:nth-child(2)', {delay: 200});
+      sr.reveal('.col:nth-child(3)', {delay: 400});
+    }
   }
 
   if (isPage('why')) {

@@ -10,10 +10,11 @@ import babel from 'gulp-babel';
 import gutil from 'gulp-util';
 import print from 'gulp-print';
 import clean from 'gulp-clean';
+import concat from 'gulp-concat';
 
 let browserSync = bSync.create();
 const scss = './themes/newave/src/scss/**/*.scss';
-const js = './themes/newave/src/js/**/*.js';
+const js = ['./themes/newave/src/js/vendor/**/*.js', './themes/newave/src/js/*.js'];
 const pages = './pages/**/*.md';
 const templates = './themes/newave/templates/**/*.twig';
 const pub = './themes/newave/public';
@@ -40,7 +41,7 @@ gulp.task('build', ['clean'], () => {
     .pipe(prefix())
     .pipe(gulp.dest(pub));
 
-    gulp.src(js)
+  gulp.src(js)
     .pipe(babel({
           presets: ['es2015']
         }))
@@ -83,7 +84,8 @@ gulp.task('js', () => {
     .pipe(babel({
             presets: ['es2015']
         }))
-    .pipe(gulp.dest(pub))
-})
+    .pipe(concat('scripts.js'))
+    .pipe(gulp.dest(pub));
+});
 
 gulp.task('default', ['serve']);

@@ -4,17 +4,16 @@
 {% set next = progress.prevSibling(page.path) %}
 
 <div id="bottom-nav">
-  <div>
-    <h3>this is the bottom nav</h3>
-  </div>
-  <div>
-
+  <div class="container">
     {% if not progress.isFirst(page.path) %}
     <a class="nav nav-prev" href="{{ prev.url }}">{{ prev.menu }}</a>
     {% endif %}
     {% if not progress.isLast(page.path) %}
     <a class="nav nav-next" href="{{ next.url }}">{{ next.menu }}</a>
     {% endif %}
+  </div>
+  <div>
+
 
   </div>
 </div>

@@ -86,8 +86,10 @@ window.addEventListener('load', function () {
    *
    */
   if (isPage('why')) {
-    const sr = ScrollReveal();
-    sr.reveal('.beni');
+    // if (!Modernizr.touchevents) {
+    //   const sr = ScrollReveal();
+    //   sr.reveal('.beni');
+    // }
   }
 
   if (isPage('contact')) {}

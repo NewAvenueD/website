@@ -3,15 +3,28 @@
 <section class="hero">
   <div class="col hero-image" style="background-image: url({{ pages.find('/images/hero').media[page.header.hero].url }})"></div>
   <div class="contents">
-    <h1 class="separator">{{ page.header.title }}</h1>
-    <div class="lead">
+    <div class="inner">
+      <h1 class="separator">{{ page.header.title }}</h1>
       <h3>{{ page.header.lead }}</h3>
     </div>
 
   </div>
 </section>
-<div class="inner">
 
+<div class="row one-col save">
+  <div class="col">
+    <div class="col-contain">
+      <div class="inner">
+        <h2>Save time. Save travel. Save teeth.</h2>
+        <div class="icons">
+          <img src="/user/pages/images/icon/clock.svg" alt="save time icon">
+          <img src="/user/pages/images/icon/travel.svg" alt="save travel icon">
+          <img src="/user/pages/images/icon/teeth.svg" alt="save teeth icon">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% set people = page.header.benefits.whom %}
 
@@ -37,16 +50,11 @@
         {% endfor %}
       </ul>
     </div>
-    </div>
   </div>
-  <div class="row bullets" style="">
-    <div class="inside">
-    </div>
 {% endfor %}
 
 
 
-</div>
 {% endblock %}
 {% block footer %}
   {% include 'partials/bottom-nav.html.twig' %}

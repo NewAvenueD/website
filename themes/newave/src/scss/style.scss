@@ -42,7 +42,7 @@ h2 {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  background-color: white;
+  // background-color: white;
 }
 main.content {
   // padding to offset neg margin of parent
@@ -86,6 +86,9 @@ div.footer {
   @include at-least(desktop) {
     height: $desk-foot-nav;
   };
+  .container {
+    // background-color: none;
+  }
   h3 {
     margin: 0;
   }

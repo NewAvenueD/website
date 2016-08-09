@@ -5,7 +5,7 @@
 
 // TODO: move vars
 
-$desk-foot-nav: 550;
+$desk-foot-nav: 365;
 $foot-nav: 125;
 * {
   box-sizing: border-box;
@@ -30,8 +30,8 @@ h2 {
   min-height: 100%;
   // negative margin to accomodate footer
   margin-bottom: $foot-nav * -1px;
-  @include at-least(desktop) {
-    margin-bottom: $desk-foot-nav;
+  @include at-least(tablet-landscape) {
+    margin-bottom: $desk-foot-nav * -1px;
   }
 
   &::before {
@@ -47,6 +47,9 @@ h2 {
 main.content {
   // padding to offset neg margin of parent
   padding-bottom: $foot-nav * 1px;
+  @include at-least(tablet-landscape) {
+    padding-bottom: $desk-foot-nav * 1px;
+  };
   background-color: $bgGrey;
   &:after {
     content: "";
@@ -83,8 +86,8 @@ div.footer {
   height: $foot-nav * 1px;
   background-color: $grey;
   color: rgb(195, 195, 195);
-  @include at-least(desktop) {
-    height: $desk-foot-nav;
+  @include at-least(tablet-landscape) {
+    height: $desk-foot-nav * 1px;
   };
   .container {
     // background-color: none;

@@ -5,15 +5,28 @@
 
 <div id="bottom-nav">
   <div class="container">
-    {% if not progress.isFirst(page.path) %}
-    <a class="nav nav-prev" href="{{ prev.url }}">{{ prev.menu }}</a>
-    {% endif %}
-    {% if not progress.isLast(page.path) %}
-    <a class="nav nav-next" href="{{ next.url }}">{{ next.menu }}</a>
-    {% endif %}
+    <div class="nav">
+      {% if not progress.isFirst(page.path) %}
+      <a class="previous" href="{{ prev.url }}">
+        <span class="both">
+          <i class="fa fa-chevron-left"></i>
+          <span class="text nav-prev">
+            {{ prev.menu == 'Why New Avenue' ? 'Why New Ave...' : prev.menu }}
+          </span>
+        </span>
+      </a>
+      {% endif %}
+      {% if not progress.isLast(page.path) %}
+      <a class="next" href="{{ next.url }}">
+        <span class="both">
+          <span class="text nav-next">
+            {{ next.menu }}
+          </span>
+          <i class="fa fa-chevron-right"></i>
+        </span>
+      </a>
+      {% endif %}
+    </div>
   </div>
-  <div>
 
-
-  </div>
 </div>

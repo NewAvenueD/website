@@ -1,5 +1,59 @@
 div.footer {
-  div {
-    // display: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 43px;
+  @include responsive-font(3vw, 22px, 48px, 37px);
+
+  a {
+    text-decoration: none;
+    // margin: 20px;
   }
+  // both prev and next
+  div.nav > a {
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 10% 0;
+    float: left;
+    &:active {
+      color: rgb(156, 247, 255);
+    }
+  }
+
+  div.nav {
+    a.previous {
+      background-color: rgb(134, 157, 185);
+      width: calc(100%/5*2);
+      @include at-least(tablet-landscape) {
+        width: calc(100%/7*2);
+      }
+      span.both {
+        margin-left: 6%;
+      }
+      span.text {
+        display: none;
+        @include at-least(tablet-landscape) {
+          display: inline;
+        };
+      }
+    }
+    a.next {
+      background-color: rgb(216, 214, 227);
+      display: inline-block;
+      width: calc(100%/5*3);
+      @include at-least(tablet-landscape) {
+        width: calc(100%/7*5);
+      }
+      &:only-of-type {
+        float: right;
+      }
+      span.both {
+        // position: absolute;
+        // right: 0;
+        float: right;
+        margin-right: 6%;
+      }
+    }
+  }
+
 }

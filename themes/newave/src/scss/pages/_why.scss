@@ -22,20 +22,21 @@ $blackish: rgb(16, 25, 29);
   }
   .hero .contents {
     color: white;
-    .inner {
+    .inner, .bottom {
       text-align: left;
       width: 88%;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      & > h1, & > h3 {
-        flex: 1;
-      }
+
       &::after {
         background-color: white;
       }
-      h3 {
-        margin-top: 6vw;
+    }
+    div.bottom {
+      @include at-least(tablet-landscape) {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
   }
@@ -85,11 +86,12 @@ $blackish: rgb(16, 25, 29);
         @include at-least(tablet-landscape) {
           h2 {
             margin-top: 0;
+            margin-bottom: .64em;
           }
         }
         img[src*='icon'] {
           width: 50vw;
-          max-height: 260px;
+          max-height: 220px;
           margin-bottom: 4%;
           @include at-least(tablet-landscape) {
             display: inline-block;

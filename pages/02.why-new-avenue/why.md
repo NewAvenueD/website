@@ -2,7 +2,8 @@
 title: Why New Avenue
 hero: interior.jpg
 body_class_list: why
-lead: Tired of waiting rooms? We are too. That’s why we don’t have one. We know going to the dentist can be a chore, that’s why we’re making it easier for your team by bringing the dental office to you. It’s dentistry, delivered to your workplace.
+lead: Tired of waiting rooms? We are too. That’s why we don’t have one. We make seeing a dentist easy for your team by bringing the dentist's office to you.
+
 benefits:
   whom:
     employers:

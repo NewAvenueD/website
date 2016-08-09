@@ -16,6 +16,12 @@ $navHeight: 95;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.float-right {
+  float: right;
+}
+.float-left {
+  float: left;
+}
 
 .square {
   &:after {
@@ -24,7 +30,11 @@ $navHeight: 95;
     padding-bottom: 100%;
   }
 }
-
+.clear-fix {
+  content: "";
+  display: table;
+  clear: both;
+}
 /// Accessibly hide element
 ///
 %visually-hidden {

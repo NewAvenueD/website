@@ -4,7 +4,7 @@
     {% set colIndex = (loop.index)-1 %}
     {% set col = page.header.cols[(loop.index)-1] %}
     {# make a style attribute with background photo if col has 'photo' class #}
-    {% set bg_style = 'photo' in col.col_class_list ? "background-image: url(/user/pages/images/feature/" ~ col.bgImage : "" %}
+    {% set bg_style = 'photo' in col.col_class_list ? "background-image: url(/user/pages/images/feature/" ~ col.bgImage ~ ")" : "" %}
     <div class="col">
       <div class="col-contain {{col.col_class_list}}" style="{{bg_style}}">
         <div class="inner">

@@ -37,6 +37,9 @@ h2 {
   &::before {
     opacity: 1;
   }
+  &::after {
+    @extend .clear-fix;
+  }
 }
 .container {
   width: 100%;

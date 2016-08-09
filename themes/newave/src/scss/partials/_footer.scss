@@ -23,10 +23,10 @@ div.footer {
   div.nav {
     a.previous {
       background-color: rgb(134, 157, 185);
-      width: calc(100%/5*2);
-      @include at-least(tablet-landscape) {
-        width: calc(100%/7*2);
-      }
+      width: calc(100%/3);
+      // @include at-least(tablet-landscape) {
+      //   width: calc(100%/7*2);
+      // }
       span.both {
         margin-left: 6%;
       }
@@ -40,10 +40,10 @@ div.footer {
     a.next {
       background-color: rgb(216, 214, 227);
       display: inline-block;
-      width: calc(100%/5*3);
-      @include at-least(tablet-landscape) {
-        width: calc(100%/7*5);
-      }
+      width: calc(100%/3*2);
+      // @include at-least(tablet-landscape) {
+      //   width: calc(100%/7*5);
+      // }
       &:only-of-type {
         float: right;
       }

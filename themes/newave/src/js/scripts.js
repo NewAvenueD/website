@@ -91,7 +91,38 @@ window.addEventListener('load', function () {
     //   sr.reveal('.beni');
     // }
   }
+  /**
+  *
+  * About
+  *
+  */
+  if (isPage('about')) {
+    // find, clone image element
+    let foosh = document.querySelector('.foosh');
+    let foosh_prime = foosh.cloneNode(true);
+    let parent = foosh.parentNode;
+    let docFrag = document.createDocumentFragment();
+    // create containing div
+    let contain = document.createElement('div');
+    contain.className = 'contain';
+    let caption = document.createElement('div');
+    let captionText = document.createElement('span');
+    captionText.textContent = foosh.alt;
+    caption.className = 'caption';
+    caption.appendChild(captionText);
+    contain.appendChild(foosh_prime);
+    contain.appendChild(caption);
+    docFrag.appendChild(contain);
+    parent.replaceChild(docFrag, foosh);
+  }
+  /**
+   *
+   * FAQs
+   *
+   */
+  if (isPage('faqs')) {
 
+  }
   if (isPage('contact')) {}
 
   const toggleNav = function () {

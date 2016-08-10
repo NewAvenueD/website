@@ -15,6 +15,7 @@ div.footer {
     overflow: hidden;
     padding: 10% 0;
     float: left;
+    color: $darkBlue;
     &:active {
       color: rgb(156, 247, 255);
     }
@@ -22,7 +23,7 @@ div.footer {
 
   div.nav {
     a.previous {
-      background-color: rgb(134, 157, 185);
+      background-color: rgb(213, 217, 222);
       width: calc(100%/3);
       // @include at-least(tablet-landscape) {
       //   width: calc(100%/7*2);
@@ -38,7 +39,7 @@ div.footer {
       }
     }
     a.next {
-      background-color: rgb(216, 214, 227);
+      background-color: rgb(232, 231, 239);
       display: inline-block;
       width: calc(100%/3*2);
       // @include at-least(tablet-landscape) {

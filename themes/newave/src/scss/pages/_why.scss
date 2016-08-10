@@ -52,9 +52,12 @@ $blackish: rgb(16, 25, 29);
         justify-content: space-between;
 
         img {
-          width: 20%;
-          @include at-least(tablet-landscape) {
+          width: 19%;
+          @include at-least(phablet) {
             width: 14%;
+          }
+          @include at-least(tablet-landscape) {
+            width: 12%;
           }
         }
       }
@@ -66,7 +69,6 @@ $blackish: rgb(16, 25, 29);
   .benies {
     background-color: $mediumBlue;
     color: white;
-    border-bottom: 1px solid $darkBlue;
     @include at-least(tablet-landscape) {
       display: flex;
       align-items: center;

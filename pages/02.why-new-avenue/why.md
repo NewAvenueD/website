@@ -14,7 +14,6 @@ benefits:
         2: On-site dentistry fits with your current dental benefits
         3: No dental benefits? We can create a customized discount plan for your employees
         #4: True cost savings for self-insured employers
-        4: Prevent dental emergencies that cause 1 in 10 employees to miss a full day of work each year
         5: Prevent dental emergencies that cause 1 in 10 employees to miss a full day of work each year
         6: Every $1 spent on dental prevention can save up to $50 in medical treatment costs
         7: Decrease employee absence for routine dental care from 3-4 hours to 1 hour or less (including travel time)

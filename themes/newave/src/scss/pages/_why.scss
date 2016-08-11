@@ -7,7 +7,7 @@ $blackish: rgb(16, 25, 29);
 
 .why {
   h1 {
-    margin-top: 4.8vh;
+    margin-top: 10.8vh;
     @include at-least(tablet-landscape) {
       margin-top: 140px;
     }
@@ -16,27 +16,22 @@ $blackish: rgb(16, 25, 29);
     // margin-top: 0;
   }
 
-.hero .hero-image:after {
+.hero:after {
     opacity: .86;
     background: linear-gradient(-6deg, $blackish, $blackish, transparent, $blackish);
   }
-  .hero .contents {
+  .hero .content {
     color: white;
-    .inner, .bottom {
-      text-align: left;
-      width: 88%;
-      margin: 0 auto;
+    text-align: left;
+    top: initial;
+    transform: translateX(-50%);
+    bottom: 10%;
+    width: 88%;
 
-      &::after {
-        background-color: white;
-      }
-    }
-    div.bottom {
+    h3 {
+      display: none;
       @include at-least(tablet-landscape) {
-        position: absolute;
-        bottom: 10%;
-        left: 50%;
-        transform: translateX(-50%);
+        display: inline;
       }
     }
   }
@@ -47,10 +42,19 @@ $blackish: rgb(16, 25, 29);
       width: 82%;
       margin: 0 auto;
 
+      h2 {
+        // margin-bottom: 0;
+        // @include at-least(tablet-landscape) {
+        //   margin-bottom: auto;
+        // }
+      }
       .icons {
         display: flex;
         justify-content: space-between;
-
+        margin-top: -40px;
+        @include at-least(phablet) {
+          margin-top: 0;
+        }
         img {
           width: 19%;
           @include at-least(phablet) {
@@ -63,7 +67,7 @@ $blackish: rgb(16, 25, 29);
       }
     }
   }
-  .benies:nth-of-type(3) .whom {
+  .benies:nth-of-type(4) .whom {
     order: 2;
   }
   .benies {

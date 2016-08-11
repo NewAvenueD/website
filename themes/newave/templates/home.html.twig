@@ -1,18 +1,14 @@
 {% extends 'partials/base.html.twig' %}
-{# TODO move base out of partials dir? #}
-{% block content %}
-<!-- home.html.twig -->
-{% set rows = page.header.content.rows %}
-{% set row = page.header.content.rows[0] %}
-<!--  row 00 -->
-<div class="{{row.class}}">
-  <div class="hero-image" style="background-image: url({{ pages.find('/images/hero').media[row.background].url }})"></div>
-  <div class="contents">
-    <div class="inner bottom">
-      <h1 class="headline"><span class="introducing">{{row.heading[0]}}</span> {{row.heading[1]}}</h1>
+{% block hero %}
+  <div class="row hero">
+    {{ page.media['hero.jpg'].html() }}
+    <div class="content">
+      <h1 class="headline"><span class="introducing">{{meta.heading[0]}}</span> {{meta.heading[1]}}</h1>
     </div>
   </div>
-</div>
+{% endblock hero %}
+{% block content %}
+
 <div class="the-rows">
   <!--  row 01 -->
   {% include '/modular/module.html.twig' with {'page': page.find('/home/_delivered')} %}

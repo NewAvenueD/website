@@ -3,20 +3,13 @@
 title: Introducing New Avenue Dentistry
 menu: Introducing
 body_class_list: home
+heading:
+- Introducing
+- New Avenue Dentistry
 ###
 ###
-### Page content
+### Mini Contact form
 ###
-###
-content:
-  rows:
-    # row 0
-    - class: hero
-      background: notification.jpg
-      heading:
-        - Introducing
-        - New Avenue Dentistry
-
 form:
     action: /
     name: quick-contact
@@ -49,8 +42,6 @@ form:
           type: email
           validate:
             required: true
-
-
 
     buttons:
         - type: submit

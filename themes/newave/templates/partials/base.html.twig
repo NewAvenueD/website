@@ -1,3 +1,4 @@
+{% set meta = page.header %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,9 +41,13 @@
   {% endblock nav%}
 
   {% block main %}
-    <main class="container content {{ class }}">
+    <main class="container content">
+      {% block hero %}
+        {% include 'partials/hero.html.twig' %}
+      {% endblock hero %}
 
-      {% block content %}{% endblock %}
+      {% block content %}
+      {% endblock %}
 
     </main>
   {% endblock main%}

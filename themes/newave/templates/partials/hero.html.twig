@@ -1,6 +1,9 @@
-<div class="row">
-  <div class="col">
-    <div class="hero-image"></div>
-    <h1>{{ page.header.title }}</h1>
+<div class="row hero">
+  {{ page.media['hero.jpg'].html() }}
+  <div class="content">
+    <h1 class="headline">{{page.header.title}}</h1>
+    {% if page.header.lead %}
+      <h3 class="lead">{{ page.header.lead }}</h3>
+    {% endif %}
   </div>
 </div>

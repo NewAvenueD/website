@@ -122,8 +122,8 @@ window.addEventListener('load', function () {
    */
   if (isPage('faqs')) {
     let dts = document.querySelectorAll('dt');
-    for (let dt of dts) {
-      dt.onclick = (e) => {
+    for (var i = 0; i < dts.length; i++) {
+      dts[i].onclick = (e) => {
         // the one that was clicked
         let answer = e.target.nextElementSibling;
         // if another one is open, close it

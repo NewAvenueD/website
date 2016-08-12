@@ -136,7 +136,10 @@ window.addEventListener('load', function () {
     }
 
   }
-  if (isPage('contact')) {}
+  if (isPage('contact')) {
+    var timer = setTimeout(clearForm(), 2000);
+    
+  }
 
   const toggleNav = function () {
     // let startingState = body.getAttribute('data-state-menu');

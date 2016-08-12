@@ -173,6 +173,13 @@
       font-size: 1.25em;
       padding-left: 6px;
     }
+    textarea {
+      height: auto;
+      @include at-least(phablet) {
+        height: 132px;
+      }
+    }
+
     form > div {
       margin: 5px auto;
       @include at-least(tablet-landscape) {
@@ -186,7 +193,7 @@
       @include at-least(tablet-landscape) {
         float: right;
         clear: none;
-        height: 250px;
+        // height: 250px;
         width: 57%;
       }
     }

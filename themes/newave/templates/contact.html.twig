@@ -1,10 +1,13 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-<div class="inner">
+
+<div class="after-hero">
   {{ page.content }}
+  {# refernces core form template supplied by plugin #}
+  <div class="">
+    {% include "forms/form.html.twig" %}
+  </div>
 </div>
-{# refernces core form template supplied by plugin #}
-{% include "forms/form.html.twig" %}
 
 {% endblock %}

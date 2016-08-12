@@ -3,14 +3,30 @@
     top: 24%;
     color: white;
   }
-
+  main.content {
+    background-color: $mediumBlue;
+    color: white;
+  }
+  div.after-hero {
+    padding: 0 3% 3% 3%;
+  }
+  form {
+    label {
+      display: none;
+    }
+    & > div {
+      margin: 5px auto;
+    }
+  }
   input, button, textarea {
     // width: 100%;
+    color: rgb(126, 126, 126);
     border-radius: 2px;
     border: none;
     height: 1.85em;
     font-size: 1.25em;
     padding-left: 6px;
+    width: 50%;
   }
   textarea {
     height: auto;

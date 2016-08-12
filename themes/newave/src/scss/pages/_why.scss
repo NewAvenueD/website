@@ -38,6 +38,7 @@ $blackish: rgb(16, 25, 29);
   .save {
     background-color: rgb(94, 112, 119);
     color: white;
+    padding-bottom: 4%;
     .inner {
       width: 82%;
       margin: 0 auto;
@@ -45,10 +46,10 @@ $blackish: rgb(16, 25, 29);
       .icons {
         display: flex;
         justify-content: space-between;
-        margin-top: -40px;
-        @include at-least(phablet) {
-          margin-top: 0;
-        }
+        // margin-top: -40px;
+        // @include at-least(phablet) {
+        //   margin-top: 0;
+        // }
         img {
           width: 19%;
           @include at-least(phablet) {

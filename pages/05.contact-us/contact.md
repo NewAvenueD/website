@@ -39,8 +39,6 @@ form:
     buttons:
         - type: submit
           value: Submit
-        - type: reset
-          value: Reset
 
     process:
         - email:
@@ -55,8 +53,7 @@ form:
             dateformat: Ymd-His-u
             extension: txt
             body: "{% include 'forms/data.txt.twig' %}"
-        - message: Thank you for your feedback!
-        - display: thankyou
+        - message: Submission successful. Thank you for getting in touch!
 ---
 
 ### Interested in learning more? Drop us a note

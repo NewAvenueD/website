@@ -16,7 +16,7 @@ form:
     fields:
         - name: comments
           label: Additional comments
-          placeholder: Additional comments
+          placeholder: Comments
           type: textarea
           class: comments
         - name: name
@@ -59,5 +59,5 @@ form:
             dateformat: Ymd-His-u
             extension: txt
             body: "{% include 'forms/data.txt.twig' %}"
-        - message: Thank you for your feedback!
+        - message: Submission successful. Thank you for getting in touch!
 ---

@@ -4,7 +4,7 @@ $hero-height: 60vh;
 .hero {
   @extend .row;
   position: relative;
-  &:after {
+  &::after {
     content: '';
     display: inline-block;
     opacity: .94;
@@ -32,56 +32,4 @@ $hero-height: 60vh;
     }
 
   }
-
-  // text-align: center;
-  // min-height: 27vh;
-  // div.contents {
-  //   padding-top: 7vh;
-  // }
-  //
-  // @include at-least(tablet-landscape) {
-  //   height: $hero-height;
-  //   div.contents {
-  //     padding-top: 12vh;
-  //     h1 {
-  //       margin-top: 0;
-  //       font-size: 7vh;
-  //       line-height: 1.5;
-  //     }
-  //
-  //   }
-  //
-  // };
-  // div.contents {
-  //   height: $hero-height-small;
-  //   position: relative;
-  //   @include at-least(tablet-landscape) {
-  //     height: $hero-height;
-  //     .inner.bottom {
-  //       position: absolute;
-  //       width: 100%;
-  //       bottom: 24%;
-  //     }
-  //     // position: absolute;
-  //   };
-  //   // top: 50%;
-  //   // transform: translateY(-50%);
-  //   right: 0; left: 0;
-  //   z-index: 102;
-  // }
-
-  // .hero-image {
-  //   position: absolute;
-  //   @include at-least(tablet-landscape) {
-  //     height: $hero-height;
-  //   };
-  //   content: '';
-  //   z-index: 101;
-  //   top: 0; right: 0; left: 0; bottom: 0;
-  //   background-size: cover;
-  //   background-position: 50% 5%;
-  //   opacity: .9;
-  //
-  //
-  // }
 }

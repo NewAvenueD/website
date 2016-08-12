@@ -1,0 +1,35 @@
+.faqs {
+  .hero::after {
+    background: none;
+  }
+}
+dt {
+  display: block;
+  position: relative;
+  z-index: 2;
+  color: white;
+  background-color: rgb(66, 74, 80);
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  @include responsive-font(1.5vw, 8px, 50px, 18px);
+  line-height: 2em;
+  padding-left: .3em;
+  border-bottom: 1px solid $darkBlue;
+  &:first-child {
+    border-top: 1px solid $darkBlue;
+  }
+}
+dd {
+  visibility: hidden;
+  max-height: 0;
+  background-color: $white;
+  width: 100%;
+  margin-left: 0;
+  // z-index: 100;
+}
+dd.active {
+  visibility: visible;
+  max-height: 200px;
+  padding: .4em;
+  transition: max-height 400ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}

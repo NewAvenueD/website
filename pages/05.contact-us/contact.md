@@ -22,6 +22,20 @@ form:
           validate:
             required: true
 
+        - name: organization
+          label: Organization
+          default: ''
+          placeholder: Organization
+          autofocus: off
+          autocomplete: on
+          type: text
+
+        - name: comments
+          label: Additional comments
+          placeholder: Additional comments
+          type: textarea
+          class: comments
+
     buttons:
         - type: submit
           value: Submit

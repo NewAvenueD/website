@@ -1,5 +1,8 @@
 .about {
-  img {
+  h1 {
+    margin-left: 13vw;
+  }
+  img.foosh {
     max-width: 400px;
   }
   div.caption {
@@ -8,5 +11,9 @@
   div.contain {
     @extend .float-right;
     margin-left: 2%;
+  }
+  main > .inner {
+    padding: 5%;
+    background-color: $white;
   }
 }

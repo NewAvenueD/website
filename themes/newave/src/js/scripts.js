@@ -121,6 +121,19 @@ window.addEventListener('load', function () {
    *
    */
   if (isPage('faqs')) {
+    let dts = document.querySelectorAll('dt');
+    for (let dt of dts) {
+      dt.onclick = (e) => {
+        // the one that was clicked
+        let answer = e.target.nextElementSibling;
+        // if another one is open, close it
+        if ((document.querySelector('dd.active') !== answer) && (document.querySelector('dd.active'))) {
+          document.querySelector('dd.active').classList.remove('active');
+        }
+        answer.classList.toggle('active');
+
+      }
+    }
 
   }
   if (isPage('contact')) {}

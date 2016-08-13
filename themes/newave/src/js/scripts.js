@@ -92,9 +92,9 @@ window.addEventListener('load', function () {
     unwrapImage();
     if (!Modernizr.touchevents) {
       const sr = ScrollReveal({ distance: '35px', duration: 620 });
-      sr.reveal('.col:first-child');
-      sr.reveal('.col:nth-child(2)', {delay: 200});
-      sr.reveal('.col:nth-child(3)', {delay: 400});
+      sr.reveal('.row:not(.delivered) .col:first-child');
+      sr.reveal('.row:not(.delivered) .col:nth-child(2)', {delay: 200});
+      sr.reveal('.row:not(.delivered) .col:nth-child(3)', {delay: 400});
     }
   }
   /**

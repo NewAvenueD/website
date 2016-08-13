@@ -34,6 +34,23 @@ window.addEventListener('load', function () {
       if (callNow) func.apply(context, args);
     };
   }
+  const toggleNav = function () {
+    // let startingState = body.getAttribute('data-state-menu');
+    toggleState('body', 'menu', 'closed', 'open');
+  }
+  // toggle nav on menu button click
+  document.getElementById('js-menu-button').onclick = (e) => {
+    e.preventDefault();
+    toggleNav();
+  };
+
+  // toggle nav on body clicks if it is open && click is outside 'drawer'
+  body.onclick = (e) => {
+    let inSideNav = navigation.contains(e.target);
+    if (body.getAttribute('data-state-menu') === 'open' && !inSideNav) {
+      toggleNav();
+    }
+  }
 
   // What page are we on?
   const isPage = page => document.body.classList.contains(page);
@@ -86,10 +103,7 @@ window.addEventListener('load', function () {
    *
    */
   if (isPage('why')) {
-    // if (!Modernizr.touchevents) {
-    //   const sr = ScrollReveal();
-    //   sr.reveal('.beni');
-    // }
+
   }
   /**
   *
@@ -110,6 +124,7 @@ window.addEventListener('load', function () {
     captionText.textContent = foosh.alt;
     caption.className = 'caption';
     caption.appendChild(captionText);
+    foosh_prime.style.float = 'none'
     contain.appendChild(foosh_prime);
     contain.appendChild(caption);
     docFrag.appendChild(contain);
@@ -136,27 +151,14 @@ window.addEventListener('load', function () {
     }
 
   }
+  /**
+   *
+   * Contact
+   *
+   */
   if (isPage('contact')) {
     var timer = setTimeout(clearForm(), 2000);
-    
   }
 
-  const toggleNav = function () {
-    // let startingState = body.getAttribute('data-state-menu');
-    toggleState('body', 'menu', 'closed', 'open');
-  }
-  // toggle nav on menu button click
-  document.getElementById('js-menu-button').onclick = (e) => {
-    e.preventDefault();
-    toggleNav();
-  };
-
-  // toggle nav on body clicks if it is open && click is outside 'drawer'
-  body.onclick = (e) => {
-    let inSideNav = navigation.contains(e.target);
-    if (body.getAttribute('data-state-menu') === 'open' && !inSideNav) {
-      toggleNav();
-    }
-  }
 
 });

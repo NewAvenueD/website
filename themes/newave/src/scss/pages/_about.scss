@@ -4,16 +4,34 @@
   }
   img.foosh {
     max-width: 400px;
+    float: right;
+    display: none;
+    @include at-least(tablet-landscape) {
+      display: block;
+    }
   }
   div.caption {
-    background-color: rgba(255, 255, 255, 0.67);
+    background-color: rgba(255, 255, 255, 0.47);
+    @include responsive-font(1.4vw, 17px, 27px, 26px);
+    padding: .4em;
+    margin-top: -4em;
+    max-width: 400px;
+    position: relative;
+    display: none;
+    @include at-least(tablet-landscape) {
+      display: block;
+    }
   }
   div.contain {
-    @extend .float-right;
-    margin-left: 2%;
+    float: right;
+    @include at-least(tablet-landscape) {
+      margin-left: 2%;
+    }
   }
   main > .inner {
     padding: 5%;
+    @include at-least(tablet-landscape) {
+    }
     background-color: $white;
   }
 }

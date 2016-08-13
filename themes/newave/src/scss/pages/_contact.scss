@@ -5,7 +5,6 @@
   }
   main.content {
     background-color: $mediumBlue;
-    color: white;
   }
   div.after-hero {
     padding: 0 3% 3% 3%;
@@ -20,7 +19,10 @@
   }
   input, button, textarea {
     // width: 100%;
-    color: rgb(126, 126, 126);
+    &::placeholder {
+      color: rgb(126, 126, 126);
+    }
+    color: rgb(43, 48, 56);
     border-radius: 2px;
     border: none;
     height: 1.85em;

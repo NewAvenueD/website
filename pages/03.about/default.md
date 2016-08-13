@@ -4,7 +4,7 @@ hero: steps.jpg
 menu: About
 body_class_list: about
 ---
-![Dr. Foosheé](../images/feature/drfooshee.jpg?classes=float-right,foosh)
+![Founder and Dentist, Michael Foosheé, D.D.S.](../images/feature/drfooshee.jpg?classes=foosh)
 We’re a group of committed dental professionals who believe taking care of your teeth should be easy. After hearing for years from patients how difficult it can be to fit appointments into their busy schedules we thought there has to be a better way.
 
 >What if we brought dental care to the patients? What if we used technology to take the friction out of the appointment process? What if busy patients could love going to the dentist?

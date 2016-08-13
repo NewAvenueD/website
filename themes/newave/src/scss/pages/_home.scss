@@ -200,7 +200,7 @@
 
     // fixes phantom margin
     div.form-textarea-wrapper {
-      margin-bottom: -4px;
+      // margin-bottom: -4px;
     }
     button {
       margin: 12px auto;
@@ -208,7 +208,7 @@
     textarea {
       @include at-least(tablet-landscape) {
         width: 100%;
-        display: inline-block;
+        // display: inline-block;
         // float: right;
       }
     }

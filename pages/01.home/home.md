@@ -52,7 +52,7 @@ form:
             from: "{{ config.plugins.email.from }}"
             to:
               - "{{ config.plugins.email.to }}"
-            subject: "[Feedback] {{ form.value.name|e }}"
+            subject: "[Contact form submission] {{ form.value.name|e }}"
             body: "{% include 'forms/data.html.twig' %}"
         - save:
             fileprefix: feedback-

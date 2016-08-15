@@ -13,7 +13,15 @@
     {% if header.robots %}
       <meta name="robots" content="{{ header.robots }}">
     {% endif %}
-    <link rel="icon" type="image/png" href="/user/pages/images/icon/favicon.png">
+    <link rel="icon" type="image/png" href="/user/pages/images/icon/favicon.png') }}" />
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ url('theme://images/apple-touch-icon.png') }}" />
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon-32x32.png" sizes="32x32') }}" />
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon-16x16.png" sizes="16x16') }}" />
+    <link rel="manifest" href="{{ url('theme://images/manifest.json') }}" />
+    <link rel="mask-icon" href="{{ url('theme://images/safari-pinned-tab.svg" color="#5bbad5') }}" />
+    <link rel="shortcut icon" href="{{ url('theme://images/favicon.ico') }}" />
+    <meta name="msapplication-config" content="{{ url('theme://images/browserconfig.xml') }}" />
+    <meta name="theme-color" content="#ffffff">
     <title>{% if header.title %}{{ header.title }} | {% endif %}{{ site.title }}</title>
     {% block stylesheets %}
       {% do assets.add('theme://public/style.css')%}

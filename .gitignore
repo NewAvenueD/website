@@ -4,4 +4,4 @@ themes/*
 themes/newave/public/*
 plugins
 data
-!config/plugins
+config

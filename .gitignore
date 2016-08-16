@@ -5,3 +5,4 @@ themes/newave/public/*
 plugins
 data
 config
+.DS_Store

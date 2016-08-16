@@ -59,7 +59,11 @@ window.addEventListener('load', function () {
   // ** Page specific scripts **
   //
 
-  // Home
+  /**
+   *
+   * Home
+   *
+   */
 
   // Unwrap images that markdown wraps in a paragraph
   const unwrapImage = () => {
@@ -105,7 +109,7 @@ window.addEventListener('load', function () {
   if (isPage('why')) {
 
   }
-  /**
+ /**
   *
   * About
   *

@@ -142,12 +142,10 @@
       width: 78%;
       ul {
         width: 100%;
-        display: table;
         display: flex;
         justify-content: space-around;
       }
       li.item {
-        display: table-cell;
         text-align: center;
         margin-bottom: 0;
         font-weight: 300;

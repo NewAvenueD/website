@@ -32,6 +32,9 @@
       width: 50%;
     }
   }
+  input:invalid {
+    box-shadow: none;
+  }
   textarea {
     height: auto;
   }

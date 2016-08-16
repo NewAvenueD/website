@@ -28,7 +28,7 @@
 
   %third {
     width: 33.3333%;
-    width: calc(100% / 3);
+    // width: calc(100% / 3);
     &:after {
       content: '';
       display: block;
@@ -37,7 +37,7 @@
   }
   %two-thirds {
     width: 66.666%;
-    width: calc((100%/3)*2);
+    // width: calc((100%/3)*2);
     &:after {
       content: '';
       display: block;

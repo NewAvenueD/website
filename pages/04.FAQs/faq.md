@@ -5,7 +5,7 @@ hero: gleam.jpg
 faqs:
   1:
     q: What is 'mobile dentistry?'
-    a: Dental care in a mobile dental office offers the same level of care you can receive in a traditional office, but fits better with your or your employees’ schedule. Mobile dentistry has been around for decades, and has been used to treat employees at their work since the late 1990's. The concept is simple: instead of making the patient come to us, we come to you.
+    a: Dental care in a mobile dental office offers the same level of care you can receive in a traditional office, but fits better with you or your employees’ schedule. Mobile dentistry has been around for decades, and has been used to treat employees at their work since the late 1990's. The concept is simple: instead of making the patient come to us, we come to you.
   2:
     q: Why use mobile dentistry?
     a: Going to the dentist can be hard. By the time you factor in travel and the waiting room, the average appointment time in a major city is 3-4 hours, causing many people to have to take a half day from work just to get a check-up. We’re making dental visits easier by bringing the dentist to employees at their workplace. This saves employees time, and increases workplace productivity. It's a zero cost additional employee benefit that can save the employee and employer time and money.

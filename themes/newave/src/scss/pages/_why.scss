@@ -96,7 +96,8 @@ $blackish: rgb(16, 25, 29);
           margin-bottom: 4%;
           @include at-least(tablet-landscape) {
             display: inline-block;
-            width: 30vw;
+            width: 50%;
+            flex: none;
             max-width: 299px;
             max-height: 190px;
           }

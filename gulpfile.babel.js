@@ -23,7 +23,7 @@ let env = gutil.env.env || 'development';
 
 // TODO: switch to gulp-watch so new files are watched too
 gutil.log(__filename);
-
+// trivial change
 gulp.task('test', () => {
   gutil.log('gulp says the environment var is', env)
 })

@@ -20,7 +20,7 @@ const templates = './themes/newave/templates/**/*.twig';
 const pub = './themes/newave/public';
 
 let env = gutil.env.env || 'development';
-
+// triv
 // TODO: switch to gulp-watch so new files are watched too
 gutil.log(__filename);
 gulp.task('test', () => {

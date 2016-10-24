@@ -8,40 +8,22 @@
   </div>
 {% endblock hero %}
 {% block content %}
-
-<div class="the-rows">
-  <!--  row 01 -->
-  {% include '/modular/module.html.twig' with {'page': page.find('/home/_delivered')} %}
-
-  <!--  row 02 -->
-  {% include '/modular/module.html.twig' with {'page': page.find('/home/_elevator')} %}
-  <!--  row 03 -->
-  {% include '/modular/module.html.twig' with {'page': page.find('/home/_how-it-works-header')} %}
-  <!--  row 04 -->
-  {% include '/modular/module.html.twig' with {'page': page.find('/home/_apt-scheduling')} %}
-  <!--  row 05 -->
-  {% include '/modular/module.html.twig' with {'page': page.find('/home/_mobile-facility')} %}
-  <!--  row 06 -->
-  {% include '/modular/module.html.twig' with {'page': page.find('/home/_notifications')} %}
-  <!--  row 07 -->
-  {% include '/modular/module.html.twig' with {'page': page.find('/home/_site-visits')} %}
-  <!--  row 08 -->
-  {% include '/modular/module.html.twig' with {'page': page.find('/home/_full-range')} %}
-  <!--  row 09 -->
-
-</div>
-
-<div class="row one-col contact">
-  <div class="col">
-    <div class="col-contain">
-      <div class="inner">
-        <h2>Get in Touch</h2>
-        <h3>Drop us a line to find out how easy it is to bring on-site dentistry to your workplace</h3>
-        {% include '/modular/module.html.twig' with {'page': page.find('/home/_mini-contact')} %}
+	<div class="the-rows">
+    {% for module in page.collection() %}
+    {% if not (module.name !== 'form.md') %}{% endif %}
+        {{ module.content }}
+    {% endfor %}
+	</div>
+  <div class="row one-col contact">
+    <div class="col">
+      <div class="col-contain">
+        <div class="inner">
+          <h2>Get in Touch</h2>
+          <h3>Drop us a line to find out how easy it is to bring on-site dentistry to your workplace</h3>
+          {% include '/modular/module.html.twig' with {'page': page.find('/home/_mini-contact')} %}
+        </div>
       </div>
     </div>
   </div>
-</div>
-
 
 {% endblock %}

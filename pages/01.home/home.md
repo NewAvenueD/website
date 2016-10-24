@@ -6,6 +6,20 @@ body_class_list: home
 heading:
 - Introducing
 - New Avenue Dentistry
+content:
+    items: @self.modular
+    order:
+        by: default
+        dir: asc
+        custom:
+            - _delivered
+            - _elevator
+            - _how-it-works-header
+            - _apt-scheduling
+            - _mobile-facility
+            - _notifications
+            - _site-visits
+            - _full-range
 ###
 ###
 ### Mini Contact form

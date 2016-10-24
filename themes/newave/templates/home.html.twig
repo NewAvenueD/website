@@ -10,8 +10,9 @@
 {% block content %}
 	<div class="the-rows">
     {% for module in page.collection() %}
-    {% if not (module.name !== 'form.md') %}{% endif %}
+      {% if not (module.name == 'form.md') %}
         {{ module.content }}
+      {% endif %}
     {% endfor %}
 	</div>
   <div class="row one-col contact">

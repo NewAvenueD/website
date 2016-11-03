@@ -1,4 +1,4 @@
-const cats = require('./cats');
+import cats from './cats'
 window.addEventListener('load', function () {
   // console.log('window load event');
   const navigation = document.querySelector('.navigation');

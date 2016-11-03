@@ -13,7 +13,7 @@ import gutil from 'gulp-util';
 import print from 'gulp-print';
 import clean from 'gulp-clean';
 import concat from 'gulp-concat';
-
+gutil.log(webpackConfig)
 let browserSync = bSync.create();
 const scss = './themes/newave/src/scss/**/*.scss';
 const js = './themes/newave/src/js/*.js';

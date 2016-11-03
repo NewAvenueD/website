@@ -1,6 +1,8 @@
 'use strict';
-import Promise from 'es6-promise';
+// import Promise from 'es6-promise';
 import gulp from 'gulp';
+import webpack from 'webpack-stream'
+import webpackConfig from './webpack.config'
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import prefix from 'gulp-autoprefixer';
@@ -14,7 +16,7 @@ import concat from 'gulp-concat';
 
 let browserSync = bSync.create();
 const scss = './themes/newave/src/scss/**/*.scss';
-const js = ['./themes/newave/src/js/vendor/**/*.js', './themes/newave/src/js/*.js'];
+const js = './themes/newave/src/js/*.js';
 const pages = './pages/**/*.md';
 const templates = './themes/newave/templates/**/*.twig';
 const pub = './themes/newave/public';
@@ -23,6 +25,7 @@ let env = gutil.env.env || 'development';
 // triv
 // TODO: switch to gulp-watch so new files are watched too
 gutil.log(__filename);
+gutil.log('stuff happened', 'Really it did', gutil.colors.magenta('123'));
 gulp.task('test', () => {
   gutil.log('gulp says the environment var is', env)
 })
@@ -55,7 +58,7 @@ gulp.task('serve', ['sass', 'php', 'js'], () => {
 
   gulp.watch(scss, ['sass']);
   gulp.watch(js, ['js']);
-  gulp.watch([pages, templates]).on('change', browserSync.reload)
+  gulp.watch([pages, js, scss, templates]).on('change', browserSync.reload)
 });
 // PHP Server
 // run this once before proxying with bS
@@ -83,12 +86,11 @@ gulp.task('sass', () => {
 });
 
 gulp.task('js', () => {
+  gutil.log('js task running..')
   gulp.src(js)
     .pipe(print())
-    .pipe(babel({
-            presets: ['es2015']
-        }))
-    .pipe(concat('scripts.js'))
+    .pipe(webpack( webpackConfig ))
+    .on('error', gutil.log)
     .pipe(gulp.dest(pub));
 });
 

@@ -1,9 +1,10 @@
+const cats = require('./cats');
 window.addEventListener('load', function () {
   // console.log('window load event');
   const navigation = document.querySelector('.navigation');
   const body = document.querySelector('body');
   const buttonContain = document.querySelector('.burger-tab');
-
+  cats();
   //
   // ** Helpers **
   //

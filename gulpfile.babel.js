@@ -15,7 +15,7 @@ import clean from 'gulp-clean'
 import concat from 'gulp-concat'
 let browserSync = bSync.create()
 const scss = './themes/newave/src/scss/**/*.scss'
-const js = './themes/newave/src/js/*.js'
+const js = './themes/newave/src/js/**/*.js'
 const pages = './pages/**/*.md'
 const templates = './themes/newave/templates/**/*.twig'
 const pub = './themes/newave/public'

@@ -29,7 +29,8 @@
       {{ assets.css() }}
     {% endblock %}
     {% block javascript %}
-    {% do assets.add('https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js') %}
+      {% do assets.add('https://cdn.polyfill.io/v2/polyfill.min.js') %}
+      {% do assets.add('https://cdn.jsdelivr.net/scrollreveal.js/3.3.1/scrollreveal.min.js') %}
       {% do assets.add('theme://public/scripts.js') %}
 
       {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
@@ -42,7 +43,6 @@
   {% endblock head %}
 </head>
 <body class="{{ header.body_class_list }}" data-state-menu="closed">
-
   <div class="nav-n-content">
   {% block nav %}
     {% include 'partials/navigation.html.twig' %}

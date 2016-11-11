@@ -107,7 +107,17 @@ window.addEventListener('load', function () {
    * Why New Avenue
    *
    */
-  if (isPage('why')) {
+  if (isPage('test')) {
+    const acuityBase = 'https://app.acuityscheduling.com/schedule.php?owner=12742842&calendarID=';
+    const urlParams = new URLSearchParams(window.location.search);
+    let calID = urlParams.get('cal')
+    console.log(calID);
+    if (calID) {
+      var ifrm = document.createElement('iframe');
+      ifrm.setAttribute('id', 'ifrm'); // assign an id
+      ifrm.setAttribute('src', acuityBase + calID);
+      document.querySelector('.frame-contain').appendChild(ifrm);
+    }
 
   }
  /**

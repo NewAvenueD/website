@@ -1,6 +1,8 @@
 ---
-title: This is a Test Page
+title: Schedule an Appointment
 body_class_list: test
+metadata:
+  robots: 'noindex, nofollow'
 ---
 
 <button class="load-form">Load Form</button>

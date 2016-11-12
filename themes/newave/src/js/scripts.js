@@ -107,7 +107,8 @@ window.addEventListener('load', function () {
    * Why New Avenue
    *
    */
-  if (isPage('test')) {
+  if (isPage('book-now')) {
+    console.log('book now page');
     const acuityBase = 'https://app.acuityscheduling.com/schedule.php?owner=12742842&calendarID=';
     const urlParams = new URLSearchParams(window.location.search);
     let calID = urlParams.get('cal')
@@ -116,6 +117,7 @@ window.addEventListener('load', function () {
       var ifrm = document.createElement('iframe');
       ifrm.setAttribute('id', 'ifrm'); // assign an id
       ifrm.setAttribute('src', acuityBase + calID);
+      document.querySelector('.frame-contain').innerHTML = '';
       document.querySelector('.frame-contain').appendChild(ifrm);
     }
 

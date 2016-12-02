@@ -1,7 +1,7 @@
 .book-now, .booking {
   @media (max-width: 600px) {
     .kn-details-group {
-      h2 { color: red; }
+      // h2 { color: red; }
     }
   }
 
@@ -38,17 +38,27 @@
     }
   }
 
-@include at-least(tablet-landscape) {
-  #view_18 { width: auto !important; }
-}
+  @include at-least(tablet-landscape) {
+    #view_18 { width: auto !important; }
+  }
   @media screen and (max-width: 500px) {
-    .kn-view form {
-      select {
-        height: auto;
-        min-height: 26px;
+    #kn-map-view_18 { width: 100% !important; }
+    .kn-map-list {
+      width: 100% !important;
+      .kn-geo-distance {
+        right: 20px;
       }
-      .kn-map-submit {
-        margin-left: auto !important;
+    }
+    .kn-view {
+      margin: 0 auto;
+      form {
+        select {
+          height: auto;
+          min-height: 26px;
+        }
+        .kn-map-submit {
+          margin-left: auto !important;
+        }
       }
     }
   }

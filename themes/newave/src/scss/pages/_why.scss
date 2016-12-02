@@ -42,7 +42,7 @@ $blackish: rgb(16, 25, 29);
       @include responsive-font(5.3vw, 10px, 49px, 14px);
     }
     .inner {
-      margin: 0 auto;
+      margin: 2em .4em;
       text-align: center;
       white-space: nowrap;
       overflow: hidden;

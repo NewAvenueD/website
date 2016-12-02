@@ -1,5 +1,5 @@
 ---
-title: Booking iFrame Test
+title: Schedule an Appointment
 body_class_list: booking
 metadata:
   robots: 'noindex, nofollow'

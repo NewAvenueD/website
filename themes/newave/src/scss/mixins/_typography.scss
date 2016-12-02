@@ -92,7 +92,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.625em;
+  font-size: 1.525em;
   /* 1.625x body copy size = 26px */
   line-height: 1.15384615;
   /* 30px / 26px */
@@ -100,7 +100,7 @@ h2 {
 
 @include at-least(tablet) {
   h2 {
-    font-size: 2em;
+    font-size: 1.3em;
     /* 2x body copy size = 32px */
     line-height: 1.25;
   }
@@ -115,9 +115,9 @@ h2 {
 }
 
 h3 {
-  font-size: 1.375em;
+  font-size: 1.275em;
   /* 1.375x body copy size = 22px */
-  line-height: 1.13636364;
+  line-height: 1.2;
   /* 25px / 22px */
 }
 

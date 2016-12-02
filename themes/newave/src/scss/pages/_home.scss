@@ -1,6 +1,15 @@
 .home {
   $blackish: rgb(31, 1, 12);
 
+  /**
+   *
+   * Typography
+   *
+   */
+
+  //  h3 {
+  //  }
+
   .col-contain {
     background-color: $white;
     padding: 5%;
@@ -60,12 +69,21 @@
       opacity: .72;
       background: linear-gradient(-6deg, $blackish, rgba(255, 255, 255, .2), $blackish);
     }
+    h1 {
+      font-size: 1.8em;
+      font-weight: 700;
+    }
+    span.introducing {
+      font-size: .84em;
+    }
     @include at-least(tablet-landscape) {
       h1 {
         font-size: 4.9em;
+        font-weight: 400;
       }
       span.introducing {
         font-size: .84em;
+        color: rgb(70, 70, 70)
       }
     }
     span.introducing {

@@ -26,7 +26,30 @@
       margin: 0 auto;
     }
   }
-  .kn-details-group {
-    h2 { font-size: 1.4em; }
+  .kn-map-list {
+    h2 {
+      font-size: 1.4em;
+      em {
+        font-style: normal;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+@include at-least(tablet-landscape) {
+  #view_18 { width: auto !important; }
+}
+  @media screen and (max-width: 500px) {
+    .kn-view form {
+      select {
+        height: auto;
+        min-height: 26px;
+      }
+      .kn-map-submit {
+        margin-left: auto !important;
+      }
+    }
   }
 }

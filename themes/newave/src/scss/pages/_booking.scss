@@ -20,7 +20,13 @@
       height: 800px;
     }
   }
-  #knack-dist_2, .frame-contain {
+  #knack-dist_2, .frame-contain, .above-the-frame {
+    h2.booking-nav {
+      font-size: 1.5em;
+    }
+    .fail-alert {
+      color: rgb(177, 1, 1);
+    }
     @include at-least(tablet-landscape) {
       max-width: 80%;
       margin: 0 auto;
@@ -40,6 +46,9 @@
 
   @include at-least(tablet-landscape) {
     #view_18 { width: auto !important; }
+    p.description {
+      font-size: 1.2em;
+    }
   }
   @media screen and (max-width: 500px) {
     #kn-map-view_18 { width: 100% !important; }

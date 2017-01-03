@@ -1,4 +1,7 @@
 .book-now, .booking {
+  > .footer {
+    display: none;
+  }
   @media (max-width: 600px) {
     .kn-details-group {
       // h2 { color: red; }

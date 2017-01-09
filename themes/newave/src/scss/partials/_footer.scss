@@ -57,12 +57,14 @@ div.footer {
     }
   }
   div.footer-content {
+    clear: both;
     position: relative;
     padding: 0 .6em;
     top: 1.2em;
     height: 30px;
     font-size: 14px;
     @include at-least(tablet-landscape) {
+      padding: 0;
       font-size: 22px;
     };
     span.address {

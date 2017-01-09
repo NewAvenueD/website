@@ -56,5 +56,25 @@ div.footer {
       }
     }
   }
+  div.footer-content {
+    position: relative;
+    padding: 0 .6em;
+    top: 1.2em;
+    height: 30px;
+    font-size: 14px;
+    @include at-least(tablet-landscape) {
+      font-size: 22px;
+    };
+    span.address {
+      display: inline-block;
+      width: 66%;
+    }
+
+    span.privacy {
+      float: right;
+      font-size: 14px;
+      font-family: sans-serif;
+    }
+  }
 
 }

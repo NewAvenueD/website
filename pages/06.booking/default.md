@@ -1,6 +1,7 @@
 ---
 title: Schedule an Appointment
 body_class_list: booking
+menu: Book Now
 metadata:
   robots: 'noindex, nofollow'
 ---

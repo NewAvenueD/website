@@ -13,6 +13,8 @@ import gutil from 'gulp-util'
 import print from 'gulp-print'
 import clean from 'gulp-clean'
 import concat from 'gulp-concat'
+import fs from 'fs'
+import path from 'path'
 let browserSync = bSync.create()
 const scss = './themes/newave/src/scss/**/*.scss'
 const js = './themes/newave/src/js/**/*.js'
@@ -23,6 +25,8 @@ const pub = './themes/newave/public'
 let env = gutil.env.env || 'development'
 let info = ['environment is...', env, '__filename is...', __filename];
 // triv
+
+
 
 info.map( (item) => gutil.log(item));
 // TODO: switch to gulp-watch so new files are watched too
@@ -35,22 +39,30 @@ gulp.task('clean', () => {
 
 gulp.task('build', ['clean', 'sass', 'js'], () => {
   gutil.log('running ', env, ' tasks........')
+  gutil.log(__dirname + '/../system/router.php')
 })
 
-gulp.task('serve', ['sass', 'php', 'js'], () => {
+gulp.task('test', () => {
+  let router = path.join(__dirname, '../system/', 'router.php')
+  fs.readFile(router, 'utf8', (err, contents) => {
+    console.log(contents);
+  })
+})
+
+gulp.task('serve', ['sass', 'js'], () => {
   // headers required to make debugbar work
   browserSync.init({
     proxy: {
-      target: '127.0.0.1:8010',
+      target: '127.0.0.1:8080',
       reqHeaders: function() {
         return {
-            host: 'localhost:8080'
+            host: 'localhost:8081'
         }
       }
     },
     port: 8080,
     open: true,
-    notify: false
+    notify: false,
   })
 
   gulp.watch(scss, ['sass'])
@@ -60,7 +72,16 @@ gulp.task('serve', ['sass', 'php', 'js'], () => {
 // PHP Server
 // run this once before proxying with bS
 gulp.task('php', function() {
-    php.server({ base: '../.', port: 8010, keepalive: true})
+
+  // let router = path.join(__dirname, '../system/', 'router.php')
+  // gutil.log(router)
+  //
+  // php.server({
+  //   base: '../.',
+  //   port: 8010,
+  //   keepalive: true,
+  //   router: __dirname + 'router.php'
+  // })
 })
 
 gulp.task('sass', () => {

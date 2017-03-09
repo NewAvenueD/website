@@ -7,8 +7,7 @@ cols:
     bgImage: smile.jpg
   -
     col_class_list: header split icon
-bgImages:
-  - smile.jpg
+    
 ###
 ###
 ### Cols separated by [section] shortcodes, rows (inside cols) separated by three dashes (---)

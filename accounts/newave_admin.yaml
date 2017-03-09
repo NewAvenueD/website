@@ -1,0 +1,11 @@
+email: adam.romines@gmail.com
+fullname: 'Newave Admin'
+title: Administrator
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$oB.b1YQ14v0ENuIpqcNRmOFzT9MW8f5SG6a0oHL7PlzbOFIoHsa4G

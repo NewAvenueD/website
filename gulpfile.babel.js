@@ -70,19 +70,25 @@ gulp.task('serve', ['sass', 'js'], () => {
   gulp.watch([pages, js, scss, templates]).on('change', browserSync.reload)
 })
 // PHP Server
-// run this once before proxying with bS
-gulp.task('php', function() {
 
-  // let router = path.join(__dirname, '../system/', 'router.php')
-  // gutil.log(router)
-  //
-  // php.server({
-  //   base: '../.',
-  //   port: 8010,
-  //   keepalive: true,
-  //   router: __dirname + 'router.php'
-  // })
-})
+// BELOW NOT WORKING
+//
+// hack: run `php -S localhost:8080 system/router.php` from grav root, then gulp serve
+
+
+// run this once before proxying with bS
+// gulp.task('php', function() {
+//
+//   // let router = path.join(__dirname, '../system/', 'router.php')
+//   // gutil.log(router)
+//   //
+//   // php.server({
+//   //   base: '../.',
+//   //   port: 8010,
+//   //   keepalive: true,
+//   //   router: __dirname + 'router.php'
+//   // })
+// })
 
 gulp.task('sass', () => {
   if (env === 'production') {

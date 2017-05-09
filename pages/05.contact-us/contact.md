@@ -45,7 +45,6 @@ form:
             from: "{{ config.plugins.email.from }}"
             to:
               - "{{ config.plugins.email.from }}"
-              - "{{ form.value.email }}"
             subject: "[Feedback] {{ form.value.name|e }}"
             body: "{% include 'forms/data.html.twig' %}"
         - save:
@@ -59,6 +58,6 @@ form:
 ### Interested in learning more? Drop us a note
 
 **New Avenue Dentistry**  
-3007 Skyway Circle North, Suite 100 
+3007 Skyway Circle North, Suite 100
 Irving, TX 75038  
 972.905.1359  

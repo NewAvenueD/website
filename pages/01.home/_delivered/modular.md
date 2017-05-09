@@ -7,7 +7,7 @@ cols:
     bgImage: smile.jpg
   -
     col_class_list: header split icon
-    
+
 ###
 ###
 ### Cols separated by [section] shortcodes, rows (inside cols) separated by three dashes (---)
@@ -15,7 +15,7 @@ cols:
 [section name="first_column"]
 [/section]
 [section name="second_column"]
-##Dentistry, Delivered to Your Workplace
+##Dentistry, Delivered to Your Workplace.
 ---
 ![New Avenue Dentistry](../../images/icon/trailer_parked.svg)
 [/section]

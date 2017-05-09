@@ -65,7 +65,8 @@ form:
         - email:
             from: "{{ config.plugins.email.from }}"
             to:
-              - "{{ config.plugins.email.from }}"
+              - "{{ config.plugins.email.to }}"
+              - "adam.romines@gmail.com"
             subject: "[Contact form submission] {{ form.value.name }}"
             body: "{% include 'forms/data.html.twig' %}"
         - save:

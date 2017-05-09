@@ -44,7 +44,8 @@ form:
         - email:
             from: "{{ config.plugins.email.from }}"
             to:
-              - "{{ config.plugins.email.from }}"
+              - "{{ config.plugins.email.to }}"
+              - "adam.romines@gmail.com"
             subject: "[Feedback] {{ form.value.name|e }}"
             body: "{% include 'forms/data.html.twig' %}"
         - save:
